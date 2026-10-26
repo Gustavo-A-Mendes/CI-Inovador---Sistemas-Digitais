@@ -1,0 +1,7 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(26Oct2026:15:28:45):( xrun -64bit xor_gate_tb.sv xor_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_28_45)
+s2::(26Oct2026:15:33:27):( xrun -64bit xor_gate_tb.sv xor_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_33_27)
+s3::(26Oct2026:15:35:11):( xrun -64bit xor_gate_tb.sv xor_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_35_11)

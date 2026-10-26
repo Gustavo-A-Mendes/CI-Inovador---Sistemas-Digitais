@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-64bit
+or_gate_tb.sv
+or_gate.sv
++gui
++access+r

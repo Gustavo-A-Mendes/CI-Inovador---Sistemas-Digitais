@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(26Oct2026:14:34:32):( xrun -64bit nand_gate_tb.sv nand_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_14_34_32)
+s2::(26Oct2026:15:22:12):( xrun -64bit nand_gate_tb.sv nand_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_22_12)
+s3::(26Oct2026:15:47:32):( xrun -64bit nand_gate_tb.sv nand_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_47_32)
+s4::(26Oct2026:15:54:09):( xrun -64bit nand_gate_tb.sv nand_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_54_09)

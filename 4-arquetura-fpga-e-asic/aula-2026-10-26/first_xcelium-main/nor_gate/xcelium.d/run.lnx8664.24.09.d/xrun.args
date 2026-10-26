@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-64bit
+nor_gate_tb.sv
+nor_gate.sv
++gui
++access+r

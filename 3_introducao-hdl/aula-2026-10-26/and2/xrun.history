@@ -1,0 +1,6 @@
+#e1(26Oct2026:10:54:02): source ./xcelium.d/env.d/env.history.26Oct2026_10_54_02
+s1(26Oct2026:10:54:02):  xrun +access+rw and2_tb.sv and2.sv 
+#e2(26Oct2026:10:57:30): source ./xcelium.d/env.d/env.history.26Oct2026_10_57_30
+s2(26Oct2026:10:57:30):  xrun +access+rw and2_tb.sv and2.sv -timescale 1ns/1ps 
+#e3(26Oct2026:10:57:33): source ./xcelium.d/env.d/env.history.26Oct2026_10_57_33
+s3(26Oct2026:10:57:33):  xrun +access+rw and2_tb.sv and2.sv -timescale 1ns/1ps 

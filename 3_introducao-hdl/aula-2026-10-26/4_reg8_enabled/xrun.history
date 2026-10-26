@@ -1,0 +1,16 @@
+#e1(26Oct2026:12:50:41): source ./xcelium.d/env.d/env.history.26Oct2026_12_50_41
+s1(26Oct2026:12:50:41):  xrun +access+rw reg8.sv reg8_tb.sv 
+#e2(26Oct2026:12:50:58): source ./xcelium.d/env.d/env.history.26Oct2026_12_50_58
+s2(26Oct2026:12:50:58):  xrun +access+rw reg8_tb.sv reg8.sv 
+#e3(26Oct2026:12:51:43): source ./xcelium.d/env.d/env.history.26Oct2026_12_51_43
+s3(26Oct2026:12:51:43):  xrun +access+rw reg8_tb.sv reg8.sv -gui 
+#e4(26Oct2026:12:55:05): source ./xcelium.d/env.d/env.history.26Oct2026_12_55_05
+s4(26Oct2026:12:55:05):  xrun +access+rw reg8_tb.sv reg8.sv 
+#e5(26Oct2026:12:56:40): source ./xcelium.d/env.d/env.history.26Oct2026_12_56_40
+s5(26Oct2026:12:56:40):  xrun +access+rw reg8_tb.sv reg8.sv 
+#e6(26Oct2026:12:57:16): source ./xcelium.d/env.d/env.history.26Oct2026_12_57_16
+s6(26Oct2026:12:57:16):  xrun +access+rw reg8_tb.sv reg8.sv -gui 
+#e7(26Oct2026:12:57:30): source ./xcelium.d/env.d/env.history.26Oct2026_12_57_30
+s7(26Oct2026:12:57:30):  xrun +access+rw reg8_tb.sv reg8.sv 
+#e8(26Oct2026:13:14:51): source ./xcelium.d/env.d/env.history.26Oct2026_13_14_51
+s8(26Oct2026:13:14:51):  xrun +access+rw reg8_tb.sv reg8.sv 

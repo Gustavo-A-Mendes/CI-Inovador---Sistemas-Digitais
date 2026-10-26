@@ -1,0 +1,530 @@
+%!PS-Adobe-3.0
+%%Creator: Nlview
+%%For: CI_INO-03
+%%Title: root
+%%BoundingBox: 28 28 568 814
+%%CreationDate: 2026-10-26 15:24
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: font Helvetica
+%%EndComments
+
+%%BeginProlog
+50 dict begin
+/line {
+    newpath moveto lineto stroke
+} bind def
+/circle {
+    newpath 2 div 0 360 arc stroke
+} bind def
+/filledcircle {
+    newpath 2 div 0 360 arc fill
+} bind def
+/text {                                 % stack: x y rot jx jy len (str)
+    gsave
+    7 -2 roll moveto                    % stack: rot jx jy len (str)
+    dup stringwidth pop /wid exch def   % string width --> wid
+    5 -1 roll                           % stack: jx jy len (str) rot
+    rotate
+    4 2 roll                            % stack: len (str) jx jy
+    Fdescent exch
+    2 div Fdescent Fascent add mul sub  % desc - jy/2 * (asc+desc)
+                                        % stack: len (str) jx ymove
+    exch
+    2 div wid mul neg                   % -jx/2 * wid
+                                        % stack: len (str) ymove xmove
+    exch rmoveto                        % stack: len (str)
+    exch 0 exch                         % stack: (str) 0 len
+    getinterval                         % stack: substr(str,0,len)
+    show                                % stack:
+    grestore
+} bind def
+/initfontfac {
+    currentdict /Ffac known not {
+        % Here we compute Ffac. Ffac is used below to resize the font
+        % in a way that the font's ascent+descent/2 fits the required
+        % text size. We compute Ffac only once, because the font F will
+        % never change.
+        %
+        dup F exch scalefont setfont % stack sz font
+        gsave
+        newpath 0 0 moveto (XTgq) false charpath
+        pathbbox                        % stack: sz l b r t
+        grestore
+        3 2 roll neg 2 div add          % fheight = ascent + descent/2
+        3 1 roll pop pop                % stack: sz fheight
+        div
+        /Ffac exch def                  % Ffac = sz/fheight
+    } if
+} bind def
+/textsize {
+    Ffac mul F exch scalefont setfont
+    gsave
+    newpath
+    0 0 moveto (XTgq) false charpath pathbbox
+    /Fascent exch def			% top -> ascent
+    pop
+    /Fdescent exch neg 2 div def	% -bottom/2 -> descent
+    pop
+    grestore
+} bind def
+/linestyle {
+				% stack: [dashdef] offs gwid
+    dup 3 1 roll		%        [dashdef] gwid offs gwid
+    mul [			%        [dashdef] gwid moffs [
+    4 -2 roll exch		%        moffs [ gwid [dashdef]
+    {exch dup 3 -1 roll mul exch} forall
+    				%	 moffs [ a1 a2 a3 .. gwid
+    pop ]			%	 moffs [a1 a2 a3..]
+    exch			%	 [a1 a2 a3..] moffs
+    setdash			% stack:
+} bind def
+
+% Define the array ISOLatin1Encoding (which specifies how characters are
+% encoded for ISO-8859-1 fonts), if it isn't already present (Postscript
+% level 2 is supposed to define it, but level 1 doesn't).
+systemdict /ISOLatin1Encoding known not {
+    /ISOLatin1Encoding [
+	/space /space /space /space /space /space /space /space
+	/space /space /space /space /space /space /space /space
+	/space /space /space /space /space /space /space /space
+	/space /space /space /space /space /space /space /space
+	/space /exclam /quotedbl /numbersign /dollar /percent /ampersand
+	    /quoteright
+	/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+	/zero /one /two /three /four /five /six /seven
+	/eight /nine /colon /semicolon /less /equal /greater /question
+	/at /A /B /C /D /E /F /G
+	/H /I /J /K /L /M /N /O
+	/P /Q /R /S /T /U /V /W
+	/X /Y /Z /bracketleft /backslash /bracketright /asciicircum
+	/underscore /quoteleft /a /b /c /d /e /f /g
+	/h /i /j /k /l /m /n /o
+	/p /q /r /s /t /u /v /w
+	/x /y /z /braceleft /bar /braceright /asciitilde /space
+	/space /space /space /space /space /space /space /space
+	/space /space /space /space /space /space /space /space
+	/dotlessi /grave /acute /circumflex /tilde /macron /breve /dotaccent
+	/dieresis /space /ring /cedilla /space /hungarumlaut /ogonek /caron
+	/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+	/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen
+	    /registered /macron
+	/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph
+	    /periodcentered
+	/cedillar /onesuperior /ordmasculine /guillemotright /onequarter
+	    /onehalf /threequarters /questiondown
+	/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+	/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex
+	    /Idieresis
+	/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis
+	    /multiply
+	/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn
+	    /germandbls
+	/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+	/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex
+	    /idieresis
+	/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+	/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn
+	    /ydieresis
+    ] def
+} if
+
+% font ISOEncode font
+% This procedure changes the encoding of a font from the default
+% Postscript encoding to ISOLatin1. The body of this procedure comes
+% from Section 5.6.1 of the Postscript book.
+/ISOEncode {
+    dup length dict begin
+	{1 index /FID ne {def} {pop pop} ifelse} forall
+	/Encoding ISOLatin1Encoding def
+	currentdict
+    end
+    /Fname exch definefont
+} bind def
+%%EndProlog
+
+%%BeginSetup
+%%IncludeResource: font Helvetica
+<< /PageSize [595 841] /Policies << /PageSize 3 >> >> setpagedevice
+%%EndSetup
+
+/DiagonalCross <<      % pattern prototype dictionary: XX
+   /PatternType 1      % Tiling pattern
+   /PaintType 2        % uncolored tiling pattern
+   /TilingType 1
+   /BBox [0 0 8 8]
+   /XStep 8
+   /YStep 8
+   /PaintProc
+     { pop
+       1 setlinewidth
+       [] 0 setdash
+       newpath -1 3 moveto
+       5 9 lineto
+       stroke newpath -1 5 moveto
+       5 -1 lineto
+       stroke newpath 3 -1 moveto
+       9 5 lineto
+       stroke newpath 3 9 moveto
+       9 3 lineto
+       stroke
+    } bind
+>> def
+/Cross <<              % pattern prototype dictionary: ++
+   /PatternType 1      % Tiling pattern
+   /PaintType 2        % uncolored tiling pattern
+   /TilingType 1
+   /BBox [0 0 8 8]
+   /XStep 8
+   /YStep 8
+   /PaintProc
+     { pop
+       1 setlinewidth
+       [] 0 setdash
+       0 4 moveto
+       8 4 lineto
+       4 0 moveto
+       4 8 lineto
+       stroke
+    } bind
+>> def
+/BackwardDiagonal <<   % pattern prototype dictionary: //
+   /PatternType 1      % Tiling pattern
+   /PaintType 2        % uncolored tiling pattern
+   /TilingType 1
+   /BBox [0 0 8 8]
+   /XStep 8
+   /YStep 8
+   /PaintProc
+     { pop
+       1 setlinewidth
+       [] 0 setdash
+       newpath -1 3 moveto
+       6 6 rlineto
+       stroke newpath 3 -1 moveto
+       6 6 rlineto
+       stroke
+    } bind
+>> def
+/ForwardDiagonal <<    % pattern prototype dictionary: \\
+   /PatternType 1      % Tiling pattern
+   /PaintType 2        % uncolored tiling pattern
+   /TilingType 1
+   /BBox [0 0 8 8]
+   /XStep 8
+   /YStep 8
+   /PaintProc
+     { pop
+       1 setlinewidth
+       [] 0 setdash
+       newpath -1 5 moveto
+       6 -6 rlineto
+       stroke newpath 3 9 moveto
+       6 -6 rlineto
+       stroke
+    } bind
+>> def
+/Vertical <<           % pattern prototype dictionary: ||
+   /PatternType 1      % Tiling pattern
+   /PaintType 2        % uncolored tiling pattern
+   /TilingType 1
+   /BBox [0 0 8 8]
+   /XStep 8
+   /YStep 8
+   /PaintProc
+     { pop
+       1 setlinewidth
+       [] 0 setdash
+       4 0 moveto
+       4 8 lineto
+       stroke
+    } bind
+>> def
+/Horizontal <<         % pattern prototype dictionary: ==
+   /PatternType 1      % Tiling pattern
+   /PaintType 2        % uncolored tiling pattern
+   /TilingType 1
+   /BBox [0 0 8 8]
+   /XStep 8
+   /YStep 8
+   /PaintProc
+     { pop
+       1 setlinewidth
+       [] 0 setdash
+       0 4 moveto
+       8 4 lineto
+       stroke
+    } bind
+>> def
+%%Page: 1 1
+%%PageOrientation: Landscape
+save
+90 rotate
+0 -841.89 translate
+27.8 274.39 786.3 539.7 rectclip
+/F /Helvetica findfont ISOEncode def
+12 initfontfac
+0 setlinecap 		% Butt caps (flat)
+0 setlinejoin		% Miter joins
+[/Pattern /DeviceRGB] setcolorspace
+0.000 0.000 0.000 setrgbcolor
+28.9 272.79 784.2 540.3 rectfill
+115.4 618.69 newpath moveto
+723.7 618.69 lineto
+723.7 618.69 lineto
+725.1 618.69 lineto
+726.5 618.59 lineto
+727.6 618.49 lineto
+729.5 618.09 lineto
+730.6 617.79 lineto
+731.7 617.49 lineto
+733 616.99 lineto
+734.5 616.29 lineto
+735.5 615.79 lineto
+736.7 615.09 lineto
+738.3 613.99 lineto
+739.2 613.29 lineto
+740.4 612.19 lineto
+741.4 611.19 lineto
+742.3 610.09 lineto
+743 609.19 lineto
+743.8 608.09 lineto
+744.5 606.89 lineto
+745.3 605.39 lineto
+745.8 604.39 lineto
+746.3 603.09 lineto
+746.6 601.99 lineto
+747 600.39 lineto
+747.3 598.79 lineto
+747.5 597.39 lineto
+747.6 595.99 lineto
+747.6 594.89 lineto
+747.6 594.89 lineto
+747.6 493.49 lineto
+747.6 493.49 lineto
+747.5 491.79 lineto
+747.4 490.39 lineto
+747.3 489.29 lineto
+747.1 488.19 lineto
+746.6 486.29 lineto
+746.2 484.99 lineto
+745.9 484.19 lineto
+745.3 482.89 lineto
+744.4 481.19 lineto
+743.8 480.19 lineto
+743 479.09 lineto
+742.3 478.19 lineto
+741.4 477.09 lineto
+740 475.79 lineto
+739.4 475.19 lineto
+738.1 474.19 lineto
+736.9 473.39 lineto
+736 472.79 lineto
+734.5 471.99 lineto
+733 471.29 lineto
+732.2 470.99 lineto
+730.6 470.49 lineto
+729 470.09 lineto
+727.9 469.89 lineto
+726.5 469.69 lineto
+725.1 469.59 lineto
+723.7 469.59 lineto
+723.7 469.59 lineto
+115.4 469.59 lineto
+115.4 469.59 lineto
+114.2 469.59 lineto
+112.8 469.69 lineto
+111.2 469.89 lineto
+110.1 470.09 lineto
+108.2 470.59 lineto
+106.9 470.99 lineto
+105.6 471.49 lineto
+104.8 471.89 lineto
+103.1 472.79 lineto
+101.9 473.49 lineto
+101.2 473.99 lineto
+99.7 475.19 lineto
+99 475.79 lineto
+98 476.79 lineto
+97.1 477.79 lineto
+95.9 479.29 lineto
+95.4 479.99 lineto
+94.7 481.19 lineto
+93.8 482.89 lineto
+93.4 483.69 lineto
+92.9 484.99 lineto
+92.4 486.59 lineto
+92 488.19 lineto
+91.8 489.29 lineto
+91.6 490.69 lineto
+91.5 491.79 lineto
+91.5 493.49 lineto
+91.5 493.49 lineto
+91.5 594.89 lineto
+91.5 594.89 lineto
+91.5 595.99 lineto
+91.6 597.39 lineto
+91.8 599.29 lineto
+92.1 600.69 lineto
+92.3 601.49 lineto
+92.8 603.09 lineto
+93.3 604.39 lineto
+94 605.89 lineto
+94.4 606.69 lineto
+95.4 608.29 lineto
+95.9 608.99 lineto
+97.1 610.49 lineto
+97.7 611.19 lineto
+98.6 612.19 lineto
+99.9 613.29 lineto
+101.2 614.29 lineto
+101.9 614.79 lineto
+103.3 615.69 lineto
+104.3 616.19 lineto
+105.6 616.79 lineto
+107.4 617.49 lineto
+108.7 617.89 lineto
+109.8 618.19 lineto
+110.9 618.39 lineto
+112.3 618.59 lineto
+113.7 618.69 lineto
+closepath
+fill
+1.5 setlinewidth
+0.000 1.000 1.000 setrgbcolor
+115.4 618.69 723.7 618.69 line
+724.228 595.32 23.3761 91 -1 newpath arcn stroke
+747.6 594.89 747.6 493.49 line
+724.161 493.029 23.4434 1 -91 newpath arcn stroke
+723.7 469.59 115.4 469.59 line
+114.939 493.029 23.4434 271 179 newpath arcn stroke
+91.5 493.49 91.5 594.89 line
+114.872 595.32 23.3761 181 89 newpath arcn stroke
+35.7855 textsize
+419.5 624.69 0 1 0 4 (norg) text
+419.5 463.69 0 1 2 20 (nor_gate worklib\(sv\)) text
+61.7 559.09 91.5 559.09 line
+29.8213 textsize
+85.5 564.99 0 2 0 3 (a=1) text
+61.7 499.49 91.5 499.49 line
+85.5 505.39 0 2 0 3 (b=1) text
+777.4 529.29 747.6 529.29 line
+753.5 535.19 0 0 0 3 (c=0) text
+121.3 559.09 91.5 559.09 line
+97.5 564.99 0 0 0 1 (a) text
+121.3 499.49 91.5 499.49 line
+97.5 505.39 0 0 0 1 (b) text
+717.7 529.29 747.6 529.29 line
+741.6 535.19 0 2 0 1 (c) text
+0.000 0.000 0.000 setrgbcolor
+580.6 529.29 23.8 filledcircle
+0.000 1.000 1.000 setrgbcolor
+0.000 0.000 0.000 setrgbcolor
+479.2 529.29 newpath moveto
+479.2 565.09 lineto
+568.7 529.29 lineto
+479.2 493.49 lineto
+closepath
+fill
+0.000 1.000 1.000 setrgbcolor
+0.000 1.000 0.000 setrgbcolor
+580.6 529.29 23.8 circle
+479.2 529.29 newpath moveto
+479.2 565.09 lineto
+568.7 529.29 lineto
+479.2 493.49 lineto
+closepath
+stroke
+449.3 529.29 479.2 529.29 line
+628.3 529.29 592.5 529.29 line
+598.5 532.29 0 0 0 3 (c=0) text
+0.000 0.000 0.000 setrgbcolor
+240.6 573.99 newpath moveto
+243.2 571.69 lineto
+245.7 569.19 lineto
+247.6 567.09 lineto
+250.2 563.79 lineto
+252.2 560.89 lineto
+254 557.89 lineto
+255.9 554.19 lineto
+256.8 552.19 lineto
+258.1 548.89 lineto
+259.5 544.29 lineto
+260.2 541.49 lineto
+260.9 537.39 lineto
+261.3 533.89 lineto
+261.4 531.69 lineto
+261.4 526.89 lineto
+261.3 524.69 lineto
+260.9 521.19 lineto
+260.2 517.09 lineto
+259.5 514.29 lineto
+258.1 509.69 lineto
+256.8 506.39 lineto
+255.9 504.39 lineto
+254 500.69 lineto
+252.2 497.69 lineto
+250.2 494.79 lineto
+247.6 491.49 lineto
+245.7 489.39 lineto
+243.2 486.89 lineto
+240.6 484.59 lineto
+240.6 484.59 lineto
+285.3 484.59 lineto
+285.3 484.59 lineto
+291.3 485.19 lineto
+296.1 485.99 lineto
+302 487.29 lineto
+309.9 489.69 lineto
+313.4 490.99 lineto
+318.9 493.39 lineto
+324.3 496.09 lineto
+329.5 499.09 lineto
+336.3 503.79 lineto
+340.1 506.79 lineto
+344.6 510.79 lineto
+349.6 515.89 lineto
+352.1 518.69 lineto
+356.5 524.29 lineto
+359.9 529.29 lineto
+359.9 529.29 lineto
+356.5 534.29 lineto
+352.1 539.89 lineto
+349.6 542.69 lineto
+344.6 547.79 lineto
+340.1 551.79 lineto
+336.3 554.79 lineto
+329.5 559.49 lineto
+324.3 562.49 lineto
+318.9 565.19 lineto
+313.4 567.59 lineto
+309.9 568.89 lineto
+302 571.29 lineto
+296.1 572.59 lineto
+291.3 573.39 lineto
+285.3 573.99 lineto
+285.3 573.99 lineto
+closepath
+fill
+0.000 1.000 0.000 setrgbcolor
+203.179 529.29 58.2961 50 -50 newpath arcn stroke
+240.6 484.59 285.3 484.59 line
+277.88 581.574 97.2674 -86 -33 newpath arc stroke
+277.88 477.006 97.2674 33 86 newpath arc stroke
+285.3 573.99 240.6 573.99 line
+210.8 559.09 252.5 559.09 line
+237.6 562.09 0 2 0 3 (a=1) text
+210.8 499.49 252.5 499.49 line
+237.6 502.49 0 2 0 3 (b=1) text
+389.7 529.29 359.9 529.29 line
+0.400 0.400 0.400 setrgbcolor
+389.7 529.29 449.3 529.29 line
+121.3 559.09 210.8 559.09 line
+121.3 499.49 210.8 499.49 line
+628.3 529.29 717.7 529.29 line
+restore
+showpage
+%%Trailer
+end
+%%Pages: 1
+%%EOF

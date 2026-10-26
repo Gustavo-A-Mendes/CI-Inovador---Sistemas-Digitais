@@ -1,0 +1,48 @@
+$date
+    Oct 26, 2026  09:21:40
+$end
+$version
+    TOOL:	xmsim(64)	24.09-s001
+$end
+$timescale
+    1 ps
+$end
+
+$scope module testbench $end
+$var parameter 32 !    N $end
+$var reg       1 "    a $end
+$var reg       1 #    b $end
+$var reg       1 $    s $end
+$var reg       2 %    memory[0] [1:0] $end
+$var reg       2 &    memory[1] [1:0] $end
+$var reg       2 '    memory[2] [1:0] $end
+$var reg       2 (    memory[3] [1:0] $end
+$var integer  32 )    i $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b100 !
+0"
+0#
+0$
+b0 %
+b1 &
+b10 '
+b11 (
+b0 )
+$end
+#2000
+b1 )
+1#
+1$
+#4000
+b10 )
+1"
+0#
+#6000
+b11 )
+1#
+0$
+#8000
+b100 )

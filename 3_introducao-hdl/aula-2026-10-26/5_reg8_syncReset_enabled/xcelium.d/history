@@ -1,0 +1,13 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(26Oct2026:12:50:41):( xrun +access+rw reg8.sv reg8_tb.sv )&&(./xcelium.d/env.d/env.history.26Oct2026_12_50_41)
+s2::(26Oct2026:12:50:58):( xrun +access+rw reg8_tb.sv reg8.sv )&&(./xcelium.d/env.d/env.history.26Oct2026_12_50_58)
+s3::(26Oct2026:12:51:43):( xrun +access+rw reg8_tb.sv reg8.sv -gui )&&(./xcelium.d/env.d/env.history.26Oct2026_12_51_43)
+s4::(26Oct2026:12:55:05):( xrun +access+rw reg8_tb.sv reg8.sv )&&(./xcelium.d/env.d/env.history.26Oct2026_12_55_05)
+s5::(26Oct2026:12:56:40):( xrun +access+rw reg8_tb.sv reg8.sv )&&(./xcelium.d/env.d/env.history.26Oct2026_12_56_40)
+s6::(26Oct2026:12:57:16):( xrun +access+rw reg8_tb.sv reg8.sv -gui )&&(./xcelium.d/env.d/env.history.26Oct2026_12_57_16)
+s7::(26Oct2026:12:57:30):( xrun +access+rw reg8_tb.sv reg8.sv )&&(./xcelium.d/env.d/env.history.26Oct2026_12_57_30)
+s8::(26Oct2026:13:14:51):( xrun +access+rw reg8_tb.sv reg8.sv )&&(./xcelium.d/env.d/env.history.26Oct2026_13_14_51)
+s9::(26Oct2026:13:19:28):( xrun +access+rw reg8_tb.sv reg8.sv )&&(./xcelium.d/env.d/env.history.26Oct2026_13_19_28)

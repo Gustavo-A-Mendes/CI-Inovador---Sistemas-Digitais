@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++access+rw
+reg8_tb.sv
+reg8.sv
+-gui

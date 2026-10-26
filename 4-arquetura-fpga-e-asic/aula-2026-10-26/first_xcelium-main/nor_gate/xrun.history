@@ -1,0 +1,8 @@
+#e1(26Oct2026:14:38:10): source ./xcelium.d/env.d/env.history.26Oct2026_14_38_10
+s1(26Oct2026:14:38:10):  xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r 
+#e2(26Oct2026:14:47:51): source ./xcelium.d/env.d/env.history.26Oct2026_14_47_51
+s2(26Oct2026:14:47:51):  xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r 
+#e3(26Oct2026:15:24:01): source ./xcelium.d/env.d/env.history.26Oct2026_15_24_01
+s3(26Oct2026:15:24:01):  xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r 
+#e4(26Oct2026:15:41:50): source ./xcelium.d/env.d/env.history.26Oct2026_15_41_50
+s4(26Oct2026:15:41:50):  xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r 

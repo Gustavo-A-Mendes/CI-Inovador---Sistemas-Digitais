@@ -1,0 +1,14 @@
+#e1(26Oct2026:13:48:53): source ./xcelium.d/env.d/env.history.26Oct2026_13_48_53
+s1(26Oct2026:13:48:53):  xrun -64bit andgate_tb.sv andgate.sv 
+#e2(26Oct2026:13:49:36): source ./xcelium.d/env.d/env.history.26Oct2026_13_49_36
+s2(26Oct2026:13:49:36):  xrun -64bit andgate_tb.sv andgate.sv +gui +access+r 
+#e3(26Oct2026:13:57:06): source ./xcelium.d/env.d/env.history.26Oct2026_13_57_06
+s3(26Oct2026:13:57:06):  xrun -64bit andgate_tb.sv andgate.sv +gui +access+r 
+#e4(26Oct2026:15:01:23): source ./xcelium.d/env.d/env.history.26Oct2026_15_01_23
+s4(26Oct2026:15:01:23):  xrun -64bit andgate_tb.sv andgate.sv +gui +access+r 
+#e5(26Oct2026:15:01:57): source ./xcelium.d/env.d/env.history.26Oct2026_15_01_57
+s5(26Oct2026:15:01:57):  xrun -64bit and_gate_tb.sv and_gate.sv +gui +access+r 
+#e6(26Oct2026:15:19:43): source ./xcelium.d/env.d/env.history.26Oct2026_15_19_43
+s6(26Oct2026:15:19:43):  xrun -64bit and_gate_tb.sv and_gate.sv +gui +access+r 
+#e7(26Oct2026:16:14:31): source ./xcelium.d/env.d/env.history.26Oct2026_16_14_31
+s7(26Oct2026:16:14:31):  xrun -64bit and_gate_tb.sv and_gate.sv +gui +access+r 

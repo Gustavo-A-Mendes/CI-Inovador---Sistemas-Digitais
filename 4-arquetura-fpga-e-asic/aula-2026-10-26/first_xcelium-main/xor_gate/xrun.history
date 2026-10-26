@@ -1,0 +1,6 @@
+#e1(26Oct2026:15:28:45): source ./xcelium.d/env.d/env.history.26Oct2026_15_28_45
+s1(26Oct2026:15:28:45):  xrun -64bit xor_gate_tb.sv xor_gate.sv +gui +access+r 
+#e2(26Oct2026:15:33:27): source ./xcelium.d/env.d/env.history.26Oct2026_15_33_27
+s2(26Oct2026:15:33:27):  xrun -64bit xor_gate_tb.sv xor_gate.sv +gui +access+r 
+#e3(26Oct2026:15:35:11): source ./xcelium.d/env.d/env.history.26Oct2026_15_35_11
+s3(26Oct2026:15:35:11):  xrun -64bit xor_gate_tb.sv xor_gate.sv +gui +access+r 

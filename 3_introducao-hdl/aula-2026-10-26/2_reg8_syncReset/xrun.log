@@ -1,0 +1,54 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 13:08:31 -03
+xrun
+	+access+rw
+	reg8_tb.sv
+	reg8.sv
+Recompiling... reason: file './reg8_tb.sv' is newer than expected.
+	expected: Mon Oct 26 13:07:53 2026
+	actual:   Mon Oct 26 13:08:28 2026
+file: reg8_tb.sv
+	module worklib.reg8_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		reg8_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.reg8_tb:sv <0x0d5da93d>
+			streams:   7, words: 12067
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               5       5
+		Scalar wires:            2       -
+		Vectored wires:          3       -
+		Always blocks:           2       2
+		Initial blocks:          1       1
+		Pseudo assignments:      4       -
+		Process Clocks:          1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.reg8_tb:sv
+Loading snapshot worklib.reg8_tb:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+[0] clk = 0 | rst = 1 | d = 0x00 (00000000) | q = 0xxx (xxxxxxxx)
+[2000] clk = 0 | rst = 1 | d = 0xff (11111111) | q = 0xxx (xxxxxxxx)
+[5000] clk = 1 | rst = 1 | d = 0xff (11111111) | q = 0x00 (00000000)
+[10000] clk = 0 | rst = 0 | d = 0xa5 (10100101) | q = 0x00 (00000000)
+[15000] clk = 1 | rst = 0 | d = 0xa5 (10100101) | q = 0xa5 (10100101)
+[19000] clk = 1 | rst = 0 | d = 0x3c (00111100) | q = 0xa5 (10100101)
+[20000] clk = 0 | rst = 0 | d = 0x3c (00111100) | q = 0xa5 (10100101)
+[25000] clk = 1 | rst = 0 | d = 0x3c (00111100) | q = 0x3c (00111100)
+[30000] clk = 0 | rst = 1 | d = 0x3c (00111100) | q = 0x3c (00111100)
+[35000] clk = 1 | rst = 1 | d = 0x3c (00111100) | q = 0x00 (00000000)
+[40000] clk = 0 | rst = 1 | d = 0x3c (00111100) | q = 0x00 (00000000)
+[45000] clk = 1 | rst = 1 | d = 0x3c (00111100) | q = 0x00 (00000000)
+--- Simulação Concluída com Sucesso ---
+Simulation complete via $finish(1) at time 46 NS + 0
+./reg8_tb.sv:76     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 13:08:31 -03  (total: 00:00:00)

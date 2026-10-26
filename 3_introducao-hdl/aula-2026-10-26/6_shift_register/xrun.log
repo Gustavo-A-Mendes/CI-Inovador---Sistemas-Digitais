@@ -1,0 +1,51 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 12:01:22 -03
+xrun
+	+access+rw
+	shift_register_tb.sv
+	shift_register.sv
+file: shift_register_tb.sv
+	module worklib.shift_register8_tb:sv
+		errors: 0, warnings: 0
+file: shift_register.sv
+	module worklib.shift_register8:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		shift_register8_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.shift_register8:sv <0x2f4328d4>
+			streams:   2, words:   828
+		worklib.shift_register8_tb:sv <0x23e044a6>
+			streams:  10, words: 19878
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               9       9
+		Scalar wires:            6       -
+		Vectored wires:          3       -
+		Always blocks:           2       2
+		Initial blocks:          1       1
+		Pseudo assignments:      8       -
+		Process Clocks:          1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.shift_register8_tb:sv
+Loading snapshot worklib.shift_register8_tb:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+[15000] Reset liberado. q = 00000000 (Esperado: 00000000)
+[36000] Carga paralela: q = 10101100 (Esperado: 10101100)
+[56000] Desloca Direita (in=1): q = 11101011 (Esperado: 11010110)
+[66000] Desloca Direita (in=0): q = 01110101 (Esperado: 01101011)
+[76000] Desloca Esquerda (in=1): q = 11101011 (Esperado: 11010111)
+[86000] Teste Prioridade (en=1, parallel_en=1): q = 01110101 (Esperado: 01101011)
+[96000] Carga Paralela com en=0: q = 11110000 (Esperado: 11110000)
+--- Fim da Simulação ---
+Simulation complete via $finish(1) at time 116 NS + 0
+./shift_register_tb.sv:114     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 12:01:24 -03  (total: 00:00:02)

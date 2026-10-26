@@ -1,0 +1,22 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 12:57:30 -03
+xrun
+	+access+rw
+	reg8_tb.sv
+	reg8.sv
+Loading snapshot worklib.reg8_tb:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+[0] clk = 0 | Entrada d = 0x00 (00000000) | Saída q = 0xxx (xxxxxxxx)
+[2000] clk = 0 | Entrada d = 0xaa (10101010) | Saída q = 0xxx (xxxxxxxx)
+[5000] clk = 1 | Entrada d = 0xaa (10101010) | Saída q = 0xaa (10101010)
+[9000] clk = 1 | Entrada d = 0x55 (01010101) | Saída q = 0xaa (10101010)
+[10000] clk = 0 | Entrada d = 0x55 (01010101) | Saída q = 0xaa (10101010)
+[15000] clk = 1 | Entrada d = 0x55 (01010101) | Saída q = 0x55 (01010101)
+[20000] clk = 0 | Entrada d = 0xff (11111111) | Saída q = 0x55 (01010101)
+[25000] clk = 1 | Entrada d = 0xff (11111111) | Saída q = 0xff (11111111)
+--- Simulação Concluída com Sucesso ---
+Simulation complete via $finish(1) at time 30 NS + 0
+./reg8_tb.sv:52     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 12:57:30 -03  (total: 00:00:00)

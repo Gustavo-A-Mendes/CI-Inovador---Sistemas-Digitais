@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++access+rw
+xor_gate_tb.sv
+xor_gate.sv
+-timescale
+1ns/1ps

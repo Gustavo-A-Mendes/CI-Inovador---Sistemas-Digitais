@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-64bit
+and_gate_tb.sv
+and_gate.sv
++gui
++access+r

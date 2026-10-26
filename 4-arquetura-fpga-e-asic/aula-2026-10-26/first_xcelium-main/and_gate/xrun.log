@@ -1,0 +1,34 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 16:14:31 -03
+xrun
+	-64bit
+	and_gate_tb.sv
+	and_gate.sv
+	+gui
+	+access+r
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm and_gate_tb.a and_gate_tb.b and_gate_tb.c
+Created probe 1
+xcelium> run
+                Tempo   Entradas    Saídas
+                         a    b       c
+                ====   ==========  =======
+                   0     0    0       0
+                   5     0    1       0
+                  10     1    0       0
+                  15     1    1       1
+Simulation complete via $finish(1) at time 20 NS + 0
+./and_gate_tb.sv:26       $finish;
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> ps2pdf and_waveform.ps
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 16:15:32 -03  (total: 00:01:01)

@@ -1,0 +1,10 @@
+#e1(26Oct2026:14:27:33): source ./xcelium.d/env.d/env.history.26Oct2026_14_27_33
+s1(26Oct2026:14:27:33):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r 
+#e2(26Oct2026:14:30:15): source ./xcelium.d/env.d/env.history.26Oct2026_14_30_15
+s2(26Oct2026:14:30:15):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r 
+#e3(26Oct2026:15:05:18): source ./xcelium.d/env.d/env.history.26Oct2026_15_05_18
+s3(26Oct2026:15:05:18):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r 
+#e4(26Oct2026:15:21:14): source ./xcelium.d/env.d/env.history.26Oct2026_15_21_14
+s4(26Oct2026:15:21:14):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r 
+#e5(26Oct2026:16:13:28): source ./xcelium.d/env.d/env.history.26Oct2026_16_13_28
+s5(26Oct2026:16:13:28):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r 

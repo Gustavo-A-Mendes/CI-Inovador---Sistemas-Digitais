@@ -1,0 +1,44 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 09:21:34 -03
+xrun
+	+access+rw
+	xor_gate_tb.sv
+	xor_gate.sv
+	-timescale 1ns/1ps
+Recompiling... reason: file './xor_gate_tb.sv' is newer than expected.
+	expected: Mon Oct 26 09:11:51 2026
+	actual:   Mon Oct 26 09:15:29 2026
+file: xor_gate_tb.sv
+	module worklib.testbench:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		testbench
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.testbench:sv <0x0f29f84a>
+			streams:   6, words:  5307
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               6       6
+		Scalar wires:            5       -
+		Initial blocks:          2       2
+		Cont. assignments:       1       1
+		Pseudo assignments:      3       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.testbench:sv
+Loading snapshot worklib.testbench:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+Tempo = 0.000000 | a = 0 	 b = 0 	 s = 0
+Tempo = 2.000000 | a = 0 	 b = 1 	 s = 1
+Tempo = 4.000000 | a = 1 	 b = 0 	 s = 1
+Tempo = 6.000000 | a = 1 	 b = 1 	 s = 0
+Simulation complete via $finish(1) at time 8 NS + 0
+./xor_gate_tb.sv:25     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 09:21:40 -03  (total: 00:00:06)
