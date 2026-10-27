@@ -6,7 +6,6 @@
 ./xcelium.d/run.lnx8664.24.09.d
 -RUNMODE
 xor_gate_tb.sv
-xor_gate.sv
 -CDSLIB
 ./xcelium.d/run.lnx8664.24.09.d/cdsrun.lib
 -HDLVAR

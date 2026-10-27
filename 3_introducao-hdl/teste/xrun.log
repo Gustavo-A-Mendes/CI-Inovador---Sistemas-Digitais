@@ -1,22 +1,17 @@
 xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 09:21:34 -03
+TOOL:	xrun(64)	24.09-s001: Started on Oct 27, 2026 at 09:02:31 -03
 xrun
-	+access+rw
+	-64bit
 	xor_gate_tb.sv
-	xor_gate.sv
-	-timescale 1ns/1ps
-Recompiling... reason: file './xor_gate_tb.sv' is newer than expected.
-	expected: Mon Oct 26 09:11:51 2026
-	actual:   Mon Oct 26 09:15:29 2026
-file: xor_gate_tb.sv
-	module worklib.testbench:sv
-		errors: 0, warnings: 0
+	+access+rw
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
 		testbench
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
+		worklib.xor_gate:sv <0x5aa0931d>
+			streams:   1, words:   199
 		worklib.testbench:sv <0x0f29f84a>
 			streams:   6, words:  5307
 	Building instance specific data structures.
@@ -39,6 +34,6 @@ Tempo = 2.000000 | a = 0 	 b = 1 	 s = 1
 Tempo = 4.000000 | a = 1 	 b = 0 	 s = 1
 Tempo = 6.000000 | a = 1 	 b = 1 	 s = 0
 Simulation complete via $finish(1) at time 8 NS + 0
-./xor_gate_tb.sv:25     $finish;
+./xor_gate_tb.sv:27     $finish;
 xcelium> exit
-TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 09:21:40 -03  (total: 00:00:06)
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 27, 2026 at 09:02:32 -03  (total: 00:00:01)

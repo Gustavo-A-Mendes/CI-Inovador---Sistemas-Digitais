@@ -1,0 +1,90 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.clk}]}
+	} ]]
+waveform format $id -namecolor #99ff00
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.reset}]}
+	} ]]
+waveform format $id -namecolor #99ff00
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.lr}]}
+	} ]]
+waveform format $id -namecolor #99ff00
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.up_down}]}
+	} ]]
+waveform format $id -namecolor #99ff00
+set id [waveform add -signals [subst  {
+	{[format {signed(tb_top_level.data_in)}]}
+	} ]]
+waveform format $id -radix %d -color #00ffff -namecolor #00ffff
+set id [waveform add -signals [subst  {
+	{[format {signed(tb_top_level.uut.reg_lr_out)}]}
+	} ]]
+waveform format $id -radix %d -color #00ffff -namecolor #00ffff
+set id [waveform add -signals [subst  {
+	{[format {signed(tb_top_level.uut.count)}]}
+	} ]]
+waveform format $id -radix %d -color #00ffff -namecolor #00ffff
+set id [waveform add -signals [subst  {
+	{[format {signed(tb_top_level.uut.add_out)}]}
+	} ]]
+waveform format $id -radix %d -color #ff00ff -namecolor #ff00ff
+set id [waveform add -signals [subst  {
+	{[format {signed(tb_top_level.uut.sub_out)}]}
+	} ]]
+waveform format $id -radix %d -color #ff00ff -namecolor #ff00ff
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.sel}]}
+	} ]]
+waveform format $id -namecolor #99ff00
+set id [waveform add -signals [subst  {
+	{[format {signed(tb_top_level.uut.mux_out)}]}
+	} ]]
+waveform format $id -radix %d -color #ff00ff -namecolor #ff00ff
+set id [waveform add -signals [subst  {
+	{[format {signed(tb_top_level.uut.reg_mux_out)}]}
+	} ]]
+waveform format $id -radix %d -color #ff00ff -namecolor #ff00ff
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.uut.bcd_7seg[1:0]}]}
+	} ]]
+waveform format $id -color #ffff00 -namecolor #ffff00
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -radix %b -color #ffff00 -namecolor #ffff00
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -radix %b -color #ffff00 -namecolor #ffff00
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.uut.reg_7seg_out[1:0]}]}
+	} ]]
+waveform format $id -color #ffff00 -namecolor #ffff00
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -radix %b -color #ffff00 -namecolor #ffff00
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -radix %b -color #ffff00 -namecolor #ffff00
+set id [waveform add -signals [subst  {
+	{[format {tb_top_level.display[1:0]}]}
+	} ]]
+waveform format $id -color #ff9900 -namecolor #ff9900
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -radix %b -color #ff9900 -namecolor #ff9900
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -radix %b -color #ff9900 -namecolor #ff9900
+
+waveform xview limits 0 230000ps

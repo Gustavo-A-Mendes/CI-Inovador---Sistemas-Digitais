@@ -6,3 +6,5 @@ s2(26Oct2026:15:22:12):  xrun -64bit nand_gate_tb.sv nand_gate.sv +gui +access+r
 s3(26Oct2026:15:47:32):  xrun -64bit nand_gate_tb.sv nand_gate.sv +gui +access+r 
 #e4(26Oct2026:15:54:09): source ./xcelium.d/env.d/env.history.26Oct2026_15_54_09
 s4(26Oct2026:15:54:09):  xrun -64bit nand_gate_tb.sv nand_gate.sv +gui +access+r 
+#e5(27Oct2026:11:29:00): source ./xcelium.d/env.d/env.history.27Oct2026_11_29_00
+s5(27Oct2026:11:29:00):  xrun -64bit nand_gate_tb.sv nand_gate.sv +access+r +gui 

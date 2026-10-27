@@ -8,3 +8,5 @@ s3(26Oct2026:15:05:18):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r
 s4(26Oct2026:15:21:14):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r 
 #e5(26Oct2026:16:13:28): source ./xcelium.d/env.d/env.history.26Oct2026_16_13_28
 s5(26Oct2026:16:13:28):  xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r 
+#e6(27Oct2026:11:13:44): source ./xcelium.d/env.d/env.history.27Oct2026_11_13_44
+s6(27Oct2026:11:13:44):  xrun -64bit inv_gate_tb.sv inv_gate.sv +access+r +gui 

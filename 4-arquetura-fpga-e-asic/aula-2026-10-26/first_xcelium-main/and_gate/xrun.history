@@ -12,3 +12,5 @@ s5(26Oct2026:15:01:57):  xrun -64bit and_gate_tb.sv and_gate.sv +gui +access+r
 s6(26Oct2026:15:19:43):  xrun -64bit and_gate_tb.sv and_gate.sv +gui +access+r 
 #e7(26Oct2026:16:14:31): source ./xcelium.d/env.d/env.history.26Oct2026_16_14_31
 s7(26Oct2026:16:14:31):  xrun -64bit and_gate_tb.sv and_gate.sv +gui +access+r 
+#e8(27Oct2026:11:11:49): source ./xcelium.d/env.d/env.history.27Oct2026_11_11_49
+s8(27Oct2026:11:11:49):  xrun -64bit and_gate_tb.sv and_gate.sv +access+r +gui 

@@ -1,11 +1,11 @@
 xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 16:14:31 -03
+TOOL:	xrun(64)	24.09-s001: Started on Oct 27, 2026 at 11:11:48 -03
 xrun
 	-64bit
 	and_gate_tb.sv
 	and_gate.sv
-	+gui
 	+access+r
+	+gui
 xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
 
 -------------------------------------
@@ -26,9 +26,6 @@ xcelium> run
                   15     1    1       1
 Simulation complete via $finish(1) at time 20 NS + 0
 ./and_gate_tb.sv:26       $finish;
-xcelium> run
-xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
-xcelium> ps2pdf and_waveform.ps
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 16:15:32 -03  (total: 00:01:01)
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 27, 2026 at 11:13:28 -03  (total: 00:01:40)

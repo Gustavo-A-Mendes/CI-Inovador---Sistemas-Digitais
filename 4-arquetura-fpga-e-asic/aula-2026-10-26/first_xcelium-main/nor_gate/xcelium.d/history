@@ -6,3 +6,5 @@ s1::(26Oct2026:14:38:10):( xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r
 s2::(26Oct2026:14:47:51):( xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_14_47_51)
 s3::(26Oct2026:15:24:01):( xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_24_01)
 s4::(26Oct2026:15:41:50):( xrun -64bit nor_gate_tb.sv nor_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_41_50)
+s5::(27Oct2026:11:17:21):( xrun -64bit nor_gate_tb.sv nor_gate.sv +access+r +gui )&&(./xcelium.d/env.d/env.history.27Oct2026_11_17_21)
+s6::(27Oct2026:11:21:56):( xrun -64bit nor_gate_tb.sv nor_gate.sv +access+r +gui )&&(./xcelium.d/env.d/env.history.27Oct2026_11_21_56)

@@ -1,6 +1,6 @@
 // Code your design here
 module xor_gate(a, b, s);
-    input a, b;
+    input logic a, b;
     output logic s;
   
     assign s = a ^ b;

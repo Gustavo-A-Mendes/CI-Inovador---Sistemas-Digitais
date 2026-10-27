@@ -1,0 +1,150 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 27, 2026 at 15:27:21 -03
+xrun
+	-64bit
+	testbench.sv
+	design.sv
+	+access+rw
+	+gui
+Recompiling... reason: file './design.sv' is newer than expected.
+	expected: Tue Oct 27 14:25:24 2026
+	actual:   Tue Oct 27 15:27:18 2026
+file: design.sv
+	module worklib.nibble_to_7seg:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_top_level
+    .seg_7(bcd_7seg[0])
+                  |
+xmelab: *W,CUVMPW (./design.sv,66|18): port sizes differ in port connection(8/7) for the instance(tb_top_level.uut) .
+    .seg_7(bcd_7seg[1])
+                  |
+xmelab: *W,CUVMPW (./design.sv,71|18): port sizes differ in port connection(8/7) for the instance(tb_top_level.uut) .
+    .q(reg_7seg_out[0])
+                  |
+xmelab: *W,CUVMPW (./design.sv,79|18): port sizes differ in port connection(7/8) for the instance(tb_top_level.uut) .
+    .q(reg_7seg_out[1])
+                  |
+xmelab: *W,CUVMPW (./design.sv,86|18): port sizes differ in port connection(7/8) for the instance(tb_top_level.uut) .
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.reg8:sv <0x7a2f79f3>
+			streams:   2, words:   610
+		worklib.nibble_to_7seg:sv <0x768fb85d>
+			streams:   1, words:  3183
+		worklib.top_level:sv <0x596283cc>
+			streams:   3, words:   669
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                12       9
+		Registers:              12      10
+		Scalar wires:            7       -
+		Expanded wires:         30       4
+		Vectored wires:         12       -
+		Always blocks:           6       4
+		Initial blocks:          1       1
+		Cont. assignments:       7       6
+		Pseudo assignments:      8       -
+		Process Clocks:          5       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_top_level:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_top_level.clk tb_top_level.data_in tb_top_level.display tb_top_level.lr tb_top_level.reset tb_top_level.sel tb_top_level.up_down tb_top_level.uut.add_out tb_top_level.uut.bcd_7seg tb_top_level.uut.count tb_top_level.uut.display tb_top_level.uut.lr tb_top_level.uut.mux_out tb_top_level.uut.reg_7seg_out tb_top_level.uut.reg_lr_out tb_top_level.uut.reg_mux_out tb_top_level.uut.reset tb_top_level.uut.sel tb_top_level.uut.sub_out tb_top_level.uut.up_down
+Created probe 1
+xcelium> run
+Tempo=0 ns | Reset=1 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'bxxxxxxx | Disp0=7'bxxxxxxx
+Tempo=5000 ns | Reset=1 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'b0000000 | Disp0=7'b0000000
+Tempo=20000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'b0000000 | Disp0=7'b0000000
+Tempo=25000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'b0111111 | Disp0=7'b0111111
+Tempo=30000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b0111111
+Tempo=45000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b0000110
+Tempo=55000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b0000111
+Tempo=65000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1111111
+Tempo=75000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1101111
+Tempo=85000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1110111
+Tempo=90000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1110111
+Tempo=95000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1111100
+Tempo=105000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1011011
+Tempo=115000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1001111
+Tempo=125000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=130000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=135000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1101101
+Tempo=145000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1111101
+Tempo=155000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1101101
+Tempo=165000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=170000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=175000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b0111111 | Disp0=7'b1001111
+Tempo=185000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b0111111 | Disp0=7'b1011011
+Tempo=195000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b0000111
+Tempo=205000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b1111101
+Tempo=215000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b1101101
+Tempo=225000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b1100110
+Simulação concluída com sucesso.
+Simulation complete via $finish(1) at time 230 NS + 0
+./testbench.sv:79     $finish;
+xcelium> ps2pdf rtl_waveform.ps
+xmsim: *E,TCLERR: Error: /undefinedfilename in (rtl_waveform.ps)
+Operand stack:
+
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push
+Dictionary stack:
+   --dict:733/1123(ro)(G)--   --dict:0/20(G)--   --dict:75/200(L)--
+Current allocation mode is local
+Last OS error: No such file or directory
+GPL Ghostscript 9.54.0: Unrecoverable error, exit code 1.
+    while executing
+"exec /bin/ps2pdf rtl_waveform.ps"
+    invoked from within
+"ps2pdf rtl_waveform.ps"
+xcelium> ps2pdf RTL_waveform.ps
+xcelium> ps2pdf RTL_waveform.ps
+xcelium> probe -create -shm tb_top_level.uut.clk tb_top_level.uut.data_in
+Created probe 2
+xcelium> reset
+Loaded snapshot worklib.tb_top_level:sv
+xcelium> run
+Tempo=0 ns | Reset=1 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'bxxxxxxx | Disp0=7'bxxxxxxx
+Tempo=5000 ns | Reset=1 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'b0000000 | Disp0=7'b0000000
+Tempo=20000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'b0000000 | Disp0=7'b0000000
+Tempo=25000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x00 | Disp1=7'b0111111 | Disp0=7'b0111111
+Tempo=30000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b0111111
+Tempo=45000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b0000110
+Tempo=55000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b0000111
+Tempo=65000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1111111
+Tempo=75000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1101111
+Tempo=85000 ns | Reset=0 | Count_Dir=  UP | Sel=ADD | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1110111
+Tempo=90000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1110111
+Tempo=95000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1111100
+Tempo=105000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1011011
+Tempo=115000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1001111
+Tempo=125000 ns | Reset=0 | Count_Dir=  UP | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=130000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=135000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1101101
+Tempo=145000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1111101
+Tempo=155000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1101101
+Tempo=165000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x05 | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=170000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b0111111 | Disp0=7'b1100110
+Tempo=175000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b0111111 | Disp0=7'b1001111
+Tempo=185000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b0111111 | Disp0=7'b1011011
+Tempo=195000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b0000111
+Tempo=205000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b1111101
+Tempo=215000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b1101101
+Tempo=225000 ns | Reset=0 | Count_Dir=DOWN | Sel=SUB | Data_In=0x0f | Disp1=7'b1110001 | Disp0=7'b1100110
+Simulação concluída com sucesso.
+Simulation complete via $finish(1) at time 230 NS + 0
+./testbench.sv:79     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 27, 2026 at 17:19:56 -03  (total: 01:52:35)

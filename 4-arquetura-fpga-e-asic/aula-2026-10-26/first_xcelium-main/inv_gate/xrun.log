@@ -1,11 +1,11 @@
 xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 16:13:28 -03
+TOOL:	xrun(64)	24.09-s001: Started on Oct 27, 2026 at 11:13:44 -03
 xrun
 	-64bit
 	inv_gate_tb.sv
 	inv_gate.sv
-	+gui
 	+access+r
+	+gui
 xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
 
 -------------------------------------
@@ -26,4 +26,4 @@ Simulation complete via $finish(1) at time 10 NS + 0
 ./inv_gate_tb.sv:16       $finish;
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 16:14:04 -03  (total: 00:00:36)
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 27, 2026 at 11:14:40 -03  (total: 00:00:56)

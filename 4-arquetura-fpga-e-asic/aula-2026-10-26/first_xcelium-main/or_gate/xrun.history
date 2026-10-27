@@ -2,3 +2,5 @@
 s1(26Oct2026:15:26:27):  xrun -64bit or_gate_tb.sv or_gate.sv +gui +access+r 
 #e2(26Oct2026:15:35:49): source ./xcelium.d/env.d/env.history.26Oct2026_15_35_49
 s2(26Oct2026:15:35:49):  xrun -64bit or_gate_tb.sv or_gate.sv +gui +access+r 
+#e3(27Oct2026:11:30:35): source ./xcelium.d/env.d/env.history.27Oct2026_11_30_35
+s3(27Oct2026:11:30:35):  xrun -64bit or_gate_tb.sv or_gate.sv +access+r +gui 

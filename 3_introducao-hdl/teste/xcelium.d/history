@@ -5,3 +5,5 @@
 s1::(26Oct2026:09:14:17):( xrun +access+rw xor_gate_tb.sv xor_gate.sv -timescale 1ns/1ps )&&(./xcelium.d/env.d/env.history.26Oct2026_09_14_17)
 s2::(26Oct2026:09:14:44):( xrun +access+rw xor_gate_tb.sv xor_gate.sv -timescale 1ns/1ps -gui )&&(./xcelium.d/env.d/env.history.26Oct2026_09_14_44)
 s3::(26Oct2026:09:21:35):( xrun +access+rw xor_gate_tb.sv xor_gate.sv -timescale 1ns/1ps )&&(./xcelium.d/env.d/env.history.26Oct2026_09_21_35)
+s4::(27Oct2026:09:01:32):( xrun -64bit xor_gate_tb.sv +accescc+rw )&&(./xcelium.d/env.d/env.history.27Oct2026_09_01_32)
+s5::(27Oct2026:09:02:31):( xrun -64bit xor_gate_tb.sv +access+rw )&&(./xcelium.d/env.d/env.history.27Oct2026_09_02_31)

@@ -5,8 +5,6 @@
 +access+rw
 -ACCESS
 +rw
--timescale
-1ns/1ps
 -no_analogsolver
 -MESSAGES
 -dms_perf

@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+`include "xor_gate.sv"
+
 module testbench;
   
   parameter N = 4;

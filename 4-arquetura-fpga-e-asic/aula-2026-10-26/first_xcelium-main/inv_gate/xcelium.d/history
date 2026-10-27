@@ -7,3 +7,4 @@ s2::(26Oct2026:14:30:15):( xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r
 s3::(26Oct2026:15:05:18):( xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_05_18)
 s4::(26Oct2026:15:21:14):( xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_15_21_14)
 s5::(26Oct2026:16:13:28):( xrun -64bit inv_gate_tb.sv inv_gate.sv +gui +access+r )&&(./xcelium.d/env.d/env.history.26Oct2026_16_13_28)
+s6::(27Oct2026:11:13:44):( xrun -64bit inv_gate_tb.sv inv_gate.sv +access+r +gui )&&(./xcelium.d/env.d/env.history.27Oct2026_11_13_44)
