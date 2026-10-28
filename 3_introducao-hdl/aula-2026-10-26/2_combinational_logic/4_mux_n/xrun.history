@@ -1,0 +1,2 @@
+#e1(28Oct2026:14:58:58): source ./xcelium.d/env.d/env.history.28Oct2026_14_58_58
+s1(28Oct2026:14:58:58):  xrun -64bit mux_n_tb.sv mux_n.sv +gui +access+rw 

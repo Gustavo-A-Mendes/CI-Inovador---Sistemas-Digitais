@@ -1,0 +1,19 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 28, 2026 at 15:11:01 -03
+xrun
+	-64bit
+	LUT2_tb.sv
+	LUT2.sv
+Loading snapshot worklib.LUT2_tb:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+                Tempo   Entradas LUT    Saídas
+                         I1    I0       O
+                ====   ============  =======
+                   0     0      0       0
+                   5     0      1       0
+                  10     1      0       0
+                  15     1      1       1
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 28, 2026 at 15:11:01 -03  (total: 00:00:00)

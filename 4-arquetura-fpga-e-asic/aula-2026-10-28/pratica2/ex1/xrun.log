@@ -1,0 +1,61 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 28, 2026 at 17:13:11 -03
+xrun
+	-64bit
+	ex1_2_tb.sv
+	LUT2.sv
+Recompiling... reason: file './ex1_2_tb.sv' is newer than expected.
+	expected: Wed Oct 28 17:12:11 2026
+	actual:   Wed Oct 28 17:13:10 2026
+file: ex1_2_tb.sv
+	module worklib.LUT2_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		LUT2_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.LUT2:sv <0x64ead240>
+			streams:   2, words:   934
+		worklib.LUT2_tb:sv <0x22f94d70>
+			streams:  12, words:  8266
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       2
+		Registers:              15      11
+		Scalar wires:           12       -
+		Vectored wires:          3       -
+		Always blocks:           3       1
+		Initial blocks:          2       2
+		Cont. assignments:       3       1
+		Pseudo assignments:      9       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.LUT2_tb:sv
+Loading snapshot worklib.LUT2_tb:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+                Tempo      Entradas LUT      Saídas
+                         A    B    C    D       O  
+                ====   ====================  =======
+                   0     0    0    0    0       0
+                   5     0    0    0    1       0
+                  10     0    0    1    0       0
+                  15     0    0    1    1       1
+                  20     0    1    0    0       0
+                  25     0    1    0    1       0
+                  30     0    1    1    0       0
+                  35     0    1    1    1       1
+                  40     1    0    0    0       0
+                  45     1    0    0    1       0
+                  50     1    0    1    0       0
+                  55     1    0    1    1       1
+                  60     1    1    0    0       0
+                  65     1    1    0    1       0
+                  70     1    1    1    0       0
+                  75     1    1    1    1       0
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 28, 2026 at 17:13:11 -03  (total: 00:00:00)

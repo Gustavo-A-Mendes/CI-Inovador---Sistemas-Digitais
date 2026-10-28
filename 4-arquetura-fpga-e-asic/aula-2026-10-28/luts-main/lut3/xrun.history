@@ -1,0 +1,8 @@
+#e1(28Oct2026:15:17:05): source ./xcelium.d/env.d/env.history.28Oct2026_15_17_05
+s1(28Oct2026:15:17:05):  xrun -64bit LUT3_tb.sv LUT3.sv 
+#e2(28Oct2026:15:18:41): source ./xcelium.d/env.d/env.history.28Oct2026_15_18_41
+s2(28Oct2026:15:18:41):  xrun -64bit LUT3_tb.sv LUT3.sv 
+#e3(28Oct2026:15:24:18): source ./xcelium.d/env.d/env.history.28Oct2026_15_24_18
+s3(28Oct2026:15:24:18):  xrun -64bit LUT3_tb.sv LUT3.sv 
+#e4(28Oct2026:15:24:26): source ./xcelium.d/env.d/env.history.28Oct2026_15_24_26
+s4(28Oct2026:15:24:26):  xrun -64bit LUT3_tb.sv LUT3.sv 

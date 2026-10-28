@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-64bit
+mux_n_tb.sv
+mux_n.sv
++gui
++access+rw

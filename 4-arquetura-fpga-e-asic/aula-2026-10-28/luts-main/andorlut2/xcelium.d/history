@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(28Oct2026:15:25:15):( xrun -64bit LUT2_ANDOR_tb.sv LUT2.sv )&&(./xcelium.d/env.d/env.history.28Oct2026_15_25_15)
