@@ -1,0 +1,79 @@
+$date
+    Oct 28, 2026  11:56:20
+$end
+$version
+    TOOL:	xmsim(64)	24.09-s001
+$end
+$timescale
+    1 ps
+$end
+
+$scope module add8_tb $end
+$var reg       8 !    a [7:0] $end
+$var reg       8 "    b [7:0] $end
+$var reg       8 #    sum [7:0] $end
+$var reg       1 $    cin $end
+$var reg       1 %    cout $end
+
+$scope module add0 $end
+$var wire      8 &    a [7:0] $end
+$var wire      8 '    b [7:0] $end
+$var wire      1 (    cin  $end
+$var wire      8 )    sum [7:0] $end
+$var wire      1 *    cout  $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+bx !
+bx "
+bx #
+x$
+x%
+bx &
+bx '
+x(
+bx )
+x*
+$end
+#2000
+b0 !
+b0 "
+0$
+0(
+b0 '
+b0 &
+0*
+b0 )
+0%
+b0 #
+#12000
+b11 !
+b101 "
+1$
+1(
+b101 '
+b11 &
+b1001 )
+b1001 #
+#22000
+b11101100 !
+b101000 "
+0$
+0(
+b101000 '
+b11101100 &
+1*
+b10100 )
+1%
+b10100 #
+#32000
+b11111010 !
+b11110 "
+b11110 '
+b11111010 &
+b11000 )
+b11000 #
+#42000

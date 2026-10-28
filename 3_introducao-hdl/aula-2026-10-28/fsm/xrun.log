@@ -1,0 +1,79 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 28, 2026 at 11:04:38 -03
+xrun
+	-64bit
+	fsm_tb.sv
+	fsm.sv
+	+access+r
+	+gui
+Recompiling... reason: file './fsm.sv' is newer than expected.
+	expected: Wed Oct 28 10:53:56 2026
+	actual:   Wed Oct 28 11:04:32 2026
+file: fsm.sv
+	module worklib.moduleName:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_moduleName
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_moduleName:sv <0x7e5c9315>
+			streams:   5, words: 10539
+		worklib.moduleName:sv <0x0df0ee32>
+			streams:   3, words:  2839
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               6       6
+		Scalar wires:            4       -
+		Always blocks:           3       3
+		Initial blocks:          1       1
+		Pseudo assignments:      2       -
+		Process Clocks:          1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_moduleName:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_moduleName.clk tb_moduleName.in_A tb_moduleName.out_D tb_moduleName.rst tb_moduleName.dut.clk tb_moduleName.dut.in_A tb_moduleName.dut.next_state tb_moduleName.dut.out_D tb_moduleName.dut.rst tb_moduleName.dut.state
+Created probe 1
+xcelium> run
+Tempo: 0 | rst: 1 | in_A: 0 | out_D: 0 | Estado Interno: x
+Tempo: 5000 | rst: 1 | in_A: 0 | out_D: 0 | Estado Interno: 0
+Tempo: 15000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 0
+Tempo: 20000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 0
+Tempo: 25000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 1
+Tempo: 35000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 2
+Tempo: 40000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 2
+Tempo: 45000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 3
+Tempo: 50000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 3
+Tempo: 55000 | rst: 0 | in_A: 1 | out_D: 1 | Estado Interno: 4
+Tempo: 60000 | rst: 0 | in_A: 0 | out_D: 1 | Estado Interno: 4
+Tempo: 65000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 0
+Tempo: 70000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 0
+Tempo: 75000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 1
+Tempo: 80000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 1
+Tempo: 85000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 0
+Tempo: 90000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 0
+Tempo: 95000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 1
+Tempo: 105000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 2
+Tempo: 130000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 2
+Tempo: 135000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 3
+Tempo: 140000 | rst: 0 | in_A: 1 | out_D: 0 | Estado Interno: 3
+Tempo: 145000 | rst: 0 | in_A: 1 | out_D: 1 | Estado Interno: 4
+Tempo: 150000 | rst: 0 | in_A: 0 | out_D: 1 | Estado Interno: 4
+Tempo: 155000 | rst: 0 | in_A: 0 | out_D: 0 | Estado Interno: 0
+Simulação concluída!
+Simulation complete via $finish(1) at time 180 NS + 0
+./fsm_tb.sv:72     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 28, 2026 at 11:06:14 -03  (total: 00:01:36)

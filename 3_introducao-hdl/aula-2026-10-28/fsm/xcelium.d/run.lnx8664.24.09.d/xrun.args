@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-64bit
+fsm_tb.sv
+fsm.sv
++access+r
++gui
