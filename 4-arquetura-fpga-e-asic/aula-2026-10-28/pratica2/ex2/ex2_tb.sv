@@ -50,6 +50,8 @@ module LUT3_tb;
       $display("                         A3    A2    A1    A0     OR0 NAND0 NAND1 OR1 NAND2  O  ");
       $display("                ====   ========================  ================================");
       $monitor($time,"      %b     %b     %b     %b       %b    %b    %b    %b    %b    %b", A3, A2, A1, A0, O_OR0, O_NAND0, O_NAND1, O_OR1, O_NAND2, O);
+
+      $finish;
     end
   
 endmodule
