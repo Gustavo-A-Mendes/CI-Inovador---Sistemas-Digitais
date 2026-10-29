@@ -1,0 +1,14 @@
+#e1(29Oct2026:13:32:26): source ./xcelium.d/env.d/env.history.29Oct2026_13_32_26
+s1(29Oct2026:13:32:26):  xrun -64bit tb_mux_add_sub.sv mux_add_sub.sv 
+#e2(29Oct2026:13:32:36): source ./xcelium.d/env.d/env.history.29Oct2026_13_32_36
+s2(29Oct2026:13:32:36):  xrun -64bit tb_mux_add_sub.sv mux_add_sub.sv 
+#e3(29Oct2026:13:33:36): source ./xcelium.d/env.d/env.history.29Oct2026_13_33_36
+s3(29Oct2026:13:33:36):  xrun -64bit tb_mux_add_sub.sv mux_add_sub.sv 
+#e4(29Oct2026:13:33:40): source ./xcelium.d/env.d/env.history.29Oct2026_13_33_40
+s4(29Oct2026:13:33:40):  xrun -64bit tb_mux_add_sub.sv mux_add_sub.sv 
+#e5(29Oct2026:13:34:09): source ./xcelium.d/env.d/env.history.29Oct2026_13_34_09
+s5(29Oct2026:13:34:09):  xrun -64bit tb_mux_add_sub.sv mux_add_sub.sv 
+#e6(29Oct2026:13:35:13): source ./xcelium.d/env.d/env.history.29Oct2026_13_35_13
+s6(29Oct2026:13:35:13):  xrun -64bit tb_mux_add_sub.sv mux_add_sub.sv 
+#e7(29Oct2026:13:35:32): source ./xcelium.d/env.d/env.history.29Oct2026_13_35_32
+s7(29Oct2026:13:35:32):  xrun -64bit tb_mux_add_sub.sv mux_add_sub.sv 

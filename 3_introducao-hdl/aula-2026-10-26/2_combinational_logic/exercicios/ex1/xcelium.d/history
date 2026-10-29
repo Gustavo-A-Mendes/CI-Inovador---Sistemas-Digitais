@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(29Oct2026:17:18:42):( xrun -64bit tb_mux8_4.sv mux8_4.sv )&&(./xcelium.d/env.d/env.history.29Oct2026_17_18_42)
+s2::(29Oct2026:17:19:21):( xrun -64bit tb_mux8_4.sv mux8_4.sv )&&(./xcelium.d/env.d/env.history.29Oct2026_17_19_21)
+s3::(29Oct2026:17:20:04):( xrun -64bit tb_mux8_4.sv mux8_4.sv )&&(./xcelium.d/env.d/env.history.29Oct2026_17_20_04)
+s4::(29Oct2026:17:20:58):( xrun -64bit tb_mux8_4.sv mux8_4.sv )&&(./xcelium.d/env.d/env.history.29Oct2026_17_20_58)

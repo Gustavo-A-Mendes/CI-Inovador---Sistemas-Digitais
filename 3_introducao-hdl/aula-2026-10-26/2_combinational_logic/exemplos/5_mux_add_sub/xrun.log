@@ -1,0 +1,46 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 29, 2026 at 13:35:31 -03
+xrun
+	-64bit
+	tb_mux_add_sub.sv
+	mux_add_sub.sv
+Recompiling... reason: file './tb_mux_add_sub.sv' is newer than expected.
+	expected: Thu Oct 29 13:34:59 2026
+	actual:   Thu Oct 29 13:35:30 2026
+file: tb_mux_add_sub.sv
+	module worklib.tb_mux_add_sub:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_mux_add_sub
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_mux_add_sub:sv <0x14af1d4a>
+			streams:   6, words:  5885
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               5       5
+		Vectored wires:          5       -
+		Always blocks:           1       1
+		Initial blocks:          2       2
+		Pseudo assignments:      4       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_mux_add_sub:sv
+Loading snapshot worklib.tb_mux_add_sub:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+a =  25 	b =   7 	op = 00 	y =  32
+a =  25 	b =   7 	op = 10 	y =   0
+a =  25 	b =   7 	op = 01 	y =  18
+a =  25 	b =   7 	op = 11 	y =   0
+a =  25 	b =   7 	op = 01 	y =  18
+Memory Usage - Current physical: 53.3M, Current virtual: 311.5M, Peak physical: 53.3M
+CPU Usage - 0.0s system + 0.0s user = 0.0s total (16.1% cpu)
+Simulation complete via $finish(2) at time 25 NS + 0
+./tb_mux_add_sub.sv:33     $finish(2);
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 29, 2026 at 13:35:32 -03  (total: 00:00:01)

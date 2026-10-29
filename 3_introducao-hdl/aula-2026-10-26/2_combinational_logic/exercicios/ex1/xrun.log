@@ -1,0 +1,43 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 29, 2026 at 17:20:58 -03
+xrun
+	-64bit
+	tb_mux8_4.sv
+	mux8_4.sv
+Recompiling... reason: file './mux8_4.sv' is newer than expected.
+	expected: Thu Oct 29 17:19:41 2026
+	actual:   Thu Oct 29 17:20:57 2026
+file: mux8_4.sv
+	module worklib.mux8_4:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_mux8_4
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.mux8_4:sv <0x596f868b>
+			streams:   1, words:   352
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               7       7
+		Vectored wires:          7       -
+		Always blocks:           1       1
+		Initial blocks:          2       2
+		Pseudo assignments:      6       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_mux8_4:sv
+Loading snapshot worklib.tb_mux8_4:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+a =  10 	b =  20 	c =  30 	d =  40 	sel = 00 	y =  10
+a =  10 	b =  20 	c =  30 	d =  40 	sel = 01 	y =  20
+a =  10 	b =  20 	c =  30 	d =  40 	sel = 10 	y =  30
+a =  10 	b =  20 	c =  30 	d =  40 	sel = 11 	y =  40
+Simulation complete via $finish(1) at time 20 NS + 0
+./tb_mux8_4.sv:28     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 29, 2026 at 17:20:59 -03  (total: 00:00:01)
