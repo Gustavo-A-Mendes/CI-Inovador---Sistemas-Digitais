@@ -3,5 +3,6 @@
 // Do not modify this file
 //
 -64bit
-ex1_2_tb.sv
-LUT2.sv
+ex1_tb.sv
+LUT_ex1_original.sv
+LUT_ex1_simplified.sv

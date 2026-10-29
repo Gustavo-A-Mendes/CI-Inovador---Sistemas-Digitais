@@ -13,23 +13,23 @@
 */
 module LUT2_circuit_original #(
   parameter INIT_NAND = 4'b0111,
-            INIT_NOR  = 4'b1000
+            INIT_NOR  = 4'b0001
 ) (
   input logic A, B, C, D, 
   output logic O_ori
 );
   
-  logic O_NAND0, O_NAND1, O_NAND2;
+  logic X0, X1, X2;
   
   // LUT2 NAND0:
-  LUT2 #(.INIT(INIT_NAND)) lut_nand0( .I0(A), .I1(B), .O(O_NAND0) );
+  LUT2 #(.INIT(INIT_NAND)) lut_nand0( .I0(A), .I1(B), .O(X0) );
 
   // LUT2 NAND1:
-  LUT2 #(.INIT(INIT_NAND)) lut_nand1( .I0(O_NAND0), .I1(C), .O(O_NAND1) );
+  LUT2 #(.INIT(INIT_NAND)) lut_nand1( .I0(X0), .I1(C), .O(X1) );
 
   // LUT2 NAND2:
-  LUT2 #(.INIT(INIT_NAND)) lut_nand2( .I0(C), .I1(D), .O(O_NAND2) );
+  LUT2 #(.INIT(INIT_NAND)) lut_nand2( .I0(C), .I1(D), .O(X2) );
 
   // LUT2 NOR:
-  LUT2 #(.INIT(INIT_NOR)) lut_nor0( .I0(O_NAND1), .I1(O_NAND2), .O(O_ori) );
+  LUT2 #(.INIT(INIT_NOR)) lut_nor0( .I0(X1), .I1(X2), .O(O_ori) );
 endmodule

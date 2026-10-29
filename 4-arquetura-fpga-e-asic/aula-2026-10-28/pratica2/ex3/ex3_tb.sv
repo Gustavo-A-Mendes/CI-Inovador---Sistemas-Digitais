@@ -20,10 +20,10 @@ module LUT23_tb;
   end
   
   initial begin
-    $display("                Tempo      Entradas LUT      Saídas");
-    $display("                \t\t A\t B\t Cin\t\t XOR0\t AND0\t AND1\t AND2\tCout  S");
-    $display("                ====   ===============    ==============================================");
-    $monitor($time,"\t %b\t %b\t  %b\t\t\t  %b\t\t  %b\t\t  %b\t\t  %b\t\t %b\t  %b", A, B, Cin, lut0.O_XOR0, lut0.O_AND0, lut0.O_AND1, lut0.O_AND2, Cout, S);      
+    $display("                Tempo        Entradas LUT               Saídas");
+    $display("                \t A\t B\t Cin\t  X0 X1 X2 X3  Cout  S");
+    $display("                =====   ======================   =======================");
+    $monitor($time,"\t %b\t %b\t  %b\t  %b  %b  %b  %b    %b    %b", A, B, Cin, lut0.X0, lut0.X1, lut0.X2, lut0.X3, Cout, S);      
   end
   
 endmodule

@@ -46,3 +46,25 @@ s22(28Oct2026:17:00:24):  xrun -64bit ex2_tb.sv LUT3.sv
 s23(28Oct2026:17:07:17):  xrun -64bit ex2_tb.sv LUT3.sv 
 #e24(28Oct2026:17:07:28): source ./xcelium.d/env.d/env.history.28Oct2026_17_07_28
 s24(28Oct2026:17:07:28):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e25(29Oct2026:09:14:34): source ./xcelium.d/env.d/env.history.29Oct2026_09_14_34
+s25(29Oct2026:09:14:34):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e26(29Oct2026:09:14:51): source ./xcelium.d/env.d/env.history.29Oct2026_09_14_51
+s26(29Oct2026:09:14:51):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e27(29Oct2026:10:03:41): source ./xcelium.d/env.d/env.history.29Oct2026_10_03_41
+s27(29Oct2026:10:03:41):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e28(29Oct2026:10:05:15): source ./xcelium.d/env.d/env.history.29Oct2026_10_05_15
+s28(29Oct2026:10:05:15):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e29(29Oct2026:10:05:24): source ./xcelium.d/env.d/env.history.29Oct2026_10_05_24
+s29(29Oct2026:10:05:24):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e30(29Oct2026:10:07:47): source ./xcelium.d/env.d/env.history.29Oct2026_10_07_47
+s30(29Oct2026:10:07:47):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e31(29Oct2026:10:07:51): source ./xcelium.d/env.d/env.history.29Oct2026_10_07_51
+s31(29Oct2026:10:07:51):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e32(29Oct2026:10:07:54): source ./xcelium.d/env.d/env.history.29Oct2026_10_07_54
+s32(29Oct2026:10:07:54):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e33(29Oct2026:10:08:57): source ./xcelium.d/env.d/env.history.29Oct2026_10_08_57
+s33(29Oct2026:10:08:57):  xrun -64bit ex2_tb.sv LUT3.sv 
+#e34(29Oct2026:12:23:26): source ./xcelium.d/env.d/env.history.29Oct2026_12_23_26
+s34(29Oct2026:12:23:26):  xrun -64bit ex2_tb.sv LUT3_ex2.sv 
+#e35(29Oct2026:12:23:45): source ./xcelium.d/env.d/env.history.29Oct2026_12_23_45
+s35(29Oct2026:12:23:45):  xrun -64bit ex2_tb.sv LUT3_ex2.sv 

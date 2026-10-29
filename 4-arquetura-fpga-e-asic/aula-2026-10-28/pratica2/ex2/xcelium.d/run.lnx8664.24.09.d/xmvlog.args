@@ -6,7 +6,7 @@
 ./xcelium.d/run.lnx8664.24.09.d
 -RUNMODE
 ex2_tb.sv
-LUT3.sv
+LUT3_ex2.sv
 -CDSLIB
 ./xcelium.d/run.lnx8664.24.09.d/cdsrun.lib
 -HDLVAR

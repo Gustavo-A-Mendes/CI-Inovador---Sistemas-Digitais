@@ -21,10 +21,10 @@ module LUT2_simplified_tb;
   
     initial
     begin
-      $display("                Tempo      Entradas LUT      Saídas");
-      $display("                   \t\t A \t B \t C \t D \t\t O0\t O1\t O  ");
-      $display("                ====   =================  =========================");
-      $monitor($time," \t %b \t %b \t %b \t %b \t\t %b \t %b \t %b", A, B, C, D, lut0.O_NAND0, lut0.O_AND0, O_simp);
+      $display("                Tempo          Entradas LUT                   Saídas");
+      $display("                   \t A\t B\t C\t D\t X0\t X1\t O  ");
+      $display("                =====   ===========================    ======================");
+      $monitor($time," \t %b\t %b\t %b\t %b \t %b\t %b\t %b", A, B, C, D, lut0.O_NAND0, lut0.O_AND0, O_simp);
     end
   
 endmodule

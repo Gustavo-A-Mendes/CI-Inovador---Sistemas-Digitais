@@ -2,5 +2,6 @@
 // File created by:  xrun
 // Do not modify this file
 //
-/home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/4-arquetura-fpga-e-asic/aula-2026-10-28/pratica2/ex1/ex1_2_tb.sv
-/home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/4-arquetura-fpga-e-asic/aula-2026-10-28/pratica2/ex1/LUT2.sv
+/home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/4-arquetura-fpga-e-asic/aula-2026-10-28/pratica2/ex1/ex1_tb.sv
+/home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/4-arquetura-fpga-e-asic/aula-2026-10-28/pratica2/ex1/LUT_ex1_original.sv
+/home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/4-arquetura-fpga-e-asic/aula-2026-10-28/pratica2/ex1/LUT_ex1_simplified.sv

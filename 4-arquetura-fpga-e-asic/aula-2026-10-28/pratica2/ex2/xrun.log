@@ -1,58 +1,62 @@
 xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	24.09-s001: Started on Oct 28, 2026 at 17:07:28 -03
+TOOL:	xrun(64)	24.09-s001: Started on Oct 29, 2026 at 12:23:45 -03
 xrun
 	-64bit
 	ex2_tb.sv
-	LUT3.sv
+	LUT3_ex2.sv
 Recompiling... reason: file './ex2_tb.sv' is newer than expected.
-	expected: Wed Oct 28 17:07:15 2026
-	actual:   Wed Oct 28 17:07:27 2026
+	expected: Thu Oct 29 10:08:56 2026
+	actual:   Thu Oct 29 12:23:44 2026
 file: ex2_tb.sv
 	module worklib.LUT3_tb:sv
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
 	Top level design units:
 		LUT3_tb
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.LUT3_tb:sv <0x5d7044b0>
-			streams:  18, words: 11574
+		worklib.LUT3_tb:sv <0x2a37c3a9>
+			streams:   8, words:  9863
+		worklib.LUT3_circuit_ex2:sv <0x22ec08c3>
+			streams:  11, words:  2499
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                 7       2
-		Registers:              42      17
-		Scalar wires:           31       -
+		Modules:                 8       3
+		Registers:              43      18
+		Scalar wires:           25       -
 		Always blocks:           6       1
 		Initial blocks:          2       2
-		Pseudo assignments:     15       -
+		Pseudo assignments:     16       -
 		Process Clocks:          4       2
 		Simulation timescale:  1ps
 	Writing initial simulation snapshot: worklib.LUT3_tb:sv
 Loading snapshot worklib.LUT3_tb:sv .................... Done
 xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
 xcelium> run
-                Tempo      Entradas LUT      Saídas
-                         A3    A2    A1    A0     OR0 NAND0 NAND1 OR1 NAND2  O  
-                ====   ========================  ================================
-                   0      0     0     0     0       0    1    1    0    1    1
-                   5      0     0     0     1       0    1    1    1    1    1
-                  10      0     0     1     0       1    1    1    0    0    1
-                  15      0     0     1     1       1    1    1    1    0    0
-                  20      0     1     0     0       1    1    1    1    0    0
-                  25      0     1     0     1       1    1    1    1    0    0
-                  30      0     1     1     0       1    1    1    1    0    0
-                  35      0     1     1     1       1    1    1    1    0    0
-                  40      1     0     0     0       1    1    1    1    0    0
-                  45      1     0     0     1       1    1    1    1    0    0
-                  50      1     0     1     0       1    1    1    1    0    0
-                  55      1     0     1     1       1    1    1    1    0    0
-                  60      1     1     0     0       1    1    1    1    0    0
-                  65      1     1     0     1       1    0    1    1    1    1
-                  70      1     1     1     0       1    1    0    1    1    1
-                  75      1     1     1     1       1    0    0    1    1    1
-xmsim: *W,RNQUIE: Simulation is complete.
+                Tempo        Entradas LUT                    Saídas
+                         A3    A2    A1    A0       X0   X1   X2   X3   X4   O  
+                ====   ========================   ================================
+                   0      0     0     0     0       0    1    1    0    0    1
+                   5      0     0     0     1       0    1    1    1    0    1
+                  10      0     0     1     0       1    1    1    0    1    1
+                  15      0     0     1     1       1    1    1    1    1    0
+                  20      0     1     0     0       1    1    1    1    1    0
+                  25      0     1     0     1       1    1    1    1    1    0
+                  30      0     1     1     0       1    1    1    1    1    0
+                  35      0     1     1     1       1    1    1    1    1    0
+                  40      1     0     0     0       1    1    1    1    1    0
+                  45      1     0     0     1       1    1    1    1    1    0
+                  50      1     0     1     0       1    1    1    1    1    0
+                  55      1     0     1     1       1    1    1    1    1    0
+                  60      1     1     0     0       1    1    1    1    1    0
+                  65      1     1     0     1       1    0    1    1    0    1
+                  70      1     1     1     0       1    1    0    1    0    1
+                  75      1     1     1     1       1    0    0    1    0    1
+Simulation complete via $finish(1) at time 80 PS + 0
+./ex2_tb.sv:20       $finish;
 xcelium> exit
-TOOL:	xrun(64)	24.09-s001: Exiting on Oct 28, 2026 at 17:07:29 -03  (total: 00:00:01)
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 29, 2026 at 12:23:47 -03  (total: 00:00:02)

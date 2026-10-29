@@ -1,0 +1,53 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 29, 2026 at 10:20:22 -03
+xrun
+	-64bit
+	ex3_tb.sv
+	LUT_ex3.sv
+Recompiling... reason: file './ex3_tb.sv' is newer than expected.
+	expected: Thu Oct 29 10:20:13 2026
+	actual:   Thu Oct 29 10:20:21 2026
+file: ex3_tb.sv
+	module worklib.LUT23_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		LUT23_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.LUT23_tb:sv <0x4d9625e5>
+			streams:   8, words:  9130
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 8       4
+		Registers:              28      20
+		Scalar wires:           23       -
+		Vectored wires:          5       -
+		Always blocks:           6       2
+		Initial blocks:          2       2
+		Cont. assignments:       5       1
+		Pseudo assignments:     15       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.LUT23_tb:sv
+Loading snapshot worklib.LUT23_tb:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+                Tempo        Entradas LUT               Saídas
+                	 A	 B	 Cin	  X0 X1 X2 X3  Cout  S
+                =====   ======================   =======================
+                   0	 0	 0	  0	  0  0  0  0    0    0
+                   5	 0	 0	  1	  1  0  0  0    0    1
+                  10	 0	 1	  0	  1  0  0  0    0    1
+                  15	 0	 1	  1	  0  1  0  0    1    0
+                  20	 1	 0	  0	  0  0  0  0    0    1
+                  25	 1	 0	  1	  1  0  0  1    1    0
+                  30	 1	 1	  0	  1  0  1  0    1    0
+                  35	 1	 1	  1	  0  1  1  1    1    1
+Simulation complete via $finish(1) at time 40 PS + 0
+./ex3_tb.sv:19     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 29, 2026 at 10:20:22 -03  (total: 00:00:00)
