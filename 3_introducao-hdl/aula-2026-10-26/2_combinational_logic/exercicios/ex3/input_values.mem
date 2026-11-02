@@ -1,0 +1,28 @@
+// Formato: A(8 bits) B(8 bits) opcode(3 bits)
+// Operação 3'b000: SOMA (Soma simples e com Carry)
+00001010_00010100_000 // 10 + 20 = 30 (Sem carry)
+11111111_00000001_000 // 255 + 1 = 0  (Gera carry e zero)
+
+// Operação 3'b001: SUBTRAÇÃO (Subtração simples e com Carry/Underflow)
+00010100_00001010_001 // 20 - 10 = 10 (Sem carry de empréstimo)
+00000101_00000101_001 // 5 - 5 = 0    (Gera zero)
+00000000_00000001_001 // 0 - 1 = 255  (Gera carry/borrow)
+
+// Operação 3'b010: AND
+10101010_11110000_010 // AND = 10100000
+
+// Operação 3'b011: OR
+10101010_11110000_011 // OR = 11111010
+
+// Operação 3'b100: XOR
+10101010_11110000_100 // XOR = 01011010
+
+// Operação 3'b101: NOT (Inverte apenas o A, ignora o B)
+00001111_00000000_101 // ~A = 11110000
+
+// Operação 3'b110: SHIFT LEFT (Deslocamento para a esquerda)
+01010101_00000000_110 // Desloca A -> 10101010 (Sem carry)
+10000001_00000000_110 // Desloca A -> 00000010 (Gera carry do bit MSB)
+
+// Operação 3'b111: PASSA A (Apenas copia o valor de A)
+01111110_00000000_111 // Result = 01111110

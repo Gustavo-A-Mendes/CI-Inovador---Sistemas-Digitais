@@ -1,0 +1,60 @@
+$date
+	Sun Nov  1 12:30:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_mux8_4 $end
+$var wire 8 ! y [7:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$var reg 8 $ c [7:0] $end
+$var reg 8 % d [7:0] $end
+$var reg 2 & sel [1:0] $end
+$scope module m0 $end
+$var wire 8 ' a [7:0] $end
+$var wire 8 ( b [7:0] $end
+$var wire 8 ) c [7:0] $end
+$var wire 8 * d [7:0] $end
+$var wire 2 + sel [1:0] $end
+$var reg 8 , y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1010 ,
+b0 +
+b101000 *
+b11110 )
+b10100 (
+b1010 '
+b0 &
+b101000 %
+b11110 $
+b10100 #
+b1010 "
+b1010 !
+$end
+#5000
+b10100 !
+b10100 ,
+b1 &
+b1 +
+#10000
+b11110 !
+b11110 ,
+b10 &
+b10 +
+#15000
+b101000 !
+b101000 ,
+b11 &
+b11 +
+#20000

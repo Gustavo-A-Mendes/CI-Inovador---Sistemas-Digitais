@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/aula-2026-10-26/2_combinational_logic/3b_mux2/mux2.sv" into library work
+INFO: [VRFC 10-311] analyzing module mux2_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/aula-2026-10-26/2_combinational_logic/3b_mux2/mux2_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module mux2_tb

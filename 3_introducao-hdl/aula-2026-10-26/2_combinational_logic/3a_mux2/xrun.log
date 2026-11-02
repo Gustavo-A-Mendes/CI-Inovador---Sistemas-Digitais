@@ -1,0 +1,51 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 28, 2026 at 13:06:59 -03
+xrun
+	-64bit
+	mux2_tb.sv
+	mux2.sv
+	+access+rw
+	+gui
+Recompiling... reason: file './mux2_tb.sv' is newer than expected.
+	expected: Wed Oct 28 12:00:45 2026
+	actual:   Wed Oct 28 13:06:57 2026
+file: mux2_tb.sv
+	module worklib.mux2_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		mux2_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.mux2_tb:sv <0x54f5623b>
+			streams:   5, words:  2881
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               4       4
+		Scalar wires:            1       -
+		Vectored wires:          4       -
+		Initial blocks:          2       2
+		Cont. assignments:       1       1
+		Pseudo assignments:      4       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.mux2_tb:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm mux2_tb.a mux2_tb.b mux2_tb.sel mux2_tb.y
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 22 NS + 0
+./mux2_tb.sv:29     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 28, 2026 at 13:07:56 -03  (total: 00:00:57)

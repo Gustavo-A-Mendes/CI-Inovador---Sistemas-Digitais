@@ -8,6 +8,9 @@ module tb_mux8_4;
   mux8_4 m0(.*);
 
   initial begin
+    $dumpfile("tb_mux8_4.vcd");
+    $dumpvars;
+
     $monitor("a = %d \tb = %d \tc = %d \td = %d \tsel = %b \ty = %d", a, b, c, d, sel, y);
   end
 

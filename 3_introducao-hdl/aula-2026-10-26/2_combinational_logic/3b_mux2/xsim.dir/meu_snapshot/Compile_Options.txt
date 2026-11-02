@@ -1,0 +1,1 @@
+-top "mux2_tb" -snapshot "meu_snapshot" -debug "typical" -timescale "1ns/1ps" 

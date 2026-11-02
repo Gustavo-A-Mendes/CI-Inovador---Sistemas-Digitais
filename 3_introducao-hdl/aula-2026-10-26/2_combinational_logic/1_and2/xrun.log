@@ -1,0 +1,15 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 26, 2026 at 10:57:33 -03
+xrun
+	+access+rw
+	and2_tb.sv
+	and2.sv
+	-timescale 1ns/1ps
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+  and2 a0(.a(a), .b(b), .y(s));
+        |
+xmelab: *E,CUVMUR (./and2_tb.sv,13|8): instance 'testbench.a0' of design unit 'and2' is unresolved in 'worklib.testbench:sv'.
+xrun: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 1), exiting.
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 26, 2026 at 10:57:33 -03  (total: 00:00:00)

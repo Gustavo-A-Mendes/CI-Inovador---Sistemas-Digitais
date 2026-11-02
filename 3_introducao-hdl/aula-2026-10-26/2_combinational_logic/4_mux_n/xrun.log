@@ -1,0 +1,56 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 28, 2026 at 14:58:58 -03
+xrun
+	-64bit
+	mux_n_tb.sv
+	mux_n.sv
+	+gui
+	+access+rw
+file: mux_n_tb.sv
+	module worklib.mux_n_tb:sv
+		errors: 0, warnings: 0
+file: mux_n.sv
+	module worklib.mux_n:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		mux_n_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.mux_n:sv <0x7b232267>
+			streams:   1, words:   392
+		worklib.mux_n_tb:sv <0x153af16c>
+			streams:   8, words:  8017
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               7       7
+		Vectored wires:          7       -
+		Always blocks:           1       1
+		Initial blocks:          1       1
+		Pseudo assignments:      6       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.mux_n_tb:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm mux_n_tb.d1 mux_n_tb.d2 mux_n_tb.d3 mux_n_tb.d4 mux_n_tb.sel mux_n_tb.y
+Created probe 1
+xcelium> run
+time =                    0 	 d1 = 0000000000001010 	 d2 = 0000000000010100 	 d3 = 0000000000011110 	 d4 = 0000000000101000 	 sel = 00 	 y = 0000000000001010
+time =                 2000 	 d1 = 0000000000001010 	 d2 = 0000000000010100 	 d3 = 0000000000011110 	 d4 = 0000000000101000 	 sel = 01 	 y = 0000000000010100
+time =                 4000 	 d1 = 0000000000001010 	 d2 = 0000000000010100 	 d3 = 0000000000011110 	 d4 = 0000000000101000 	 sel = 10 	 y = 0000000000011110
+time =                 6000 	 d1 = 0000000000001010 	 d2 = 0000000000010100 	 d3 = 0000000000011110 	 d4 = 0000000000101000 	 sel = 11 	 y = 0000000000101000
+Simulation complete via $finish(1) at time 8 NS + 0
+./mux_n_tb.sv:41     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 28, 2026 at 15:10:55 -03  (total: 00:11:57)

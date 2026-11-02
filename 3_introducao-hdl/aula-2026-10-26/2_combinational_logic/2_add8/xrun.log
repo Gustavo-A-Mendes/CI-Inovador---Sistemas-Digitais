@@ -1,0 +1,51 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Oct 28, 2026 at 11:56:12 -03
+xrun
+	-64bit
+	add8_tb.sv
+	add8.sv
+	+access+rw
+	+gui
+Recompiling... reason: file './add8_tb.sv' is newer than expected.
+	expected: Wed Oct 28 11:51:19 2026
+	actual:   Wed Oct 28 11:56:05 2026
+file: add8_tb.sv
+	module worklib.add8_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		add8_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.add8_tb:sv <0x2eeea13c>
+			streams:   6, words:  4811
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               5       5
+		Scalar wires:            3       -
+		Vectored wires:          4       -
+		Initial blocks:          2       2
+		Cont. assignments:       1       1
+		Pseudo assignments:      5       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.add8_tb:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm add8_tb.a add8_tb.b add8_tb.cin add8_tb.cout add8_tb.sum
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 42 NS + 0
+./add8_tb.sv:35     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Oct 28, 2026 at 12:01:00 -03  (total: 00:04:48)

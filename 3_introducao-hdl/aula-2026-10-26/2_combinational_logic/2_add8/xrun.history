@@ -1,0 +1,18 @@
+#e1(28Oct2026:11:49:07): source ./xcelium.d/env.d/env.history.28Oct2026_11_49_07
+s1(28Oct2026:11:49:07):  xrun -64bit add8_tb.sv add8.sv +access+rw 
+#e2(28Oct2026:11:49:31): source ./xcelium.d/env.d/env.history.28Oct2026_11_49_31
+s2(28Oct2026:11:49:31):  xrun -64bit add8_tb.sv add8.sv +access+rw 
+#e3(28Oct2026:11:49:56): source ./xcelium.d/env.d/env.history.28Oct2026_11_49_56
+s3(28Oct2026:11:49:56):  xrun -64bit add8_tb.sv add8.sv +access+rw 
+#e4(28Oct2026:11:50:07): source ./xcelium.d/env.d/env.history.28Oct2026_11_50_07
+s4(28Oct2026:11:50:07):  xrun -64bit add8_tb.sv add8.sv +access+rw 
+#e5(28Oct2026:11:50:38): source ./xcelium.d/env.d/env.history.28Oct2026_11_50_38
+s5(28Oct2026:11:50:38):  xrun -64bit add8_tb.sv add8.sv +access+rw +gui 
+#e6(28Oct2026:11:51:27): source ./xcelium.d/env.d/env.history.28Oct2026_11_51_27
+s6(28Oct2026:11:51:27):  xrun -64bit add8_tb.sv add8.sv +access+rw +gui 
+#e7(28Oct2026:11:52:06): source ./xcelium.d/env.d/env.history.28Oct2026_11_52_06
+s7(28Oct2026:11:52:06):  xrun -64bit add8_tb.sv add8.sv +access+rw 
+#e8(28Oct2026:11:55:16): source ./xcelium.d/env.d/env.history.28Oct2026_11_55_16
+s8(28Oct2026:11:55:16):  xrun -64bit add8_tb.sv add8.sv +access+rw +gui 
+#e9(28Oct2026:11:56:12): source ./xcelium.d/env.d/env.history.28Oct2026_11_56_12
+s9(28Oct2026:11:56:12):  xrun -64bit add8_tb.sv add8.sv +access+rw +gui 
