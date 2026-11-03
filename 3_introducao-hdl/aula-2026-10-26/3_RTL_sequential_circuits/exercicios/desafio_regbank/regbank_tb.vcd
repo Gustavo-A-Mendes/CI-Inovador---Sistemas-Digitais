@@ -1,0 +1,277 @@
+$date
+    Nov  3, 2026  11:07:27
+$end
+$version
+    TOOL:	xmsim(64)	24.09-s001
+$end
+$timescale
+    1 ps
+$end
+
+$scope module regbank_tb $end
+$var reg       1 !    clk $end
+$var reg       1 "    rst $end
+$var reg       4 #    en [3:0] $end
+$var reg      32 $    d [31:0] $end
+$var reg      32 %    q [31:0] $end
+
+$scope module dut $end
+$var wire      1 &    clk  $end
+$var wire      1 '    rst  $end
+$var wire      1 (    en [3] $end
+$var wire      1 )    en [2] $end
+$var wire      1 *    en [1] $end
+$var wire      1 +    en [0] $end
+$var wire     32 ,    d [31:0] $end
+$var reg      32 -    q [31:0] $end
+
+$scope begin g[0] $end
+$var parameter 32 .    i $end
+
+$scope module rg $end
+$var wire      1 &    clk  $end
+$var wire      1 '    rst  $end
+$var wire      1 +    en  $end
+$var wire      8 /    d [7:0] $end
+$var reg       8 0    q [7:0] $end
+$upscope $end
+
+$upscope $end
+
+
+$scope begin g[1] $end
+$var parameter 32 1    i $end
+
+$scope module rg $end
+$var wire      1 &    clk  $end
+$var wire      1 '    rst  $end
+$var wire      1 *    en  $end
+$var wire      8 2    d [7:0] $end
+$var reg       8 3    q [7:0] $end
+$upscope $end
+
+$upscope $end
+
+
+$scope begin g[2] $end
+$var parameter 32 4    i $end
+
+$scope module rg $end
+$var wire      1 &    clk  $end
+$var wire      1 '    rst  $end
+$var wire      1 )    en  $end
+$var wire      8 5    d [7:0] $end
+$var reg       8 6    q [7:0] $end
+$upscope $end
+
+$upscope $end
+
+
+$scope begin g[3] $end
+$var parameter 32 7    i $end
+
+$scope module rg $end
+$var wire      1 &    clk  $end
+$var wire      1 '    rst  $end
+$var wire      1 (    en  $end
+$var wire      8 8    d [7:0] $end
+$var reg       8 9    q [7:0] $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b11 7
+b10 4
+b1 1
+b0 .
+0!
+0"
+b0 #
+b0 $
+bx %
+0&
+0'
+0(
+0)
+0*
+0+
+b0 ,
+bx -
+b0 /
+bx 0
+b0 2
+bx 3
+b0 5
+bx 6
+b0 8
+bx 9
+$end
+#2000
+1"
+1'
+b0 9
+b0 6
+b0 3
+b0 0
+bx00000000 -
+bx0000000000000000 -
+bx000000000000000000000000 -
+b0 -
+b0 %
+#5000
+1!
+1&
+#10000
+0!
+0&
+#12000
+0"
+0'
+#15000
+1!
+1&
+#20000
+0!
+0&
+#22000
+b10010001101000101011001111000 $
+b10010001101000101011001111000 ,
+b10010 8
+b110100 5
+b1010110 2
+b1111000 /
+#23000
+b1 #
+1+
+#25000
+1!
+1&
+b1111000 0
+b1111000 -
+b1111000 %
+#27000
+b10 #
+1*
+0+
+#30000
+0!
+0&
+#35000
+1!
+1&
+b1010110 3
+b101011001111000 -
+b101011001111000 %
+#37000
+b1100 #
+1(
+1)
+0*
+#40000
+0!
+0&
+#45000
+1!
+b11111111111111111111111111111111 $
+b11111111111111111111111111111111 ,
+1&
+b11111111 8
+b11111111 5
+b11111111 2
+b11111111 /
+b10010 9
+b110100 6
+b1101000101011001111000 -
+b10010001101000101011001111000 -
+b10010001101000101011001111000 %
+#47000
+b0 #
+0(
+0)
+#50000
+0!
+0&
+#55000
+1!
+1&
+#60000
+0!
+0&
+#65000
+1!
+1&
+#70000
+0!
+0&
+#75000
+1!
+b11011110101011011011111011101111 $
+b11011110101011011011111011101111 ,
+1&
+b11011110 8
+b10101101 5
+b10111110 2
+b11101111 /
+#77000
+b1111 #
+1(
+1)
+1*
+1+
+#80000
+0!
+0&
+#85000
+1!
+1&
+b11011110 9
+b10101101 6
+b10111110 3
+b11101111 0
+b10010001101000101011011101111 -
+b10010001101001011111011101111 -
+b10010101011011011111011101111 -
+b11011110101011011011111011101111 -
+b11011110101011011011111011101111 %
+#87000
+b0 #
+0(
+0)
+0*
+0+
+#90000
+0!
+0&
+#95000
+1!
+1"
+1'
+1&
+b0 9
+b0 6
+b0 3
+b0 0
+b11011110101011011011111000000000 -
+b11011110101011010000000000000000 -
+b11011110000000000000000000000000 -
+b0 -
+b0 %
+#100000
+0!
+0&
+#105000
+1!
+0"
+0'
+1&
+#110000
+0!
+0&
+#115000
+1!

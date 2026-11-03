@@ -1,0 +1,121 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 09:32:07 -03
+xrun
+	-64bit
+	tb_counter_10.sv
+	counter_10.sv
+Recompiling... reason: file './counter_10.sv' is newer than expected.
+	expected: Tue Nov  3 09:30:08 2026
+	actual:   Tue Nov  3 09:32:06 2026
+file: counter_10.sv
+	module worklib.counter_10:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		counter_10_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.counter_10:sv <0x75b73390>
+			streams:   2, words:   594
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               5       5
+		Scalar wires:            3       -
+		Vectored wires:          2       -
+		Always blocks:           2       2
+		Initial blocks:          3       3
+		Pseudo assignments:      4       -
+		Process Clocks:          1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.counter_10_tb:sv
+Loading snapshot worklib.counter_10_tb:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./tb_counter_10.sv, line = 68, pos = 12
+           Scope: counter_10_tb
+            Time: 0 FS + 0
+
+Tempo: 0 	| clk: 0 | rst: 0 | en: 0 | count:  x
+Tempo: 2000 	| clk: 0 | rst: 1 | en: 0 | count:  x
+Tempo: 5000 	| clk: 1 | rst: 1 | en: 0 | count:  0
+Tempo: 10000 	| clk: 0 | rst: 1 | en: 0 | count:  0
+Tempo: 12000 	| clk: 0 | rst: 0 | en: 0 | count:  0
+Tempo: 15000 	| clk: 1 | rst: 0 | en: 0 | count:  0
+Tempo: 20000 	| clk: 0 | rst: 0 | en: 0 | count:  0
+Tempo: 22000 	| clk: 0 | rst: 0 | en: 1 | count:  0
+Tempo: 25000 	| clk: 1 | rst: 0 | en: 1 | count:  1
+Tempo: 30000 	| clk: 0 | rst: 0 | en: 1 | count:  1
+Tempo: 35000 	| clk: 1 | rst: 0 | en: 1 | count:  2
+Tempo: 40000 	| clk: 0 | rst: 0 | en: 1 | count:  2
+Tempo: 45000 	| clk: 1 | rst: 0 | en: 1 | count:  3
+Tempo: 50000 	| clk: 0 | rst: 0 | en: 1 | count:  3
+Tempo: 55000 	| clk: 1 | rst: 0 | en: 1 | count:  4
+Tempo: 60000 	| clk: 0 | rst: 0 | en: 1 | count:  4
+Tempo: 65000 	| clk: 1 | rst: 0 | en: 1 | count:  5
+Tempo: 70000 	| clk: 0 | rst: 0 | en: 1 | count:  5
+Tempo: 75000 	| clk: 1 | rst: 0 | en: 1 | count:  6
+Tempo: 80000 	| clk: 0 | rst: 0 | en: 1 | count:  6
+Tempo: 85000 	| clk: 1 | rst: 0 | en: 1 | count:  7
+Tempo: 90000 	| clk: 0 | rst: 0 | en: 1 | count:  7
+Tempo: 95000 	| clk: 1 | rst: 0 | en: 1 | count:  8
+Tempo: 100000 	| clk: 0 | rst: 0 | en: 1 | count:  8
+Tempo: 105000 	| clk: 1 | rst: 0 | en: 1 | count:  9
+Tempo: 110000 	| clk: 0 | rst: 0 | en: 1 | count:  9
+Tempo: 115000 	| clk: 1 | rst: 0 | en: 1 | count:  0
+Tempo: 120000 	| clk: 0 | rst: 0 | en: 1 | count:  0
+Tempo: 125000 	| clk: 1 | rst: 0 | en: 1 | count:  1
+Tempo: 130000 	| clk: 0 | rst: 0 | en: 1 | count:  1
+Tempo: 135000 	| clk: 1 | rst: 0 | en: 1 | count:  2
+Tempo: 140000 	| clk: 0 | rst: 0 | en: 1 | count:  2
+Tempo: 145000 	| clk: 1 | rst: 0 | en: 1 | count:  3
+Tempo: 150000 	| clk: 0 | rst: 0 | en: 1 | count:  3
+Tempo: 155000 	| clk: 1 | rst: 0 | en: 1 | count:  4
+Tempo: 160000 	| clk: 0 | rst: 0 | en: 1 | count:  4
+Tempo: 165000 	| clk: 1 | rst: 0 | en: 1 | count:  5
+Tempo: 170000 	| clk: 0 | rst: 0 | en: 1 | count:  5
+Tempo: 175000 	| clk: 1 | rst: 0 | en: 1 | count:  6
+Tempo: 180000 	| clk: 0 | rst: 0 | en: 1 | count:  6
+Tempo: 185000 	| clk: 1 | rst: 0 | en: 1 | count:  7
+Tempo: 190000 	| clk: 0 | rst: 0 | en: 1 | count:  7
+Tempo: 195000 	| clk: 1 | rst: 0 | en: 1 | count:  8
+Tempo: 200000 	| clk: 0 | rst: 0 | en: 1 | count:  8
+Tempo: 205000 	| clk: 1 | rst: 0 | en: 1 | count:  9
+Tempo: 210000 	| clk: 0 | rst: 0 | en: 1 | count:  9
+Tempo: 215000 	| clk: 1 | rst: 0 | en: 0 | count:  9
+Tempo: 220000 	| clk: 0 | rst: 0 | en: 0 | count:  9
+Tempo: 225000 	| clk: 1 | rst: 0 | en: 0 | count:  9
+Tempo: 230000 	| clk: 0 | rst: 0 | en: 0 | count:  9
+Tempo: 235000 	| clk: 1 | rst: 0 | en: 0 | count:  9
+Tempo: 240000 	| clk: 0 | rst: 0 | en: 0 | count:  9
+Tempo: 245000 	| clk: 1 | rst: 0 | en: 0 | count:  9
+Tempo: 250000 	| clk: 0 | rst: 0 | en: 0 | count:  9
+Tempo: 255000 	| clk: 1 | rst: 0 | en: 0 | count:  9
+Tempo: 260000 	| clk: 0 | rst: 0 | en: 0 | count:  9
+Tempo: 265000 	| clk: 1 | rst: 0 | en: 1 | count:  0
+Tempo: 270000 	| clk: 0 | rst: 0 | en: 1 | count:  0
+Tempo: 275000 	| clk: 1 | rst: 0 | en: 1 | count:  1
+Tempo: 280000 	| clk: 0 | rst: 0 | en: 1 | count:  1
+Tempo: 285000 	| clk: 1 | rst: 0 | en: 1 | count:  2
+Tempo: 290000 	| clk: 0 | rst: 0 | en: 1 | count:  2
+Tempo: 295000 	| clk: 1 | rst: 0 | en: 1 | count:  3
+Tempo: 300000 	| clk: 0 | rst: 0 | en: 1 | count:  3
+Tempo: 305000 	| clk: 1 | rst: 0 | en: 1 | count:  4
+Tempo: 310000 	| clk: 0 | rst: 0 | en: 1 | count:  4
+Tempo: 315000 	| clk: 1 | rst: 1 | en: 1 | count:  0
+Tempo: 320000 	| clk: 0 | rst: 1 | en: 1 | count:  0
+Tempo: 325000 	| clk: 1 | rst: 0 | en: 1 | count:  1
+Tempo: 330000 	| clk: 0 | rst: 0 | en: 1 | count:  1
+Tempo: 335000 	| clk: 1 | rst: 0 | en: 1 | count:  2
+Tempo: 340000 	| clk: 0 | rst: 0 | en: 1 | count:  2
+Tempo: 345000 	| clk: 1 | rst: 0 | en: 1 | count:  3
+Tempo: 350000 	| clk: 0 | rst: 0 | en: 1 | count:  3
+Simulação finalizada com sucesso!
+Simulation complete via $finish(1) at time 355 NS + 0
+./tb_counter_10.sv:57     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 09:32:08 -03  (total: 00:00:01)

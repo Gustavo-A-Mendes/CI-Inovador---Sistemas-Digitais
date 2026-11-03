@@ -1,0 +1,53 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 09:19:30 -03
+xrun
+	-64bit
+	tb_reg16.sv
+	reg16.sv
+Recompiling... reason: file './tb_reg16.sv' is newer than expected.
+	expected: Tue Nov  3 09:17:32 2026
+	actual:   Tue Nov  3 09:19:27 2026
+file: tb_reg16.sv
+	module worklib.tb_reg16:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_reg16
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_reg16:sv <0x23592ff3>
+			streams:   8, words:  8275
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               6       6
+		Scalar wires:            3       -
+		Vectored wires:          3       -
+		Always blocks:           1       1
+		Initial blocks:          2       2
+		Pseudo assignments:      5       -
+		Process Clocks:          1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_reg16:sv
+Loading snapshot worklib.tb_reg16:sv .................... Done
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+                   0ns 	clk = 0 	rst = x 	en = x 	d =     x 	q =     x
+                2000ns 	clk = 0 	rst = 1 	en = 0 	d =     x 	q =     x
+                5000ns 	clk = 1 	rst = 1 	en = 0 	d =     x 	q =     0
+               10000ns 	clk = 0 	rst = 1 	en = 0 	d =     x 	q =     0
+               15000ns 	clk = 1 	rst = 1 	en = 0 	d =     x 	q =     0
+               17000ns 	clk = 1 	rst = 0 	en = 0 	d =     x 	q =     0
+               20000ns 	clk = 0 	rst = 0 	en = 0 	d =     x 	q =     0
+               25000ns 	clk = 1 	rst = 0 	en = 0 	d = 26719 	q =     0
+               27000ns 	clk = 1 	rst = 0 	en = 1 	d = 26719 	q =     0
+               30000ns 	clk = 0 	rst = 0 	en = 1 	d = 26719 	q =     0
+               35000ns 	clk = 1 	rst = 0 	en = 1 	d = 26719 	q = 26719
+               40000ns 	clk = 0 	rst = 0 	en = 1 	d = 26719 	q = 26719
+Simulation complete via $finish(1) at time 45 NS + 0
+./tb_reg16.sv:31     $finish;
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 09:19:30 -03  (total: 00:00:00)

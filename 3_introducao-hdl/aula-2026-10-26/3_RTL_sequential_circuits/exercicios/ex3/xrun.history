@@ -1,0 +1,24 @@
+#e1(03Nov2026:09:38:26): source ./xcelium.d/env.d/env.history.03Nov2026_09_38_26
+s1(03Nov2026:09:38:26):  xrun -64bit tb_counter_n.sv counter_n.sv 
+#e2(03Nov2026:09:38:49): source ./xcelium.d/env.d/env.history.03Nov2026_09_38_49
+s2(03Nov2026:09:38:49):  xrun -64bit tb_counter_n.sv counter_n.sv 
+#e3(03Nov2026:09:39:07): source ./xcelium.d/env.d/env.history.03Nov2026_09_39_07
+s3(03Nov2026:09:39:07):  xrun -64bit tb_counter_n.sv counter_n.sv 
+#e4(03Nov2026:09:47:17): source ./xcelium.d/env.d/env.history.03Nov2026_09_47_17
+s4(03Nov2026:09:47:17):  xrun -64bit tb_counter_n.sv counter_n_top.sv 
+#e5(03Nov2026:09:47:37): source ./xcelium.d/env.d/env.history.03Nov2026_09_47_37
+s5(03Nov2026:09:47:37):  xrun -64bit tb_counter_n.sv counter_n_top.sv 
+#e6(03Nov2026:09:48:40): source ./xcelium.d/env.d/env.history.03Nov2026_09_48_40
+s6(03Nov2026:09:48:40):  xrun -64bit tb_counter_n.sv counter_n_top.sv 
+#e7(03Nov2026:09:49:30): source ./xcelium.d/env.d/env.history.03Nov2026_09_49_30
+s7(03Nov2026:09:49:30):  xrun -64bit tb_counter_n.sv counter_n.sv 
+#e8(03Nov2026:09:49:33): source ./xcelium.d/env.d/env.history.03Nov2026_09_49_33
+s8(03Nov2026:09:49:33):  xrun -64bit tb_counter_n.sv counter_n_top.sv 
+#e9(03Nov2026:09:50:26): source ./xcelium.d/env.d/env.history.03Nov2026_09_50_26
+s9(03Nov2026:09:50:26):  xrun -64bit tb_counter_n.sv counter_n_top.sv 
+#e10(03Nov2026:09:51:01): source ./xcelium.d/env.d/env.history.03Nov2026_09_51_01
+s10(03Nov2026:09:51:01):  xrun -64bit tb_counter_n.sv counter_n_top.sv 
+#e11(03Nov2026:09:51:17): source ./xcelium.d/env.d/env.history.03Nov2026_09_51_17
+s11(03Nov2026:09:51:17):  xrun -64bit tb_counter_n.sv counter_n_top.sv 
+#e12(03Nov2026:09:51:38): source ./xcelium.d/env.d/env.history.03Nov2026_09_51_38
+s12(03Nov2026:09:51:38):  xrun -64bit tb_counter_n.sv counter_n_top.sv 

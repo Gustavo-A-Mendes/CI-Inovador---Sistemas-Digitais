@@ -1,0 +1,37 @@
+$date
+    Nov  3, 2026  09:51:39
+$end
+$version
+    TOOL:	xmsim(64)	24.09-s001
+$end
+$timescale
+    1 ps
+$end
+
+$scope module counter_10_tb $end
+
+$scope module dut $end
+
+$scope module cn0 $end
+$var parameter 32 !    W $end
+$var parameter 32 "    N $end
+$upscope $end
+
+
+$scope module cn1 $end
+$var parameter 32 #    W $end
+$var parameter 32 $    N $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b10000 $
+b100 #
+b1010 "
+b100 !
+$end
+#355000

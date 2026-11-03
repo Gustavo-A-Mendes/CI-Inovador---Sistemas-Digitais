@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(03Nov2026:10:49:19):( xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw )&&(./xcelium.d/env.d/env.history.03Nov2026_10_49_19)
+s2::(03Nov2026:10:56:06):( xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw )&&(./xcelium.d/env.d/env.history.03Nov2026_10_56_06)
+s3::(03Nov2026:11:02:46):( xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw )&&(./xcelium.d/env.d/env.history.03Nov2026_11_02_46)
+s4::(03Nov2026:11:04:54):( xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw )&&(./xcelium.d/env.d/env.history.03Nov2026_11_04_54)
+s5::(03Nov2026:11:07:10):( xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw )&&(./xcelium.d/env.d/env.history.03Nov2026_11_07_10)

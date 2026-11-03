@@ -1,0 +1,72 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 11:07:10 -03
+xrun
+	-64bit
+	tb_regbank.sv
+	regbank.sv
+	reg8.sv
+	+gui
+	+access+rw
+Recompiling... reason: file './tb_regbank.sv' is newer than expected.
+	expected: Tue Nov  3 11:04:46 2026
+	actual:   Tue Nov  3 11:06:59 2026
+file: tb_regbank.sv
+	module worklib.regbank_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		regbank_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.regbank_tb:sv <0x1fe2e3ad>
+			streams:   9, words: 14597
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 6       3
+		Registers:              10       7
+		Scalar wires:            2       -
+		Expanded wires:          4       1
+		Vectored wires:         15       -
+		Always blocks:           5       2
+		Initial blocks:          3       3
+		Pseudo assignments:     13       -
+		Process Clocks:          4       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.regbank_tb:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm regbank_tb.clk regbank_tb.rst regbank_tb.d regbank_tb.en regbank_tb.q regbank_tb.dut.g[0].rg.d regbank_tb.dut.g[0].rg.en regbank_tb.dut.g[0].rg.q regbank_tb.dut.g[1].rg.d regbank_tb.dut.g[1].rg.en regbank_tb.dut.g[1].rg.q regbank_tb.dut.g[2].rg.d regbank_tb.dut.g[2].rg.en regbank_tb.dut.g[2].rg.q regbank_tb.dut.g[3].rg.d regbank_tb.dut.g[3].rg.en regbank_tb.dut.g[3].rg.q
+Created probe 1
+xcelium> run
+Tempo: 0 | rst: 0 | en: 0000 | d: 0x00000000 | q: 0xxxxxxxxx
+Tempo: 2000 | rst: 1 | en: 0000 | d: 0x00000000 | q: 0x00000000
+Tempo: 12000 | rst: 0 | en: 0000 | d: 0x00000000 | q: 0x00000000
+Tempo: 22000 | rst: 0 | en: 0000 | d: 0x12345678 | q: 0x00000000
+Tempo: 23000 | rst: 0 | en: 0001 | d: 0x12345678 | q: 0x00000000
+Tempo: 25000 | rst: 0 | en: 0001 | d: 0x12345678 | q: 0x00000078
+Tempo: 27000 | rst: 0 | en: 0010 | d: 0x12345678 | q: 0x00000078
+Tempo: 35000 | rst: 0 | en: 0010 | d: 0x12345678 | q: 0x00005678
+Tempo: 37000 | rst: 0 | en: 1100 | d: 0x12345678 | q: 0x00005678
+Tempo: 45000 | rst: 0 | en: 1100 | d: 0xffffffff | q: 0x12345678
+Tempo: 47000 | rst: 0 | en: 0000 | d: 0xffffffff | q: 0x12345678
+Tempo: 75000 | rst: 0 | en: 0000 | d: 0xdeadbeef | q: 0x12345678
+Tempo: 77000 | rst: 0 | en: 1111 | d: 0xdeadbeef | q: 0x12345678
+Tempo: 85000 | rst: 0 | en: 1111 | d: 0xdeadbeef | q: 0xdeadbeef
+Tempo: 87000 | rst: 0 | en: 0000 | d: 0xdeadbeef | q: 0xdeadbeef
+Tempo: 95000 | rst: 1 | en: 0000 | d: 0xdeadbeef | q: 0x00000000
+Tempo: 105000 | rst: 0 | en: 0000 | d: 0xdeadbeef | q: 0x00000000
+Simulação finalizada com sucesso!
+Simulation complete via $finish(1) at time 115 NS + 0
+./tb_regbank.sv:74     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 11:09:09 -03  (total: 00:01:59)

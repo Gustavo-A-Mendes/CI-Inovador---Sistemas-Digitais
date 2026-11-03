@@ -1,0 +1,10 @@
+#e1(03Nov2026:10:49:19): source ./xcelium.d/env.d/env.history.03Nov2026_10_49_19
+s1(03Nov2026:10:49:19):  xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw 
+#e2(03Nov2026:10:56:06): source ./xcelium.d/env.d/env.history.03Nov2026_10_56_06
+s2(03Nov2026:10:56:06):  xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw 
+#e3(03Nov2026:11:02:46): source ./xcelium.d/env.d/env.history.03Nov2026_11_02_46
+s3(03Nov2026:11:02:46):  xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw 
+#e4(03Nov2026:11:04:54): source ./xcelium.d/env.d/env.history.03Nov2026_11_04_54
+s4(03Nov2026:11:04:54):  xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw 
+#e5(03Nov2026:11:07:10): source ./xcelium.d/env.d/env.history.03Nov2026_11_07_10
+s5(03Nov2026:11:07:10):  xrun -64bit tb_regbank.sv regbank.sv reg8.sv +gui +access+rw 

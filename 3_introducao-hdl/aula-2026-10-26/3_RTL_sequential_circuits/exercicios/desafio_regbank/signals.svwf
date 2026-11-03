@@ -1,0 +1,81 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.rst}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.d[31:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.en[3:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.q[31:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[0].rg.d[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #ff9900 -namecolor #ff9900
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[0].rg.en}]}
+	} ]]
+waveform format $id -color #ff9900 -namecolor #ff9900
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[0].rg.q[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #ff9900 -namecolor #ff9900
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[1].rg.d[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #ffff00 -namecolor #ffff00
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[1].rg.en}]}
+	} ]]
+waveform format $id -color #ffff00 -namecolor #ffff00
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[1].rg.q[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #ffff00 -namecolor #ffff00
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[2].rg.d[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #0099ff -namecolor #0099ff
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[2].rg.en}]}
+	} ]]
+waveform format $id -color #0099ff -namecolor #0099ff
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[2].rg.q[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #0099ff -namecolor #0099ff
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[3].rg.d[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #00ffff -namecolor #00ffff
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[3].rg.en}]}
+	} ]]
+waveform format $id -color #00ffff -namecolor #00ffff
+set id [waveform add -signals [subst  {
+	{[format {regbank_tb.dut.g[3].rg.q[7:0]}]}
+	} ]]
+waveform format $id -radix %b -color #00ffff -namecolor #00ffff
+
+waveform xview limits 0 115000ps
