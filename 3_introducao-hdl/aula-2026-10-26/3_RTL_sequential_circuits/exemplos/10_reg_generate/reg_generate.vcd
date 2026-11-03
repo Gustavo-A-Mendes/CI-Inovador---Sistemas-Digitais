@@ -1,0 +1,115 @@
+$date
+	Tue Nov  3 02:11:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_reg_generate $end
+$var wire 32 ! q [31:0] $end
+$var parameter 32 " N $end
+$var reg 1 # clk $end
+$var reg 32 $ d [31:0] $end
+$var reg 1 % rst $end
+$scope begin g[0] $end
+$var parameter 2 & i $end
+$scope module u_rg $end
+$var wire 1 # clk $end
+$var wire 8 ' d [7:0] $end
+$var wire 1 % rst $end
+$var parameter 32 ( N $end
+$var reg 8 ) q [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin g[1] $end
+$var parameter 2 * i $end
+$scope module u_rg $end
+$var wire 1 # clk $end
+$var wire 8 + d [7:0] $end
+$var wire 1 % rst $end
+$var parameter 32 , N $end
+$var reg 8 - q [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin g[2] $end
+$var parameter 3 . i $end
+$scope module u_rg $end
+$var wire 1 # clk $end
+$var wire 8 / d [7:0] $end
+$var wire 1 % rst $end
+$var parameter 32 0 N $end
+$var reg 8 1 q [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin g[3] $end
+$var parameter 3 2 i $end
+$scope module u_rg $end
+$var wire 1 # clk $end
+$var wire 8 3 d [7:0] $end
+$var wire 1 % rst $end
+$var parameter 32 4 N $end
+$var reg 8 5 q [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 4
+b11 2
+b1000 0
+b10 .
+b1000 ,
+b1 *
+b1000 (
+b0 &
+b1000 "
+$end
+#0
+$dumpvars
+b0 5
+bx 3
+b0 1
+bx /
+b0 -
+bx +
+b0 )
+bx '
+1%
+bx $
+0#
+b0 !
+$end
+#2
+0%
+#5
+bx !
+bx 5
+bx 1
+bx -
+bx )
+b10010100 '
+b1001111 +
+b10100001 /
+b100000 3
+b100000101000010100111110010100 $
+1#
+#10
+0#
+#15
+b100000101000010100111110010100 !
+b10010100 )
+b1001111 -
+b10100001 1
+b100000 5
+1#
+#20
+0#
+#25
+1#
+#30
+0#
+#35
+1#

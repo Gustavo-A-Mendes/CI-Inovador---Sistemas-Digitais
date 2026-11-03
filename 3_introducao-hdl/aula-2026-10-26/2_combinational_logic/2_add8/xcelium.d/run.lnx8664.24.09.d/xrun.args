@@ -1,9 +1,0 @@
-//
-// File created by:  xrun
-// Do not modify this file
-//
--64bit
-add8_tb.sv
-add8.sv
-+access+rw
-+gui

@@ -1,8 +1,0 @@
-module mux2 (
-  input wire [7:0]  a, b,
-  input wire        sel,
-  output wire [7:0] y
-);
-
-  assign y = (sel == 1'b0) ? a : b;
-endmodule
