@@ -1,0 +1,1 @@
+1793737188 /home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/aula_2026-10-28/memory/2_rom_array/rom_array.sv

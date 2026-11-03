@@ -1,0 +1,4 @@
+#e1(03Nov2026:17:17:39): source ./xcelium.d/env.d/env.history.03Nov2026_17_17_39
+s1(03Nov2026:17:17:39):  xrun -compile rom8_addr4.sv 
+#e2(03Nov2026:17:20:10): source ./xcelium.d/env.d/env.history.03Nov2026_17_20_10
+s2(03Nov2026:17:20:10):  xrun -compile rom8_addr4.sv 

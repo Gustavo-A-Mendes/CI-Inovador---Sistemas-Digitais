@@ -1,0 +1,9 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 17:20:33 -03
+xrun
+	-compile
+	rom_array.sv
+Recompiling... reason: file './rom_array.sv' is newer than expected.
+	expected: Tue Nov  3 17:19:41 2026
+	actual:   Tue Nov  3 17:19:48 2026
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 17:20:33 -03  (total: 00:00:00)

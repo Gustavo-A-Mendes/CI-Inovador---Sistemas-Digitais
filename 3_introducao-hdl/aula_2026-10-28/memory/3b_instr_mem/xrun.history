@@ -1,0 +1,8 @@
+#e1(03Nov2026:17:24:57): source ./xcelium.d/env.d/env.history.03Nov2026_17_24_57
+s1(03Nov2026:17:24:57):  xrun -compile instr_mem.sv 
+#e2(03Nov2026:17:25:01): source ./xcelium.d/env.d/env.history.03Nov2026_17_25_01
+s2(03Nov2026:17:25:01):  xrun -compile instr_mem.sv 
+#e3(03Nov2026:17:26:46): source ./xcelium.d/env.d/env.history.03Nov2026_17_26_46
+s3(03Nov2026:17:26:46):  xrun -compile instr_mem.sv 
+#e4(03Nov2026:17:26:48): source ./xcelium.d/env.d/env.history.03Nov2026_17_26_48
+s4(03Nov2026:17:26:48):  xrun -compile instr_mem.sv 
