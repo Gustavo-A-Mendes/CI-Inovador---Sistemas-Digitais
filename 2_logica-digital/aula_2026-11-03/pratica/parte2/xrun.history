@@ -1,0 +1,68 @@
+#e1(03Nov2026:12:04:56): source ./xcelium.d/env.d/env.history.03Nov2026_12_04_56
+s1(03Nov2026:12:04:56):  xrun -compile tb.sv sistema_x.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e2(03Nov2026:12:05:00): source ./xcelium.d/env.d/env.history.03Nov2026_12_05_00
+s2(03Nov2026:12:05:00):  xrun -gui -access rw -top tb 
+#e3(03Nov2026:12:05:14): source ./xcelium.d/env.d/env.history.03Nov2026_12_05_14
+s3(03Nov2026:12:05:14):  xrun -compile tb.sv sistema_x.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e4(03Nov2026:12:05:47): source ./xcelium.d/env.d/env.history.03Nov2026_12_05_47
+s4(03Nov2026:12:05:47):  xrun -compile tb.sv sistema_x.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e5(03Nov2026:12:05:55): source ./xcelium.d/env.d/env.history.03Nov2026_12_05_55
+s5(03Nov2026:12:05:55):  xrun -compile tb.sv sistema_x.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e6(03Nov2026:12:06:20): source ./xcelium.d/env.d/env.history.03Nov2026_12_06_20
+s6(03Nov2026:12:06:20):  xrun -compile tb.sv sistema_x.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e7(03Nov2026:12:06:27): source ./xcelium.d/env.d/env.history.03Nov2026_12_06_27
+s7(03Nov2026:12:06:27):  xrun -gui -access rw -top tb 
+#e8(03Nov2026:12:08:16): source ./xcelium.d/env.d/env.history.03Nov2026_12_08_16
+s8(03Nov2026:12:08:16):  xrun -compile tb.sv sistema_x.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e9(03Nov2026:12:08:18): source ./xcelium.d/env.d/env.history.03Nov2026_12_08_18
+s9(03Nov2026:12:08:18):  xrun -gui -access rw -top tb 
+#e10(03Nov2026:13:01:51): source ./xcelium.d/env.d/env.history.03Nov2026_13_01_51
+s10(03Nov2026:13:01:51):  xrun -compile tb.sv sistema_y.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e11(03Nov2026:13:01:55): source ./xcelium.d/env.d/env.history.03Nov2026_13_01_55
+s11(03Nov2026:13:01:55):  xrun -gui -access rw -top tb 
+#e12(03Nov2026:13:03:08): source ./xcelium.d/env.d/env.history.03Nov2026_13_03_08
+s12(03Nov2026:13:03:08):  xrun -compile tb.sv sistema_y.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e13(03Nov2026:13:03:09): source ./xcelium.d/env.d/env.history.03Nov2026_13_03_09
+s13(03Nov2026:13:03:09):  xrun -gui -access rw -top tb 
+#e14(03Nov2026:13:03:41): source ./xcelium.d/env.d/env.history.03Nov2026_13_03_41
+s14(03Nov2026:13:03:41):  xrun -compile tb.sv sistema_y.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e15(03Nov2026:13:03:53): source ./xcelium.d/env.d/env.history.03Nov2026_13_03_53
+s15(03Nov2026:13:03:53):  xrun -compile tb.sv sistema_y.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e16(03Nov2026:13:03:56): source ./xcelium.d/env.d/env.history.03Nov2026_13_03_56
+s16(03Nov2026:13:03:56):  xrun -gui -access rw -top tb 
+#e17(03Nov2026:13:04:48): source ./xcelium.d/env.d/env.history.03Nov2026_13_04_48
+s17(03Nov2026:13:04:48):  xrun -compile tb.sv sistema_y.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e18(03Nov2026:13:04:50): source ./xcelium.d/env.d/env.history.03Nov2026_13_04_50
+s18(03Nov2026:13:04:50):  xrun -gui -access rw -top tb 
+#e19(03Nov2026:14:26:08): source ./xcelium.d/env.d/env.history.03Nov2026_14_26_08
+s19(03Nov2026:14:26:08):  xrun tb.sv sistema_y.sv fast_vdd1v0_basicCells_hvt.v -gui -access rw 
+#e20(03Nov2026:14:33:38): source ./xcelium.d/env.d/env.history.03Nov2026_14_33_38
+s20(03Nov2026:14:33:38):  xrun tb.sv sistema_y.sv fast_vdd1v0_basicCells_hvt.v -gui -access rw 
+#e21(03Nov2026:15:21:40): source ./xcelium.d/env.d/env.history.03Nov2026_15_21_40
+s21(03Nov2026:15:21:40):  xrun -gui access rw -top tb 
+#e22(03Nov2026:15:21:58): source ./xcelium.d/env.d/env.history.03Nov2026_15_21_58
+s22(03Nov2026:15:21:58):  xrun -gui access rw -top tb 
+#e23(03Nov2026:15:22:09): source ./xcelium.d/env.d/env.history.03Nov2026_15_22_09
+s23(03Nov2026:15:22:09):  xrun -compile tb.sv 
+#e24(03Nov2026:15:22:19): source ./xcelium.d/env.d/env.history.03Nov2026_15_22_19
+s24(03Nov2026:15:22:19):  xrun -compile sistema_y.sv 
+#e25(03Nov2026:15:22:22): source ./xcelium.d/env.d/env.history.03Nov2026_15_22_22
+s25(03Nov2026:15:22:22):  xrun -compile fast_vdd1v0_basicCells_hvt.v 
+#e26(03Nov2026:15:22:32): source ./xcelium.d/env.d/env.history.03Nov2026_15_22_32
+s26(03Nov2026:15:22:32):  xrun -elaborate --top tb 
+#e27(03Nov2026:15:22:36): source ./xcelium.d/env.d/env.history.03Nov2026_15_22_36
+s27(03Nov2026:15:22:36):  xrun -elaborate -top tb 
+#e28(03Nov2026:15:22:45): source ./xcelium.d/env.d/env.history.03Nov2026_15_22_45
+s28(03Nov2026:15:22:45):  xrun -elaborate tb 
+#e29(03Nov2026:15:23:04): source ./xcelium.d/env.d/env.history.03Nov2026_15_23_04
+s29(03Nov2026:15:23:04):  xrun -compile sistema_y.sv 
+#e30(03Nov2026:15:23:05): source ./xcelium.d/env.d/env.history.03Nov2026_15_23_05
+s30(03Nov2026:15:23:05):  xrun -elaborate tb 
+#e31(03Nov2026:15:23:07): source ./xcelium.d/env.d/env.history.03Nov2026_15_23_07
+s31(03Nov2026:15:23:07):  xrun -elaborate -top tb 
+#e32(03Nov2026:15:23:15): source ./xcelium.d/env.d/env.history.03Nov2026_15_23_15
+s32(03Nov2026:15:23:15):  xrun -gui access rw -top tb 
+#e33(03Nov2026:15:23:21): source ./xcelium.d/env.d/env.history.03Nov2026_15_23_21
+s33(03Nov2026:15:23:21):  xrun -gui -access rw -top tb 
+#e34(03Nov2026:15:28:00): source ./xcelium.d/env.d/env.history.03Nov2026_15_28_00
+s34(03Nov2026:15:28:00):  xrun -gui -access rw -top tb 

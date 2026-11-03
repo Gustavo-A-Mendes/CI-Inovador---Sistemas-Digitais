@@ -1,0 +1,45 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 15:38:02 -03
+xrun
+	-gui
+	-access rw
+	-top tb
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.sistema_x:sv <0x4527c15b>
+			streams:   5, words:  1311
+		worklib.tb:sv <0x3b697859>
+			streams:   4, words:  2735
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  5       4
+		Primitives:               3       2
+		Timing outputs:           3       2
+		Registers:                5       5
+		Scalar wires:            10       -
+		Expanded wires:           4       1
+		Always blocks:            1       1
+		Initial blocks:           1       1
+		Pseudo assignments:       7       -
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.tb:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> run
+Iniciou...
+Estimulos...
+Acabou o teste.
+Simulation complete via $finish(1) at time 103 NS + 0
+./tb.sv:28     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 15:38:53 -03  (total: 00:00:51)

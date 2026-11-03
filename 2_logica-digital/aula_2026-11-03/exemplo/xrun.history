@@ -1,0 +1,30 @@
+#e1(03Nov2026:11:21:31): source ./xcelium.d/env.d/env.history.03Nov2026_11_21_31
+s1(03Nov2026:11:21:31):  xrun -compile tb.sv 
+#e2(03Nov2026:11:21:55): source ./xcelium.d/env.d/env.history.03Nov2026_11_21_55
+s2(03Nov2026:11:21:55):  xrun -compile tb.sv 
+#e3(03Nov2026:11:22:01): source ./xcelium.d/env.d/env.history.03Nov2026_11_22_01
+s3(03Nov2026:11:22:01):  xrun -compile tb.sv 
+#e4(03Nov2026:11:22:12): source ./xcelium.d/env.d/env.history.03Nov2026_11_22_12
+s4(03Nov2026:11:22:12):  xrun -elaborate -top tb 
+#e5(03Nov2026:11:22:33): source ./xcelium.d/env.d/env.history.03Nov2026_11_22_33
+s5(03Nov2026:11:22:33):  xrun -top tb 
+#e6(03Nov2026:11:26:26): source ./xcelium.d/env.d/env.history.03Nov2026_11_26_26
+s6(03Nov2026:11:26:26):  xrun -compile tb.sv 
+#e7(03Nov2026:11:26:33): source ./xcelium.d/env.d/env.history.03Nov2026_11_26_33
+s7(03Nov2026:11:26:33):  xrun -top tb 
+#e8(03Nov2026:11:26:37): source ./xcelium.d/env.d/env.history.03Nov2026_11_26_37
+s8(03Nov2026:11:26:37):  xrun -elaborate -top tb 
+#e9(03Nov2026:11:27:23): source ./xcelium.d/env.d/env.history.03Nov2026_11_27_23
+s9(03Nov2026:11:27:23):  xrun -gui -access rw -top tb 
+#e10(03Nov2026:11:28:47): source ./xcelium.d/env.d/env.history.03Nov2026_11_28_47
+s10(03Nov2026:11:28:47):  xrun -compile tb.sv 
+#e11(03Nov2026:11:28:49): source ./xcelium.d/env.d/env.history.03Nov2026_11_28_49
+s11(03Nov2026:11:28:49):  xrun -elaborate -top tb 
+#e12(03Nov2026:11:28:59): source ./xcelium.d/env.d/env.history.03Nov2026_11_28_59
+s12(03Nov2026:11:28:59):  xrun -top tb 
+#e13(03Nov2026:11:29:03): source ./xcelium.d/env.d/env.history.03Nov2026_11_29_03
+s13(03Nov2026:11:29:03):  xrun -gui -access rw -top tb 
+#e14(03Nov2026:11:48:33): source ./xcelium.d/env.d/env.history.03Nov2026_11_48_33
+s14(03Nov2026:11:48:33):  xrun -compile tb.sv /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v 
+#e15(03Nov2026:11:48:41): source ./xcelium.d/env.d/env.history.03Nov2026_11_48_41
+s15(03Nov2026:11:48:41):  xrun -gui -access rw -top tb 

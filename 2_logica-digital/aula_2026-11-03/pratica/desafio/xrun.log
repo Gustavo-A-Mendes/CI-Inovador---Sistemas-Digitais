@@ -1,0 +1,56 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 15:42:03 -03
+xrun
+	-gui
+	-access rw
+	-top tb
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.meu_primeiro_mux8x1:sv <0x1b0ca29f>
+			streams:   7, words:  1775
+		worklib.tb:sv <0x602e3069>
+			streams:   6, words:  9696
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 6       5
+		Primitives:             27       3
+		Timing outputs:          4       3
+		Registers:               9       9
+		Scalar wires:           14       -
+		Expanded wires:         11       2
+		Initial blocks:          2       2
+		Pseudo assignments:     11       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> run
+=== INÍCIO DO TESTE DO MUX 8x1 ===
+[PASS] Seleção A = 000 (0) | Saída Q = 0 | Esperado X[0] = 0
+[PASS] Seleção A = 001 (1) | Saída Q = 0 | Esperado X[1] = 0
+[PASS] Seleção A = 010 (2) | Saída Q = 1 | Esperado X[2] = 1
+[PASS] Seleção A = 011 (3) | Saída Q = 1 | Esperado X[3] = 1
+[PASS] Seleção A = 100 (4) | Saída Q = 0 | Esperado X[4] = 0
+[PASS] Seleção A = 101 (5) | Saída Q = 1 | Esperado X[5] = 1
+[PASS] Seleção A = 110 (6) | Saída Q = 0 | Esperado X[6] = 0
+[PASS] Seleção A = 111 (7) | Saída Q = 1 | Esperado X[7] = 1
+
+=== TESTE COM VETOR DINÂMICO ===
+Seleção A = 001 | Saída Q = 0 (Esperado: 0)
+Seleção A = 110 | Saída Q = 1 (Esperado: 1)
+
+Simulação finalizada com sucesso!
+Simulation complete via $finish(1) at time 120 NS + 0
+./tb.sv:60     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 15:42:42 -03  (total: 00:00:39)

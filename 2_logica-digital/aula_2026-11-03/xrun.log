@@ -1,0 +1,100 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 15:00:51 -03
+xrun
+	-gui
+	-access rw
+	-top tb
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> run
+Tempo=0 ns | A=00 (0) | B=00 (0) | CI=0 || S=00 (0) | CO=0
+
+--- INICIANDO TESTE EXAUSTIVO ---
+Tempo=2000 ns | A=00 (0) | B=00 (0) | CI=1 || S=01 (1) | CO=0
+xmsim: *E,ERRSEV (./tb.sv,56): (time 30 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=0, B=0, CI=1 | Esperado={CO,S}=000 | Obtido={CO,S}=001
+Tempo=3000 ns | A=00 (0) | B=01 (1) | CI=0 || S=01 (1) | CO=0
+Tempo=4000 ns | A=00 (0) | B=01 (1) | CI=1 || S=10 (2) | CO=0
+xmsim: *E,ERRSEV (./tb.sv,56): (time 50 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=0, B=1, CI=1 | Esperado={CO,S}=001 | Obtido={CO,S}=010
+Tempo=5000 ns | A=00 (0) | B=10 (2) | CI=0 || S=10 (2) | CO=0
+Tempo=6000 ns | A=00 (0) | B=10 (2) | CI=1 || S=11 (3) | CO=0
+xmsim: *E,ERRSEV (./tb.sv,56): (time 70 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=0, B=2, CI=1 | Esperado={CO,S}=010 | Obtido={CO,S}=011
+Tempo=7000 ns | A=00 (0) | B=11 (3) | CI=0 || S=11 (3) | CO=0
+Tempo=8000 ns | A=00 (0) | B=11 (3) | CI=1 || S=00 (0) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 90 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=0, B=3, CI=1 | Esperado={CO,S}=011 | Obtido={CO,S}=100
+Tempo=9000 ns | A=01 (1) | B=00 (0) | CI=0 || S=01 (1) | CO=0
+Tempo=10000 ns | A=01 (1) | B=00 (0) | CI=1 || S=10 (2) | CO=0
+xmsim: *E,ERRSEV (./tb.sv,56): (time 110 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=1, B=0, CI=1 | Esperado={CO,S}=001 | Obtido={CO,S}=010
+Tempo=11000 ns | A=01 (1) | B=01 (1) | CI=0 || S=10 (2) | CO=0
+Tempo=12000 ns | A=01 (1) | B=01 (1) | CI=1 || S=11 (3) | CO=0
+xmsim: *E,ERRSEV (./tb.sv,56): (time 130 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=1, B=1, CI=1 | Esperado={CO,S}=010 | Obtido={CO,S}=011
+Tempo=13000 ns | A=01 (1) | B=10 (2) | CI=0 || S=11 (3) | CO=0
+Tempo=14000 ns | A=01 (1) | B=10 (2) | CI=1 || S=00 (0) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 150 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=1, B=2, CI=1 | Esperado={CO,S}=011 | Obtido={CO,S}=100
+Tempo=15000 ns | A=01 (1) | B=11 (3) | CI=0 || S=00 (0) | CO=1
+Tempo=16000 ns | A=01 (1) | B=11 (3) | CI=1 || S=01 (1) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 170 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=1, B=3, CI=1 | Esperado={CO,S}=100 | Obtido={CO,S}=101
+Tempo=17000 ns | A=10 (2) | B=00 (0) | CI=0 || S=10 (2) | CO=0
+Tempo=18000 ns | A=10 (2) | B=00 (0) | CI=1 || S=11 (3) | CO=0
+xmsim: *E,ERRSEV (./tb.sv,56): (time 190 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=2, B=0, CI=1 | Esperado={CO,S}=010 | Obtido={CO,S}=011
+Tempo=19000 ns | A=10 (2) | B=01 (1) | CI=0 || S=11 (3) | CO=0
+Tempo=20000 ns | A=10 (2) | B=01 (1) | CI=1 || S=00 (0) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 210 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=2, B=1, CI=1 | Esperado={CO,S}=011 | Obtido={CO,S}=100
+Tempo=21000 ns | A=10 (2) | B=10 (2) | CI=0 || S=00 (0) | CO=1
+Tempo=22000 ns | A=10 (2) | B=10 (2) | CI=1 || S=01 (1) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 230 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=2, B=2, CI=1 | Esperado={CO,S}=100 | Obtido={CO,S}=101
+Tempo=23000 ns | A=10 (2) | B=11 (3) | CI=0 || S=01 (1) | CO=1
+Tempo=24000 ns | A=10 (2) | B=11 (3) | CI=1 || S=10 (2) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 250 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=2, B=3, CI=1 | Esperado={CO,S}=101 | Obtido={CO,S}=110
+Tempo=25000 ns | A=11 (3) | B=00 (0) | CI=0 || S=11 (3) | CO=0
+Tempo=26000 ns | A=11 (3) | B=00 (0) | CI=1 || S=00 (0) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 270 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=3, B=0, CI=1 | Esperado={CO,S}=011 | Obtido={CO,S}=100
+Tempo=27000 ns | A=11 (3) | B=01 (1) | CI=0 || S=00 (0) | CO=1
+Tempo=28000 ns | A=11 (3) | B=01 (1) | CI=1 || S=01 (1) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 290 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=3, B=1, CI=1 | Esperado={CO,S}=100 | Obtido={CO,S}=101
+Tempo=29000 ns | A=11 (3) | B=10 (2) | CI=0 || S=01 (1) | CO=1
+Tempo=30000 ns | A=11 (3) | B=10 (2) | CI=1 || S=10 (2) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 310 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=3, B=2, CI=1 | Esperado={CO,S}=101 | Obtido={CO,S}=110
+Tempo=31000 ns | A=11 (3) | B=11 (3) | CI=0 || S=10 (2) | CO=1
+Tempo=32000 ns | A=11 (3) | B=11 (3) | CI=1 || S=11 (3) | CO=1
+xmsim: *E,ERRSEV (./tb.sv,56): (time 330 NS).
+tb.unmblk1.unmblk1.unmblk1
+[ERRO] A=3, B=3, CI=1 | Esperado={CO,S}=110 | Obtido={CO,S}=111
+--- FIM DO TESTE ---
+Simulation complete via $finish(1) at time 330 NS + 0
+./tb.sv:65     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 15:20:27 -03  (total: 00:19:36)

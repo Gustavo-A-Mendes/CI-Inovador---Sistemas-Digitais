@@ -1,0 +1,20 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 03, 2026 at 15:28:00 -03
+xrun
+	-gui
+	-access rw
+	-top tb
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> run
+Iniciou...
+Estimulos...
+Acabou o teste.
+Simulation complete via $finish(1) at time 103 NS + 0
+./tb.sv:29     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 03, 2026 at 15:35:42 -03  (total: 00:07:42)

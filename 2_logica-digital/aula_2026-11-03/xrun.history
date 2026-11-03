@@ -1,0 +1,62 @@
+#e1(03Nov2026:14:42:39): source ./xcelium.d/env.d/env.history.03Nov2026_14_42_39
+s1(03Nov2026:14:42:39):  xrun -compile tb.sv 
+#e2(03Nov2026:14:42:55): source ./xcelium.d/env.d/env.history.03Nov2026_14_42_55
+s2(03Nov2026:14:42:55):  xrun -compile full_adder2.sv 
+#e3(03Nov2026:14:43:05): source ./xcelium.d/env.d/env.history.03Nov2026_14_43_05
+s3(03Nov2026:14:43:05):  xrun -elaborate tb.sv 
+#e4(03Nov2026:14:43:18): source ./xcelium.d/env.d/env.history.03Nov2026_14_43_18
+s4(03Nov2026:14:43:18):  xrun -top tb.sv 
+#e5(03Nov2026:14:43:48): source ./xcelium.d/env.d/env.history.03Nov2026_14_43_48
+s5(03Nov2026:14:43:48):  xrun -compile tb.sv 
+#e6(03Nov2026:14:43:55): source ./xcelium.d/env.d/env.history.03Nov2026_14_43_55
+s6(03Nov2026:14:43:55):  xrun -compile tb.sv 
+#e7(03Nov2026:14:43:58): source ./xcelium.d/env.d/env.history.03Nov2026_14_43_58
+s7(03Nov2026:14:43:58):  xrun -compile full_adder2.sv 
+#e8(03Nov2026:14:44:16): source ./xcelium.d/env.d/env.history.03Nov2026_14_44_16
+s8(03Nov2026:14:44:16):  xrun -elaborate -top tb 
+#e9(03Nov2026:14:44:31): source ./xcelium.d/env.d/env.history.03Nov2026_14_44_31
+s9(03Nov2026:14:44:31):  xrun -compile tb.sv 
+#e10(03Nov2026:14:44:36): source ./xcelium.d/env.d/env.history.03Nov2026_14_44_36
+s10(03Nov2026:14:44:36):  xrun -compile full_adder2.sv 
+#e11(03Nov2026:14:44:42): source ./xcelium.d/env.d/env.history.03Nov2026_14_44_42
+s11(03Nov2026:14:44:42):  xrun -elaborate -top tb 
+#e12(03Nov2026:14:45:03): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_03
+s12(03Nov2026:14:45:03):  xrun -compile tb.sv 
+#e13(03Nov2026:14:45:06): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_06
+s13(03Nov2026:14:45:06):  xrun -compile full_adder2.sv 
+#e14(03Nov2026:14:45:08): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_08
+s14(03Nov2026:14:45:08):  xrun -elaborate -top tb 
+#e15(03Nov2026:14:45:25): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_25
+s15(03Nov2026:14:45:25):  xrun -compile tb.sv 
+#e16(03Nov2026:14:45:27): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_27
+s16(03Nov2026:14:45:27):  xrun -compile full_adder2.sv 
+#e17(03Nov2026:14:45:32): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_32
+s17(03Nov2026:14:45:32):  xrun -compile fast_vdd1v0_basicCells_hvt.v 
+#e18(03Nov2026:14:45:36): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_36
+s18(03Nov2026:14:45:36):  xrun -elaborate -top tb 
+#e19(03Nov2026:14:45:50): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_50
+s19(03Nov2026:14:45:50):  xrun -compile tb.sv 
+#e20(03Nov2026:14:45:52): source ./xcelium.d/env.d/env.history.03Nov2026_14_45_52
+s20(03Nov2026:14:45:52):  xrun -elaborate -top tb 
+#e21(03Nov2026:14:46:05): source ./xcelium.d/env.d/env.history.03Nov2026_14_46_05
+s21(03Nov2026:14:46:05):  xrun -top tb -gui -access rw 
+#e22(03Nov2026:14:46:29): source ./xcelium.d/env.d/env.history.03Nov2026_14_46_29
+s22(03Nov2026:14:46:29):  xrun -gui -access rw -top tb 
+#e23(03Nov2026:14:46:57): source ./xcelium.d/env.d/env.history.03Nov2026_14_46_57
+s23(03Nov2026:14:46:57):  xrun -compile tb.sv 
+#e24(03Nov2026:14:47:00): source ./xcelium.d/env.d/env.history.03Nov2026_14_47_00
+s24(03Nov2026:14:47:00):  xrun -elaborate -top tb 
+#e25(03Nov2026:14:47:22): source ./xcelium.d/env.d/env.history.03Nov2026_14_47_22
+s25(03Nov2026:14:47:22):  xrun -compile full_adder2.sv 
+#e26(03Nov2026:14:47:23): source ./xcelium.d/env.d/env.history.03Nov2026_14_47_23
+s26(03Nov2026:14:47:23):  xrun -elaborate -top tb 
+#e27(03Nov2026:14:47:30): source ./xcelium.d/env.d/env.history.03Nov2026_14_47_30
+s27(03Nov2026:14:47:30):  xrun -gui -access rw -top tb 
+#e28(03Nov2026:14:55:19): source ./xcelium.d/env.d/env.history.03Nov2026_14_55_19
+s28(03Nov2026:14:55:19):  xrun -compile full_adder2.sv 
+#e29(03Nov2026:14:55:21): source ./xcelium.d/env.d/env.history.03Nov2026_14_55_21
+s29(03Nov2026:14:55:21):  xrun -elaborate -top tb 
+#e30(03Nov2026:14:55:23): source ./xcelium.d/env.d/env.history.03Nov2026_14_55_23
+s30(03Nov2026:14:55:23):  xrun -gui -access rw -top tb 
+#e31(03Nov2026:15:00:52): source ./xcelium.d/env.d/env.history.03Nov2026_15_00_52
+s31(03Nov2026:15:00:52):  xrun -gui -access rw -top tb 
