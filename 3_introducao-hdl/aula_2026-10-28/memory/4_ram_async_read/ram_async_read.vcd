@@ -1,0 +1,62 @@
+$date
+	Wed Nov  4 02:33:07 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_ram $end
+$var wire 8 ! dout [7:0] $end
+$var parameter 32 " AW $end
+$var parameter 32 # DW $end
+$var reg 4 $ addr [3:0] $end
+$var reg 1 % clk $end
+$var reg 8 & din [7:0] $end
+$var reg 1 ' we $end
+$scope module dut $end
+$var wire 4 ( addr [3:0] $end
+$var wire 1 % clk $end
+$var wire 8 ) din [7:0] $end
+$var wire 8 * dout [7:0] $end
+$var wire 1 ' we $end
+$var parameter 32 + AW $end
+$var parameter 32 , DW $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 ,
+b100 +
+b1000 #
+b100 "
+$end
+#0
+$dumpvars
+bx *
+b0 )
+b0 (
+0'
+b0 &
+0%
+b0 $
+bx !
+$end
+#5000
+1%
+#10000
+b10100101 &
+b10100101 )
+b11 $
+b11 (
+1'
+0%
+#15000
+b10100101 !
+b10100101 *
+1%
+#20000
+0'
+0%

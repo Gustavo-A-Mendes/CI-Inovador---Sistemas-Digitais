@@ -1,0 +1,74 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2009.vpi";
+S_0000022EE5697C40 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000022EE5697DD0 .scope module, "ram_re_rst" "ram_re_rst" 3 2;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 1 "we";
+    .port_info 3 /INPUT 1 "re";
+    .port_info 4 /INPUT 8 "addr";
+    .port_info 5 /INPUT 8 "din";
+    .port_info 6 /OUTPUT 8 "dout";
+o0000022EE56ACFD8 .functor BUFZ 8, c4<zzzzzzzz>; HiZ drive
+v0000022EE5698010_0 .net "addr", 7 0, o0000022EE56ACFD8;  0 drivers
+o0000022EE56AD008 .functor BUFZ 1, c4<z>; HiZ drive
+v0000022EE56F1C40_0 .net "clk", 0 0, o0000022EE56AD008;  0 drivers
+o0000022EE56AD038 .functor BUFZ 8, c4<zzzzzzzz>; HiZ drive
+v0000022EE56F1CE0_0 .net "din", 7 0, o0000022EE56AD038;  0 drivers
+v0000022EE56F1D80_0 .var "dout", 7 0;
+v0000022EE56F1E20 .array "mem", 255 0, 7 0;
+o0000022EE56AD098 .functor BUFZ 1, c4<z>; HiZ drive
+v0000022EE56F1EC0_0 .net "re", 0 0, o0000022EE56AD098;  0 drivers
+o0000022EE56AD0C8 .functor BUFZ 1, c4<z>; HiZ drive
+v0000022EE56A7190_0 .net "rst", 0 0, o0000022EE56AD0C8;  0 drivers
+o0000022EE56AD0F8 .functor BUFZ 1, c4<z>; HiZ drive
+v0000022EE56A7230_0 .net "we", 0 0, o0000022EE56AD0F8;  0 drivers
+E_0000022EE56978F0 .event posedge, v0000022EE56F1C40_0;
+    .scope S_0000022EE5697DD0;
+T_0 ;
+    %wait E_0000022EE56978F0;
+    %load/vec4 v0000022EE56A7230_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %load/vec4 v0000022EE56F1CE0_0;
+    %load/vec4 v0000022EE5698010_0;
+    %pad/u 10;
+    %ix/vec4 3;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0000022EE56F1E20, 0, 4;
+T_0.0 ;
+    %load/vec4 v0000022EE56A7190_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %pushi/vec4 0, 0, 8;
+    %assign/vec4 v0000022EE56F1D80_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0000022EE56F1EC0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %load/vec4 v0000022EE5698010_0;
+    %pad/u 10;
+    %ix/vec4 4;
+    %load/vec4a v0000022EE56F1E20, 4;
+    %assign/vec4 v0000022EE56F1D80_0, 0;
+T_0.4 ;
+T_0.3 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    ".\ram_re_rst.sv";
