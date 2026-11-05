@@ -1,0 +1,47 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 05, 2026 at 14:29:16 -03
+xrun
+	-top tb_ula_comparativa
+	-gui
+	-access rw
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_ula_comparativa
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.delayed_ula_neander:sv <0x69917ee4>
+			streams:   6, words:  1963
+		worklib.ula_neander:sv <0x3ce60bc2>
+			streams:   3, words:  1993
+		worklib.tb_ula_comparativa:sv <0x3465efd3>
+			streams:  10, words:  3908
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       3
+		Registers:              21      18
+		Scalar wires:           18       -
+		Vectored wires:         13       -
+		Always blocks:           2       1
+		Initial blocks:          1       1
+		Cont. assignments:       5       5
+		Pseudo assignments:     12       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_ula_comparativa:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_ula_comparativa.n_atrasado tb_ula_comparativa.n_ideal tb_ula_comparativa.res_atrasado tb_ula_comparativa.res_ideal tb_ula_comparativa.tb_AC tb_ula_comparativa.tb_RDM tb_ula_comparativa.tb_sel tb_ula_comparativa.z_atrasado tb_ula_comparativa.z_ideal
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 20 NS + 0
+./tb_ula_comparativa.sv:41         #20 $finish; 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.09-s001: Exiting on Nov 05, 2026 at 15:31:26 -03  (total: 01:02:10)

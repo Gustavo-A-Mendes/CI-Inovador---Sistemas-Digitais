@@ -1,0 +1,13 @@
+======================================================================
+
+Annotating SDF timing data:
+  Compiled SDF file:     meu_projeto_atrasos.sdf.X
+  Log file:              sdf_log.txt
+  Backannotation scope:  tb_top_level.DUT
+  Configuration file:    
+  MTM control:           
+  Scale factors:         
+  Scale type:            
+
+Time units: 1ps
+

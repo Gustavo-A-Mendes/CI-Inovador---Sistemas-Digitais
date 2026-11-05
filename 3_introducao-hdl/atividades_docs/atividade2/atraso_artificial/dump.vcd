@@ -1,0 +1,90 @@
+$date
+    Nov  5, 2026  14:29:26
+$end
+$version
+    TOOL:	xmsim(64)	24.09-s001
+$end
+$timescale
+    1 ps
+$end
+
+$scope module tb_ula_comparativa $end
+$var reg       8 !    tb_AC [7:0] $end
+$var reg       8 "    tb_RDM [7:0] $end
+$var reg       3 #    tb_sel [2:0] $end
+$var reg       8 $    res_ideal [7:0] $end
+$var reg       1 %    n_ideal $end
+$var reg       1 &    z_ideal $end
+$var reg       8 '    res_atrasado [7:0] $end
+$var reg       1 (    n_atrasado $end
+$var reg       1 )    z_atrasado $end
+
+$scope module DUT_IDEAL $end
+$var wire      8 *    AC [7:0] $end
+$var wire      8 +    RDM [7:0] $end
+$var wire      3 ,    sel_ula [2:0] $end
+$var reg       8 -    resultado [7:0] $end
+$var reg       1 .    N $end
+$var reg       1 /    Z $end
+$upscope $end
+
+
+$scope module DUT_ATRASADO $end
+$var wire      8 0    AC [7:0] $end
+$var wire      8 1    RDM [7:0] $end
+$var wire      3 2    sel_ula [2:0] $end
+$var reg       8 3    resultado_atrasado [7:0] $end
+$var reg       1 4    N_atrasado $end
+$var reg       1 5    Z_atrasado $end
+$var reg       8 6    res_ideal [7:0] $end
+$var reg       1 7    n_ideal $end
+$var reg       1 8    z_ideal $end
+
+$scope module ULA_REAL $end
+$var wire      8 0    AC [7:0] $end
+$var wire      8 1    RDM [7:0] $end
+$var wire      3 2    sel_ula [2:0] $end
+$var reg       8 9    resultado [7:0] $end
+$var reg       1 :    N $end
+$var reg       1 ;    Z $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b1010 !
+b1111 "
+b0 #
+b0 $
+0%
+1&
+bx '
+x(
+x)
+b1010 *
+b1111 +
+b0 ,
+b0 -
+0.
+1/
+b1010 0
+b1111 1
+b0 2
+bx 3
+x4
+x5
+b0 6
+07
+18
+b0 9
+0:
+1;
+$end
+#5000
+1)
+0(
+b0 '
+#20000

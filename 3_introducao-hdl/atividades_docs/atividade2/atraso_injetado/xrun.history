@@ -1,0 +1,44 @@
+#e1(05Nov2026:15:32:29): source ./xcelium.d/env.d/env.history.05Nov2026_15_32_29
+s1(05Nov2026:15:32:29):  xrun -compile meu_projeto_netlist.v 
+#e2(05Nov2026:15:32:30): source ./xcelium.d/env.d/env.history.05Nov2026_15_32_30
+s2(05Nov2026:15:32:30):  xrun -compile meu_projeto_netlist.v 
+#e3(05Nov2026:15:32:39): source ./xcelium.d/env.d/env.history.05Nov2026_15_32_39
+s3(05Nov2026:15:32:39):  xrun -compile tb_ula_neader_delay_injection.sv meu_projeto_netlist.v 
+#e4(05Nov2026:15:32:41): source ./xcelium.d/env.d/env.history.05Nov2026_15_32_41
+s4(05Nov2026:15:32:41):  xrun -compile tb_ula_neader_delay_injection.sv meu_projeto_netlist.v 
+#e5(05Nov2026:15:33:03): source ./xcelium.d/env.d/env.history.05Nov2026_15_33_03
+s5(05Nov2026:15:33:03):  xrun -compile tb_ula_neader_delay_injection.sv meu_projeto_netlist.v 
+#e6(05Nov2026:15:33:04): source ./xcelium.d/env.d/env.history.05Nov2026_15_33_04
+s6(05Nov2026:15:33:04):  xrun -compile tb_ula_neader_delay_injection.sv meu_projeto_netlist.v 
+#e7(05Nov2026:15:33:17): source ./xcelium.d/env.d/env.history.05Nov2026_15_33_17
+s7(05Nov2026:15:33:17):  xrun -elaborate -top tb_ula_neader_delay_injection 
+#e8(05Nov2026:15:33:45): source ./xcelium.d/env.d/env.history.05Nov2026_15_33_45
+s8(05Nov2026:15:33:45):  xrun -elaborate -top tb_top_level 
+#e9(05Nov2026:15:58:54): source ./xcelium.d/env.d/env.history.05Nov2026_15_58_54
+s9(05Nov2026:15:58:54):  xrun tb_top_level.sv meu_projeto_netlist.v /data/verilog/src/glbl.v -y /data/verilog/src/unisims -libext .v -access +rwc -gui 
+#e10(05Nov2026:15:59:13): source ./xcelium.d/env.d/env.history.05Nov2026_15_59_13
+s10(05Nov2026:15:59:13):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /data/verilog/src/glbl.v -y /data/verilog/src/unisims -libext .v -access +rwc -gui 
+#e11(05Nov2026:16:02:18): source ./xcelium.d/env.d/env.history.05Nov2026_16_02_18
+s11(05Nov2026:16:02:18):  xrun tb_top_level.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui 
+#e12(05Nov2026:16:02:42): source ./xcelium.d/env.d/env.history.05Nov2026_16_02_42
+s12(05Nov2026:16:02:42):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui 
+#e13(05Nov2026:16:10:52): source ./xcelium.d/env.d/env.history.05Nov2026_16_10_52
+s13(05Nov2026:16:10:52):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 
+#e14(05Nov2026:16:17:17): source ./xcelium.d/env.d/env.history.05Nov2026_16_17_17
+s14(05Nov2026:16:17:17):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 
+#e15(05Nov2026:16:18:06): source ./xcelium.d/env.d/env.history.05Nov2026_16_18_06
+s15(05Nov2026:16:18:06):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 
+#e16(05Nov2026:16:27:11): source ./xcelium.d/env.d/env.history.05Nov2026_16_27_11
+s16(05Nov2026:16:27:11):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e17(05Nov2026:16:34:27): source ./xcelium.d/env.d/env.history.05Nov2026_16_34_27
+s17(05Nov2026:16:34:27):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e18(05Nov2026:16:37:18): source ./xcelium.d/env.d/env.history.05Nov2026_16_37_18
+s18(05Nov2026:16:37:18):  xrun tb_top_level.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e19(05Nov2026:16:37:35): source ./xcelium.d/env.d/env.history.05Nov2026_16_37_35
+s19(05Nov2026:16:37:35):  xrun tb_top_level.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e20(05Nov2026:16:38:28): source ./xcelium.d/env.d/env.history.05Nov2026_16_38_28
+s20(05Nov2026:16:38:28):  xrun tb_top_level.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e21(05Nov2026:16:48:00): source ./xcelium.d/env.d/env.history.05Nov2026_16_48_00
+s21(05Nov2026:16:48:00):  xrun tb_top_level.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e22(05Nov2026:16:57:28): source ./xcelium.d/env.d/env.history.05Nov2026_16_57_28
+s22(05Nov2026:16:57:28):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 

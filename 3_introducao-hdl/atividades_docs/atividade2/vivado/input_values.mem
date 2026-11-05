@@ -1,0 +1,16 @@
+// Formato: A(8 bits) B(8 bits) opcode(3 bits)
+// Operação 3'b001: SOMA (Soma simples e com Carry)
+00001010_00010100_001 // 10 + 20 = 30 (Sem carry)
+11111111_00000001_001 // 255 + 1 = 0  (Gera carry e zero)
+
+// Operação 3'b010: AND
+10101010_11110000_010 // AND = 10100000
+
+// Operação 3'b011: OR
+10101010_11110000_011 // OR = 11111010
+
+// Operação 3'b100: NOT (Inverte apenas o A, ignora o B)
+00001111_00000000_100 // ~A = 11110000
+
+// Operação 3'b000: PASSA A (Apenas copia o valor de A)
+01111110_00000000_000 // Result = 01111110

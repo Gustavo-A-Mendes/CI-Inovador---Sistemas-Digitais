@@ -1,0 +1,50 @@
+#e1(05Nov2026:14:21:45): source ./xcelium.d/env.d/env.history.05Nov2026_14_21_45
+s1(05Nov2026:14:21:45):  xrun -compile tb_ula_comparativa.sv 
+#e2(05Nov2026:14:21:48): source ./xcelium.d/env.d/env.history.05Nov2026_14_21_48
+s2(05Nov2026:14:21:48):  xrun -compile tb_ula_comparativa.sv 
+#e3(05Nov2026:14:22:00): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_00
+s3(05Nov2026:14:22:00):  xrun -compile ula_neander.sv 
+#e4(05Nov2026:14:22:01): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_01
+s4(05Nov2026:14:22:01):  xrun -compile ula_neander.sv 
+#e5(05Nov2026:14:22:11): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_11
+s5(05Nov2026:14:22:11):  xrun -compile ula_neander.sv 
+#e6(05Nov2026:14:22:13): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_13
+s6(05Nov2026:14:22:13):  xrun -compile ula_neander.sv 
+#e7(05Nov2026:14:22:16): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_16
+s7(05Nov2026:14:22:16):  xrun -compile ula_neander.sv 
+#e8(05Nov2026:14:22:22): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_22
+s8(05Nov2026:14:22:22):  xrun -compile delayed_ula_neander.sv 
+#e9(05Nov2026:14:22:24): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_24
+s9(05Nov2026:14:22:24):  xrun -compile delayed_ula_neander.sv 
+#e10(05Nov2026:14:22:26): source ./xcelium.d/env.d/env.history.05Nov2026_14_22_26
+s10(05Nov2026:14:22:26):  xrun -compile tb_ula_comparativa.sv 
+#e11(05Nov2026:14:23:53): source ./xcelium.d/env.d/env.history.05Nov2026_14_23_53
+s11(05Nov2026:14:23:53):  xrun -compile tb_ula_comparativa.sv 
+#e12(05Nov2026:14:23:54): source ./xcelium.d/env.d/env.history.05Nov2026_14_23_54
+s12(05Nov2026:14:23:54):  xrun -compile tb_ula_comparativa.sv 
+#e13(05Nov2026:14:24:08): source ./xcelium.d/env.d/env.history.05Nov2026_14_24_08
+s13(05Nov2026:14:24:08):  xrun -elaborate -top tb_ula_comparativa 
+#e14(05Nov2026:14:24:54): source ./xcelium.d/env.d/env.history.05Nov2026_14_24_54
+s14(05Nov2026:14:24:54):  xrun -compile delayed_ula_neander.sv 
+#e15(05Nov2026:14:24:54): source ./xcelium.d/env.d/env.history.05Nov2026_14_24_54
+s15(05Nov2026:14:24:54):  xrun -compile delayed_ula_neander.sv 
+#e16(05Nov2026:14:24:58): source ./xcelium.d/env.d/env.history.05Nov2026_14_24_58
+s16(05Nov2026:14:24:58):  xrun -compile tb_ula_comparativa.sv 
+#e17(05Nov2026:14:25:01): source ./xcelium.d/env.d/env.history.05Nov2026_14_25_01
+s17(05Nov2026:14:25:01):  xrun -elaborate -top tb_ula_comparativa 
+#e18(05Nov2026:14:25:10): source ./xcelium.d/env.d/env.history.05Nov2026_14_25_10
+s18(05Nov2026:14:25:10):  xrun -top tb_ula_comparativa 
+#e19(05Nov2026:14:25:21): source ./xcelium.d/env.d/env.history.05Nov2026_14_25_21
+s19(05Nov2026:14:25:21):  xrun -top tb_ula_comparativa -gui -access rw 
+#e20(05Nov2026:14:28:48): source ./xcelium.d/env.d/env.history.05Nov2026_14_28_48
+s20(05Nov2026:14:28:48):  xrun -compile ula_neander.sv 
+#e21(05Nov2026:14:28:49): source ./xcelium.d/env.d/env.history.05Nov2026_14_28_49
+s21(05Nov2026:14:28:49):  xrun -compile ula_neander.sv 
+#e22(05Nov2026:14:29:07): source ./xcelium.d/env.d/env.history.05Nov2026_14_29_07
+s22(05Nov2026:14:29:07):  xrun -compile ula_neander.sv delayed_ula_neander.sv tb_ula_comparativa.sv 
+#e23(05Nov2026:14:29:09): source ./xcelium.d/env.d/env.history.05Nov2026_14_29_09
+s23(05Nov2026:14:29:09):  xrun -compile ula_neander.sv delayed_ula_neander.sv tb_ula_comparativa.sv 
+#e24(05Nov2026:14:29:13): source ./xcelium.d/env.d/env.history.05Nov2026_14_29_13
+s24(05Nov2026:14:29:13):  xrun -elaborate -top tb_ula_comparativa 
+#e25(05Nov2026:14:29:16): source ./xcelium.d/env.d/env.history.05Nov2026_14_29_16
+s25(05Nov2026:14:29:16):  xrun -top tb_ula_comparativa -gui -access rw 

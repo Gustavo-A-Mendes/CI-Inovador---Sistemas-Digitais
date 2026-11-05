@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-YDIR
+/tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims
+-LIBEXT
+.v

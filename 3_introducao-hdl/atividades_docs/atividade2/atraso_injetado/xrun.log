@@ -1,0 +1,96 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Nov 05, 2026 at 16:57:28 -03
+xrun
+	tb_ula_neader_delay_injection.sv
+	meu_projeto_netlist.v
+	/tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v
+	-y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims
+	-libext .v
+	-access +rwc
+	-gui
+	-sdf_nocheck_celltype
+	-pulse_r 0
+	-pulse_e 0
+	-notimingchecks
+file: tb_ula_neader_delay_injection.sv
+	module worklib.tb_top_level:sv
+		errors: 0, warnings: 0
+		Caching library 'unisims' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_top_level
+		glbl
+	Reading SDF file from location "meu_projeto_atrasos.sdf"
+xmelab: *W,CUSFNF: The SDF file "meu_projeto_netlist.sdf" not found..
+ $sdf_annotate("meu_projeto_netlist.sdf",,,,"tool_control");
+             |
+xmelab: *W,CUSSTI (./meu_projeto_netlist.v,71|13): This SDF System Task will be Ignored..
+	Annotating SDF timing data:
+		Compiled SDF file:     meu_projeto_atrasos.sdf.X
+		Log file:              sdf_log.txt
+		Backannotation scope:  tb_top_level.DUT
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+	Annotation completed successfully...
+xmelab: *W,NTCNTX: +notimingcheck is in use while a design has negative timing checks.  If the design requires NTC delays to work properly, +ncntcnotchks should be used instead.
+	SDF statistics: 
+		 No. of Pathdelays = 313     	 No. of Disabled Pathdelays = 0        Annotated = 59.42% (186/313) 
+		 No. of Tchecks    = 200     	 No. of Disabled Tchecks    = 200      Annotated = 0.00% (0.00/0) 
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_top_level:sv <0x7074a147>
+			streams:   7, words:  3145
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  61      12
+		UDPs:                     17       3
+		Primitives:               85       5
+		Timing outputs:           72      16
+		Registers:               136      53
+		Scalar wires:            355       -
+		Expanded wires:           43       8
+		Vectored wires:            8       -
+		Always blocks:            26       5
+		Initial blocks:           89      27
+		Cont. assignments:       111      35
+		Pseudo assignments:       47       -
+		Timing checks:           344       -
+		Interconnect:            118      54
+		Delayed tcheck signals:   32       -
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.tb_top_level:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_top_level.tb_AC tb_top_level.tb_RDM tb_top_level.tb_n tb_top_level.tb_res tb_top_level.tb_sel tb_top_level.tb_z
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 100 NS + 0
+./tb_ula_neader_delay_injection.sv:35         $finish;
+xcelium> ps2pdf ula_neader_waveform.ps
+xmsim: *E,TCLERR: Error: /undefinedfilename in (ula_neader_waveform.ps)
+Operand stack:
+
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push
+Dictionary stack:
+   --dict:733/1123(ro)(G)--   --dict:0/20(G)--   --dict:75/200(L)--
+Current allocation mode is local
+Last OS error: No such file or directory
+GPL Ghostscript 9.54.0: Unrecoverable error, exit code 1.
+    while executing
+"exec /bin/ps2pdf ula_neader_waveform.ps"
+    invoked from within
+"ps2pdf ula_neader_waveform.ps"
+xcelium> ps2pdf ula_neander_waveform.ps
+xcelium> 
