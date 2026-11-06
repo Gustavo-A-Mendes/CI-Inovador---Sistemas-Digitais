@@ -5,7 +5,7 @@ Annotating SDF timing data:
   Log file:              sdf_log.txt
   Backannotation scope:  tb_top_level.DUT
   Configuration file:    
-  MTM control:           
+  MTM control:           MINIMUM
   Scale factors:         
   Scale type:            
 

@@ -1,0 +1,92 @@
+*** Message Type: info ***
+When: Thu Nov 05 04:57:29 PM -03 2026
+SimVision started.
+Version: TOOL:  simvision(64)   24.09-s001
+User: CI_INO-03
+Host: CI-03
+Platform: Linux/x86_64/5.14.0-687.60.1.el9_8.x86_64
+Started: Thu Nov 05 04:57:29 PM -03 2026
+Command: /tools/installs/XCELIUM2209/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:CI-03:48311 -64BIT -nocopyright
+Work Directory: /home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/atividades_docs/atividade2/atraso_injetado
+ 
+*** Message Type: info ***
+When: Thu Nov 05 04:57:30 PM -03 2026
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Thu Nov 05 04:57:32 PM -03 2026
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Thu Nov 05 04:57:33 PM -03 2026
+Connect to Simulator
+      Design: worklib.tb_top_level:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim(64)       24.09-s001
+        User: CI_INO-03
+        Host: CI-03
+Time Started: Thu Nov 05 04:57:29 PM -03 2026
+  Process ID: 359495
+   Directory: /home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/atividades_docs/atividade2/atraso_injetado
+     Command: xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks
+
+ 
+*** Message Type: info ***
+When: Thu Nov 05 04:57:33 PM -03 2026
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Thu Nov 05 04:57:35 PM -03 2026
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Thu Nov 05 05:00:05 PM -03 2026
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Thu Nov 05 05:21:41 PM -03 2026
+Exit XM-Sim: user
+      Design: worklib.tb_top_level:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim(64)       24.09-s001
+        User: CI_INO-03
+        Host: CI-03
+Time Started: Thu Nov 05 04:57:29 PM -03 2026
+  Process ID: 359495
+   Directory: /home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/atividades_docs/atividade2/atraso_injetado
+     Command: xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks
+
+ 
+*** Message Type: error ***
+When: Thu Nov 05 05:21:41 PM -03 2026
+XM-Sim Crashed:
+      Design: worklib.tb_top_level:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim(64)       24.09-s001
+        User: CI_INO-03
+        Host: CI-03
+Time Started: Thu Nov 05 04:57:29 PM -03 2026
+  Process ID: 359495
+   Directory: /home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/atividades_docs/atividade2/atraso_injetado
+     Command: xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks
+      Design: worklib.tb_top_level:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:      xmsim(64)       24.09-s001
+        User: CI_INO-03
+        Host: CI-03
+Time Started: Thu Nov 05 04:57:29 PM -03 2026
+  Process ID: 359495
+   Directory: /home/CI_INO-03/Documents/Github/CI-Inovador---Sistemas-Digitais/3_introducao-hdl/atividades_docs/atividade2/atraso_injetado
+     Command: xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: Thu Nov 05 05:21:44 PM -03 2026
+SimVision Exit.
+ 

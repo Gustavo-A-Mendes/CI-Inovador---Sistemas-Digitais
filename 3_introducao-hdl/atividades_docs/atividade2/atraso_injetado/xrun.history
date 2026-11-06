@@ -42,3 +42,27 @@ s20(05Nov2026:16:38:28):  xrun tb_top_level.sv meu_projeto_netlist.v /tools/inst
 s21(05Nov2026:16:48:00):  xrun tb_top_level.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
 #e22(05Nov2026:16:57:28): source ./xcelium.d/env.d/env.history.05Nov2026_16_57_28
 s22(05Nov2026:16:57:28):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e23(06Nov2026:10:04:55): source ./xcelium.d/env.d/env.history.06Nov2026_10_04_55
+s23(06Nov2026:10:04:55):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e24(06Nov2026:10:14:29): source ./xcelium.d/env.d/env.history.06Nov2026_10_14_29
+s24(06Nov2026:10:14:29):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e25(06Nov2026:10:17:31): source ./xcelium.d/env.d/env.history.06Nov2026_10_17_31
+s25(06Nov2026:10:17:31):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e26(06Nov2026:10:17:57): source ./xcelium.d/env.d/env.history.06Nov2026_10_17_57
+s26(06Nov2026:10:17:57):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e27(06Nov2026:10:18:10): source ./xcelium.d/env.d/env.history.06Nov2026_10_18_10
+s27(06Nov2026:10:18:10):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e28(06Nov2026:10:18:29): source ./xcelium.d/env.d/env.history.06Nov2026_10_18_29
+s28(06Nov2026:10:18:29):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e29(06Nov2026:10:19:06): source ./xcelium.d/env.d/env.history.06Nov2026_10_19_06
+s29(06Nov2026:10:19:06):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e30(06Nov2026:10:19:53): source ./xcelium.d/env.d/env.history.06Nov2026_10_19_53
+s30(06Nov2026:10:19:53):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e31(06Nov2026:10:53:25): source ./xcelium.d/env.d/env.history.06Nov2026_10_53_25
+s31(06Nov2026:10:53:25):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e32(06Nov2026:11:36:45): source ./xcelium.d/env.d/env.history.06Nov2026_11_36_45
+s32(06Nov2026:11:36:45):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e33(06Nov2026:12:14:41): source ./xcelium.d/env.d/env.history.06Nov2026_12_14_41
+s33(06Nov2026:12:14:41):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
+#e34(06Nov2026:12:17:20): source ./xcelium.d/env.d/env.history.06Nov2026_12_17_20
+s34(06Nov2026:12:17:20):  xrun tb_ula_neader_delay_injection.sv meu_projeto_netlist.v /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/glbl.v -y /tools/installs/Xilinx/Vivado/2024.2/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks 
