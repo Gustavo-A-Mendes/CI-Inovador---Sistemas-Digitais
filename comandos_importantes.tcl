@@ -99,6 +99,7 @@ xrun -top {nome_modulo_do_top_level} {./arquivo1.sv} {./arquivo2.sv} {./arquivo3
 #   -timescale:         Define uma escala de tempo padrão para módulos que não a possuam declarada
 #   -64bit:             Invoca os binários do Xcelium em modo de 64 bits (necessário para designs grandes).
 
+## ----------------------------------------------------------------------
 
 ## VIVADO
 
@@ -110,7 +111,11 @@ write_sdf -force ./meu_projeto_atrasos.sdf
 write_verilog -force -mode timesim -sdf_anno true ./meu_projeto_netlist.v
 # OBS: Para a simulação fazer sentido fora do Vivado, você também precisa exportar a Netlist com os delays matematicamente vinculados ao SDF:
 
+# Gerar o arquivo TCL, para compartilhar um arquivo de reconstrução do projeto:
 
+
+
+## ----------------------------------------------------------------------
 
 ## Executando simulação com os arquivos de .sdf e netlist.v no XCelium:
 

@@ -1,0 +1,49 @@
+# ==========================================
+# Vivado (Xilinx / AMD)
+# ==========================================
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.gen/
+*.log
+*.jou
+*.str
+
+# ==========================================
+# Icarus Verilog (iverilog) & GTKWave
+# ==========================================
+# Saidas de simulacao e formas de onda
+*.vvp
+*.vcd
+*.fst
+*.ghw
+
+# Opcional: descomente a linha abaixo se nao quiser guardar configuracoes de tela do GTKWave
+# *.gtkw
+
+# ==========================================
+# Cadence Xcelium / Incisive
+# ==========================================
+# Pastas de compilacao e artefatos
+xcelium.d/
+INCA_libs/
+xm-work/
+cov_work/
+simv.daidir/
+
+# Logs e arquivos de historico do Xcelium
+xrun.log
+xrun.history
+nc.log
+nc.key
+*.dsn
+*.trn
+*.shm
+
+# ==========================================
+# Sistema Operacional / Editores
+# ==========================================
+.DS_Store
+Thumbs.db
