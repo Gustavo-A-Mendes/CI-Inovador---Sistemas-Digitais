@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.128 (w)1999-2026 BSI
+[*] Sun Nov  8 21:24:38 2026
+[*]
+[dumpfile] "D:\gusta\OneDrive\Documentos\GitHub\CI-Inovador---Sistemas-Digitais\3_introducao-hdl\atividades_docs\atividade3\tb_up_down_counter_result.vcd"
+[dumpfile_mtime] "Sun Nov  8 21:21:42 2026"
+[dumpfile_size] 1367
+[savefile] "D:\gusta\OneDrive\Documentos\GitHub\CI-Inovador---Sistemas-Digitais\3_introducao-hdl\atividades_docs\atividade3\up_down_counter.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 734 329
+*-15.954783 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 280
+[signals_width] 100
+[sst_expanded] 1
+[sst_vpaned_height] 156
+@28
+tb_up_down_counter_8.clk
+@29
+tb_up_down_counter_8.rst_n
+@28
+tb_up_down_counter_8.enable
+tb_up_down_counter_8.up_down
+@22
+tb_up_down_counter_8.Q[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

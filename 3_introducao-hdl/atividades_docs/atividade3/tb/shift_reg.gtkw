@@ -1,0 +1,34 @@
+[*]
+[*] GTKWave Analyzer v3.3.128 (w)1999-2026 BSI
+[*] Sun Nov  8 21:07:44 2026
+[*]
+[dumpfile] "D:\gusta\OneDrive\Documentos\GitHub\CI-Inovador---Sistemas-Digitais\3_introducao-hdl\atividades_docs\atividade3\tb_result.vcd"
+[dumpfile_mtime] "Sun Nov  8 20:58:46 2026"
+[dumpfile_size] 1521
+[savefile] "D:\gusta\OneDrive\Documentos\GitHub\CI-Inovador---Sistemas-Digitais\3_introducao-hdl\atividades_docs\atividade3\shift_reg.gtkw"
+[timestart] 0
+[size] 1920 973
+[pos] -219 -216
+*-13.371499 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_shift_reg_32.
+[sst_width] 280
+[signals_width] 140
+[sst_expanded] 1
+[sst_vpaned_height] 286
+@28
+tb_shift_reg_32.clk
+@29
+tb_shift_reg_32.rst_n
+@28
+tb_shift_reg_32.load
+@22
+tb_shift_reg_32.D[31:0]
+@28
+tb_shift_reg_32.shift_right
+tb_shift_reg_32.SR_in
+tb_shift_reg_32.shift_left
+tb_shift_reg_32.SL_in
+@22
+tb_shift_reg_32.Q[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

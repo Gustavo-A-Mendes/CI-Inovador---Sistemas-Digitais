@@ -1,0 +1,23 @@
+[*]
+[*] GTKWave Analyzer v3.3.128 (w)1999-2026 BSI
+[*] Sun Nov  8 21:28:04 2026
+[*]
+[dumpfile] "D:\gusta\OneDrive\Documentos\GitHub\CI-Inovador---Sistemas-Digitais\3_introducao-hdl\atividades_docs\atividade3\tb_lfsr_generator_result.vcd"
+[dumpfile_mtime] "Sun Nov  8 21:26:08 2026"
+[dumpfile_size] 1600
+[savefile] "D:\gusta\OneDrive\Documentos\GitHub\CI-Inovador---Sistemas-Digitais\3_introducao-hdl\atividades_docs\atividade3\lfsr_generator.gtkw"
+[timestart] 0
+[size] 1920 973
+[pos] -219 -216
+*-14.738335 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 280
+[signals_width] 90
+[sst_expanded] 1
+[sst_vpaned_height] 286
+@28
+tb_lfsr_generator_8.clk
+tb_lfsr_generator_8.rst_n
+@23
+tb_lfsr_generator_8.Q[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
