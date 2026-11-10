@@ -1,0 +1,101 @@
+(DELAYFILE
+  (SDFVERSION  "OVI 3.0")
+  (DESIGN      "arbitro")
+  (DATE        "Tue Nov 10 16:12:48 -03 2026")
+  (VENDOR      "Cadence, Inc.")
+  (PROGRAM     "Genus(TM) Synthesis Solution")
+  (VERSION     "23.18-s043_1")
+  (DIVIDER     .)
+  (VOLTAGE     ::1.1)
+  (PROCESS     "::1.0")
+  (TEMPERATURE ::0.0)
+  (TIMESCALE   1ps)
+  (CELL
+     (CELLTYPE "NOR3BXLHVT")
+     (INSTANCE g162__2398)
+     (DELAY
+        (ABSOLUTE
+          (PORT AN (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (IOPATH B Y (::20) (::8))
+          (IOPATH C Y (::18) (::11))
+          (IOPATH AN Y (::32) (::20))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NOR3XLHVT")
+     (INSTANCE g165__5107)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (IOPATH A Y (::23) (::9))
+          (IOPATH B Y (::20) (::8))
+          (IOPATH C Y (::18) (::11))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NOR2BX1HVT")
+     (INSTANCE g163__6260)
+     (DELAY
+        (ABSOLUTE
+          (PORT AN (::0.0))
+          (PORT B (::0.0))
+          (IOPATH B Y (::14) (::10))
+          (IOPATH AN Y (::23) (::21))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2XLHVT")
+     (INSTANCE g164__4319)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (PORT B (::0.0))
+          (IOPATH A Y (::17) (::29))
+          (IOPATH B Y (::18) (::28))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NOR2BX1HVT")
+     (INSTANCE g167__8428)
+     (DELAY
+        (ABSOLUTE
+          (PORT AN (::0.0))
+          (PORT B (::0.0))
+          (IOPATH B Y (::11) (::6))
+          (IOPATH AN Y (::26) (::22))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NOR2BX1HVT")
+     (INSTANCE g166__5526)
+     (DELAY
+        (ABSOLUTE
+          (PORT AN (::0.0))
+          (PORT B (::0.0))
+          (IOPATH B Y (::8) (::5))
+          (IOPATH AN Y (::23) (::21))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2X1HVT")
+     (INSTANCE g168__6783)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.0))
+          (PORT B (::0.0))
+          (IOPATH A Y (::24) (::40))
+          (IOPATH B Y (::22) (::36))
+        )
+     )
+  )
+)
