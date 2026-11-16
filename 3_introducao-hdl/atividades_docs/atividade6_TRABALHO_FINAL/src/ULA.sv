@@ -1,22 +1,20 @@
-typedef enum logic [2:0] { 
-    OP_ADD     = 3'b000,
-    OP_AND     = 3'b001,
-    OP_OR      = 3'b010,
-    OP_NOT     = 3'b011,
-    OP_PASS    = 3'b100,
-} Op_t;
+`timescale 1ns/1ps
+
+import neander_pkg::*;
 
 module ula (
-    input   logic   [7:0]   x_i,
-    input   logic   [7:0]   y_i,
-    input   Op_t            opcode_i,
-    output  logic   [7:0]   ula_o,
-    output  logic   [1:0]   nz_o
+    input   logic       [7:0]   x_i,
+    input   logic       [7:0]   y_i,
+    input   ula_op_t            opcode_i,
+    output  logic       [7:0]   ula_o,
+    output  logic       [1:0]   nz_o
 );
     // sinais internos para os sinais de condição:
     logic n, z;
 
     always_comb begin
+        ula_o = 8'h00;  // Valor default
+
         unique case(opcode_i)
             OP_ADD:     ula_o = x_i + y_i;
             OP_AND:     ula_o = x_i & y_i;

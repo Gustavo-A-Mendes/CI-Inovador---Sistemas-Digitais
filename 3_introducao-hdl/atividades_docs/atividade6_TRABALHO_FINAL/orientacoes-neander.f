@@ -427,30 +427,31 @@ O único registrador que recebe dados de duas fontes é o REM. Para solucionar e
 
 // ================================================================================
 // ================================================================================
-    |   |                       |                               |
-    |ID |     tranferência      |         Sinais de controle    |
-    |___|_______________________|_______________________________|
-    | 0 | REM <- PC             | sel = 0; ld_rem = 1           |
-    | 1 | REM <- RDM            | sel = 1; ld_rem = 1           |
-    | 2 | PC <- PC + 1          | inc_pc = 1                    |
-    | 3 | RI <- RDM             | ld_ri = 1                     |
-    | 4 | RDM <- AC             | ld_rdm = 1                    |
-    | 5 | AC <- RDM;        N; Z| ULA(Y); ld_ac = 1; ld_nz = 1  |
-    | 6 | AC <- AC + RDM;   N; Z| ULA(ADD); ld_ac = 1; ld_nz = 1|
-    | 7 | AC <- AC or RDM;  N; Z| ULA(OR); ld_ac = 1; ld_nz = 1 |
-    | 8 | AC <- AC and RDM; N; Z| ULA(AND); ld_ac = 1; ld_nz = 1|
-    | 9 | AC <- not(AC);    N; Z| ULA(NOT); ld_ac = 1; ld_nz = 1|
-    | A | PC <- RDM             | ld_pc = 1                     |
-    | B | RDM <- MEM(REM)       | r_en = 1                      |
-    | C | MEM(REM) <- RDM       | w_en = 1                      |
-    | D | goto t0               | goto_t0 = 1                   |
+    |   |                       |                                   |
+    |ID |     tranferência      |         Sinais de controle        |
+    |___|_______________________|___________________________________|
+    | 0 | REM <- PC             | sel_rem = 0; ld_rem = 1           |
+    | 1 | REM <- RDM            | sel_rem = 1; ld_rem = 1           |
+    | 2 | PC <- PC + 1          | inc_pc = 1                        |
+    | 3 | RI <- RDM             | ld_ri = 1                         |
+    | 4 | RDM <- AC             | ld_rdm = 1; sel_rdm = 1           |
+    | 5 | AC <- RDM;        N; Z| ULA(Y); ld_ac = 1; ld_nz = 1      |
+    | 6 | AC <- AC + RDM;   N; Z| ULA(ADD); ld_ac = 1; ld_nz = 1    |
+    | 7 | AC <- AC or RDM;  N; Z| ULA(OR); ld_ac = 1; ld_nz = 1     |
+    | 8 | AC <- AC and RDM; N; Z| ULA(AND); ld_ac = 1; ld_nz = 1    |
+    | 9 | AC <- not(AC);    N; Z| ULA(NOT); ld_ac = 1; ld_nz = 1    |
+    | A | PC <- RDM             | ld_pc = 1                         |
+    | B | RDM <- MEM(REM)       | r_en = 1; ld_rdm = 1; sel_rdm = 0 |
+    | C | MEM(REM) <- RDM       | w_en = 1                          |
+    | D | goto t0               | goto_t0 = 1                       |
 
     *sinais de controle de 14 bits:
-        sel     -> seletor MUX
+        sel_rem -> seletor MUX da entrada REM
         ld_rem  -> "carga" REM
         ld_pc   -> "carga" PC
         inc_pc  -> incrementa PC
         ld_ri   -> "carga" RI
+        sel_rdm -> seletor da entrada RDM
         ld_rdm  -> "carga" RDM
         ld_ac   -> "carga" AC
         ld_nz   -> "carga" NZ

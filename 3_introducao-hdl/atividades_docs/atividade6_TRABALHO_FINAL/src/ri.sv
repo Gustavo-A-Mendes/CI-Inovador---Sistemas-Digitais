@@ -1,9 +1,11 @@
+`timescale 1ns/1ps
+
 module ri (
     input   logic           clk_i,
     input   logic           rst_n_i,
-    input   logic   [7:0]   ri_d,
     input   logic           load_i,
-    output  logic   [7:0]   ri_q,
+    input   logic   [7:0]   ri_d,
+    output  logic   [7:0]   ri_q
 );
 
     always_ff @( posedge clk_i or negedge rst_n_i ) begin

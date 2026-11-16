@@ -1,9 +1,11 @@
+`timescale 1ns/1ps
+
 module rem (
     input   logic           clk_i,
     input   logic           rst_n_i,
-    input   logic   [7:0]   rem_d,
     input   logic           load_i,
-    output  logic   [7:0]   rem_q,
+    input   logic   [7:0]   rem_d,
+    output  logic   [7:0]   rem_q
 );
 
     always_ff @( posedge clk_i or negedge rst_n_i ) begin
