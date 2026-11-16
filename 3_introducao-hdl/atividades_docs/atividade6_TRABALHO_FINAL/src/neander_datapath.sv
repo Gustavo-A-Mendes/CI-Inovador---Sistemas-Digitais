@@ -6,46 +6,31 @@ module neander_datapath (
     input   logic               clk_i,
     input   logic               rst_n_i,
     
-    ctrl_dpath_if.slave         ctrl_dpath_bus_i,   // (input ctrl_sgn, output datapath_sigh)
-    dpath_mem_if.master         dpath_mem_bus_i     // (input mem_data, output datapath_sigh)
+    ctrl_dpath_if.slave         ctrl_dpath_bus_i,   // (input ctrl_sgn, output status_sgn)
+    dpath_mem_if.master         dpath_mem_bus_i     // (input mem_data, output dpath_data)
 );
-    
+    // ======================================================================
+    //                        MACROS DE ROTEAMENTO
+    // ======================================================================
+    `define CTRL_IN     ctrl_dpath_bus_i.ctrl_sgn
+    `define STATUS_OUT  ctrl_dpath_bus_i.status_sgn
+    `define MEM_IN      dpath_mem_bus_i.mem_data
+    `define DPATH_OUT   dpath_mem_bus_i.dpath_data
+
     // ======================================================================
     //                    INICIALIZAÇÃO DOS FIOS INTERNOS
     // ======================================================================
     
     // FIOS DATAPATH:
-    logic [7:0] pc_q, rem_q, rdm_q, ac_q, ri_q, nz_q;    // Fios sequenciais
-    logic [7:0] mpx_out_w, ula_out_w, nz_w;              // Fios combinacionais
-
-    logic r_en_w, w_en_w, goto_t0_w;
-
-    // FIOS INTERFACE CTRL-DPATH: Sinais de controle (Datapath <- Control)
-    ctrl_dpath_t controle;      // atalho para a struct ctrl_sgn
-    assign controle = ctrl_dpath_bus_i.ctrl_sgn;
+    logic [7:0] pc_q, rdm_q, ac_q, ri_q;    // Fios sequenciais
+    logic [7:0] mpx_out_w, ula_out_w;                    // Fios combinacionais
+    logic [1:0] nz_w;
 
     // FIOS INTERFACE CTRL-DPATH: Sinais de Status  (Datapath -> Controle)
-    dpath_ctrl_t dpath2ctrl;    // atalho para a struct status_sgn
-    assign dpath2ctrl = ctrl_dpath_bus_i.status_sgn;
-    
-    // Atribuição com '{...} obriga o compilador verificar se todos os campos da struct foram preenchidos
-    assign dpath2ctrl = '{
-        nz          :   nz_q,
-        inst_code   :   instructions_t'(ri_q[7:4]),
-    };
-    
-    // FIOS INTERFACE DPATH-MEM: Entrada de Dados (Datapath <- MEM):
-    dpath_mem_t memoria;        // atalho para a struct mem_data
-    assign memoria = dpath_mem_bus_i.mem_data;
+    assign `STATUS_OUT.inst_code =  instructions_t'(ri_q[7:4]);
 
     // FIOS INTERFACE DPATH-MEM: Saídas de Dados (MEM <- Datapath):
-    mem_dpath_t dpath2mem;      // atalho para a struct dpath_data
-    assign dpath2mem = dpath_mem_bus_i.dpath_data;
-
-    assign dpath_mem_bus_i.dpath_data = '{
-        rem_q   : rem_q,
-        rdm_q   : rdm_q,
-    };
+    assign `DPATH_OUT.rdm_q =   rdm_q;
 
     // ======================================================================
     //                          INSTANCIANDO MÓDULOS
@@ -55,20 +40,20 @@ module neander_datapath (
     pc PC0(
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
-        .ld_pc_i(controle.ld_pc),
-        .inc_pc_i(controle.inc_pc),
-        .pc_i(rdm_q),
-        .pc_o(pc_q)
+        .ld_pc_i(`CTRL_IN.ld_pc),
+        .inc_pc_i(`CTRL_IN.inc_pc),
+        .pc_d(rdm_q),
+        .pc_q(pc_q)
     );
 
     // REM - Reg. de Endereço da Memória:
-    assign mpx_out_w = (controle.sel_mpx) ? rdm_q : pc_q;
+    assign mpx_out_w = (`CTRL_IN.sel_rem) ? rdm_q : pc_q;
     rem REM0(
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
-        .load_i(controle.ld_rem),
+        .load_i(`CTRL_IN.ld_rem),
         .rem_d(mpx_out_w),
-        .rem_q(rem_q)
+        .rem_q(`DPATH_OUT.rem_q)
     );
 
     // RDM - Reg. de Dados da Memória:
@@ -76,9 +61,9 @@ module neander_datapath (
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
         .rdm_ac_i(ac_q),
-        .rda_mem_i(memoria.mem_q),
-        .sel_i(controle.sel_rdm),
-        .load_i(controle.ld_rdm),
+        .rdm_mem_i(`MEM_IN.mem_q),
+        .sel_i(`CTRL_IN.sel_rdm),
+        .load_i(`CTRL_IN.ld_rdm),
         .rdm_q(rdm_q)
     );
 
@@ -86,7 +71,7 @@ module neander_datapath (
     ac AC0(
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
-        .load_i(controle.ld_ac),
+        .load_i(`CTRL_IN.ld_ac),
         .ac_d(ula_out_w),
         .ac_q(ac_q)
     );
@@ -95,7 +80,7 @@ module neander_datapath (
     ri RI0(
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
-        .load_i(controle.ld_ri),
+        .load_i(`CTRL_IN.ld_ri),
         .ri_d(rdm_q),
         .ri_q(ri_q)
     );
@@ -104,7 +89,7 @@ module neander_datapath (
     ula ULA0(
         .x_i(ac_q),
         .y_i(rdm_q),
-        .op_code_i(controle.op_code),
+        .opcode_i(`CTRL_IN.op_code),
         .ula_o(ula_out_w),
         .nz_o(nz_w)
     );
@@ -113,9 +98,13 @@ module neander_datapath (
     nz NZ0(
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
-        .load_i(controle.ld_nz),
+        .load_i(`CTRL_IN.ld_nz),
         .nz_d(nz_w),
-        .nz_q(nz_q)
+        .nz_q(`STATUS_OUT.nz)
     );
     
+    `undef CTRL_IN
+    `undef STATUS_OUT
+    `undef MEM_IN
+    `undef DPATH_OUT
 endmodule

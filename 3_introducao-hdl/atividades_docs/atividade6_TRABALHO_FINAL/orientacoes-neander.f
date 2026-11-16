@@ -65,6 +65,7 @@
     |  0100  |  OR   end | "OU" lógico                      |
     |  0101  |  AND  end | "E" lógico                       |
     |  0110  |  NOT      | Inverte (complementa) acumulador |
+    |  0111  |  SUB      | Subtrai                          |
     |  1000  |  JMP  end | Desvio incondicional (jump)      |
     |  1001  |  JN   end | Desvio condicional (jump on N)   |
     |  1010  |  JZ   end | Desvio condicional (jump on Z)   |

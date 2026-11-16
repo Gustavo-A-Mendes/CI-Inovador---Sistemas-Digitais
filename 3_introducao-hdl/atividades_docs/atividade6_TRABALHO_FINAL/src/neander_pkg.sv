@@ -1,24 +1,26 @@
-package neander_pkg
+package neander_pkg;
     typedef enum logic [2:0] { 
-        OP_ADD     = 3'b000,
-        OP_AND     = 3'b001,
-        OP_OR      = 3'b010,
-        OP_NOT     = 3'b011,
-        OP_PASS    = 3'b100
+        OP_ADD  =   3'b000,
+        OP_AND  =   3'b001,
+        OP_OR   =   3'b010,
+        OP_NOT  =   3'b011,
+        OP_PASS =   3'b100,
+        OP_SUB  =   3'b101
     } ula_op_t;
 
     typedef enum logic [3:0] { 
-        INST_NOP    =   4'b0000,
-        INST_STA    =   4'b0001,
-        INST_LDA    =   4'b0010,
-        INST_ADD    =   4'b0011,
-        INST_OR     =   4'b0100,
-        INST_AND    =   4'b0101,
-        INST_NOT    =   4'b0110,
-        INST_JMP    =   4'b1000,
-        INST_JN     =   4'b1001,
-        INST_JZ     =   4'b1010,
-        INST_HLT    =   4'b1111
+        INST_NOP    =   4'b0000,    // 8'h00
+        INST_STA    =   4'b0001,    // 8'h10
+        INST_LDA    =   4'b0010,    // 8'h20
+        INST_ADD    =   4'b0011,    // 8'h30
+        INST_OR     =   4'b0100,    // 8'h40
+        INST_AND    =   4'b0101,    // 8'h50
+        INST_NOT    =   4'b0110,    // 8'h60
+        INST_SUB    =   4'b0111,    // 8'h70
+        INST_JMP    =   4'b1000,    // 8'h80
+        INST_JN     =   4'b1001,    // 8'h90
+        INST_JZ     =   4'b1010,    // 8'hA0
+        INST_HLT    =   4'b1111     // 8'hF0
     } instructions_t;
     
     typedef struct packed {

@@ -1,11 +1,13 @@
+`timescale 1ns/1ps
+
 import neander_pkg::*;
 
 module decod_instruncao (
     input   instructions_t  inst_code_i,
     input   logic   [1:0]   nz_i,
-    input   logic   [7:0]   t_num_i,        // Tempo (Vetor One-Hot t0 a t7)
+    input   logic   [7:0]   t_i,        // Tempo (Vetor One-Hot t0 a t7)
     output  ctrl_dpath_t    dpath_ctrl_o,
-    output  ctrl_dpath_t    mem_ctrl_o
+    output  ctrl_mem_t    mem_ctrl_o
 );
 
     // Matriz de instruções:
@@ -62,8 +64,8 @@ module decod_instruncao (
         };
 
         mem_ctrl_o = '{
-            default:    0
-        }
+            default :   0
+        };
 
         // Definindo fase de FETCH:
         if (t_i[0]) begin       // REM <- PC
@@ -82,7 +84,7 @@ module decod_instruncao (
 
         //
         else begin
-            unique case(instrucao)
+            unique case(inst_code_i)
                 INST_NOP: begin
                     if (t_i[3])
                         dpath_ctrl_o.goto_t0 =  1'b1;    // Reinicia temporização
@@ -141,7 +143,7 @@ module decod_instruncao (
                     end
                 end
 
-                INST_ADD, INST_OR, INST_AND: begin
+                INST_ADD, INST_OR, INST_AND, INST_SUB: begin
                     if (t_i[3]) begin       // REM <- PC
                         dpath_ctrl_o.sel_rem =  1'b0;
                         dpath_ctrl_o.ld_rem  =  1'b1;
@@ -166,8 +168,9 @@ module decod_instruncao (
                         dpath_ctrl_o.ld_nz   =  1'b1;
                         dpath_ctrl_o.goto_t0 =  1'b1;
                         // operação da ULA
-                        dpath_ctrl_o.op_code =  (instrucao == INST_ADD) ? OP_ADD :
-                                                (instrucao == INST_OR)  ? OP_OR  : OP_AND;
+                        dpath_ctrl_o.op_code =  (inst_code_i == INST_ADD) ? OP_ADD :
+                                                (inst_code_i == INST_SUB) ? OP_SUB :
+                                                (inst_code_i == INST_OR)  ? OP_OR  : OP_AND;
                     end
                 end
 
@@ -248,6 +251,11 @@ module decod_instruncao (
                     if (t_i[3]) begin
                         dpath_ctrl_o.hlt =  1'b1;
                     end
+                end
+                default: begin
+                    dpath_ctrl_o.goto_t0 = 1'b1; // Aborta a operação e reinicia a máquina
+                    dpath_ctrl_o.hlt     = 1'b0;
+                    dpath_ctrl_o.op_code = OP_PASS;
                 end
             endcase
         end

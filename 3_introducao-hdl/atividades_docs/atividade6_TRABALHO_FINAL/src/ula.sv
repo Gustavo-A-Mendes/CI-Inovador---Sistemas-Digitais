@@ -16,11 +16,13 @@ module ula (
         ula_o = 8'h00;  // Valor default
 
         unique case(opcode_i)
-            OP_ADD:     ula_o = x_i + y_i;
-            OP_AND:     ula_o = x_i & y_i;
-            OP_OR:      ula_o = x_i | y_i;
-            OP_NOT:     ula_o = ~x_i;
-            OP_PASS:    ula_o = y_i;
+            OP_ADD  :   ula_o = x_i + y_i;
+            OP_AND  :   ula_o = x_i & y_i;
+            OP_OR   :   ula_o = x_i | y_i;
+            OP_NOT  :   ula_o = ~x_i;
+            OP_PASS :   ula_o = y_i;
+            OP_SUB  :   ula_o = x_i - y_i;
+            default :   ula_o = y_i;
         endcase
 
         n = ula_o[7];           // Em complemento de 2, o bit mais significativo é o bit de sinal

@@ -5,6 +5,7 @@ iverilog [flags] arquivo_fonte.v testbench.v
 # Principais flags:
 #   -s nome_modulo_raiz:    força o top_level para aquele módulo.
 #                           Exemplo: iverilog -s nome_do_modulo_raiz design.v tb_1.v tb_2.v
+
 #   -o <arquivo>:   Define o nome do arquivo de saída. Se não for usado, o padrão gerado é a.out.
 #                   Exemplo: iverilog -o sim.vvp design.v testbench.v
 #   
@@ -86,7 +87,12 @@ xrun -top {nome_modulo_do_top_level} {./arquivo1.sv} {./arquivo2.sv} {./arquivo3
 
 # Flags úteis:
 #   -clean:             Remove diretórios temporários e base de dados de compilações anteriores
+#
+#   -f <arquivo_de_comandos>:   Lê uma lista de arquivos fonte a partir de um arquivo de texto. Útil para 
+#                               projetos muito grandes.
+#
 #   -gui:               Abre interface gráfica SimVision para depuração visual e análise de waveform
+#
 #   -access <modos>:    Controla acesso dos objetos da simulação (Necessário para ver o waveform)
 #
 #             +r    ->  Leitura
@@ -94,9 +100,13 @@ xrun -top {nome_modulo_do_top_level} {./arquivo1.sv} {./arquivo2.sv} {./arquivo3
 #             +rwc  ->  Leitura, Escrita e Conectividade (para debug completo e tracing de drivers)
 #   
 #   -debug:             Habilita recursos internos adicionais de debug e salva informações estruturais no banco de dados
+#
 #   -linedebug:         Debug linha por linha
+#
 #   -sv/ -v93/ -vhdl08: Compatibilidade com SystemVerilog, VHDL-93 ou VHDL 2008
+#
 #   -timescale:         Define uma escala de tempo padrão para módulos que não a possuam declarada
+#
 #   -64bit:             Invoca os binários do Xcelium em modo de 64 bits (necessário para designs grandes).
 
 ## ----------------------------------------------------------------------
