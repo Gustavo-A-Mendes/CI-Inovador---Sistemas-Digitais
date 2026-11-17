@@ -21,6 +21,7 @@ module neander_mem (
 
     // FIOS MEMORIA:
     logic [7:0] addr_w, wdata_d;
+    logic [7:0] rdata_q;
 
 
     // FIOS INTERFACE DPATH-MEM: Entrada de Dados   (MEM <- Datapath):
@@ -33,16 +34,18 @@ module neander_mem (
     // ======================================================================
     
     // Instancia a memória SRAM:
-    logic [7:0] sram [0:255];
+    // logic [7:0] sram [0:255];
+    (* ram_style = "block" *) logic [7:0] sram [0:255];
 
     // ======================================================================
     //                            DEFININDO LÓGICA
     // ======================================================================
-    always_ff @ ( posedge clk_i ) begin
+    always_ff @ ( negedge clk_i ) begin
         if (`CTRL_IN.w_en)    sram[addr_w] <= wdata_d;
+        if (`CTRL_IN.r_en)    rdata_q <= sram[addr_w];
     end 
 
-    assign `MEM_OUT.mem_q = (`CTRL_IN.r_en) ? sram[addr_w] : 8'h00;
+    assign `MEM_OUT.mem_q = rdata_q;
 
     `undef CTRL_IN
     `undef DPATH_IN

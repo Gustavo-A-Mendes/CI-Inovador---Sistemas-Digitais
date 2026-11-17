@@ -2,7 +2,8 @@
 
 module neander (
     input   logic   clk_i,
-    input   logic   rst_n_i
+    input   logic   rst_n_i,
+    output  logic   hlt_o
 );
     
     // Instanciando Interfaces:
@@ -37,4 +38,6 @@ module neander (
         .ctrl_mem_bus_i(ctrl_mem_bus.slave),        // Conecta o Controle no SLAVE
         .dpath_mem_bus_i(dpath_mem_bus.slave)       // Conecta o Controle no SLAVE
     );
+
+    assign hlt_o = ctrl_dpath_bus.ctrl_sgn.hlt;
 endmodule

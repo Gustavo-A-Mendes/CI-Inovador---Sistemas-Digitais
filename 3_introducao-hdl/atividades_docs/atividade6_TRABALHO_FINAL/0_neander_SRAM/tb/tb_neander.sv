@@ -5,11 +5,13 @@ module tb_neander;
     // 1. Sinais de Estímulo (Energia)
     logic clk_tb;
     logic rst_n_tb;
+    logic htl_tb;
 
     // 2. Instanciando o Chip (Device Under Test)
     neander dut (
         .clk_i   (clk_tb),
-        .rst_n_i (rst_n_tb)
+        .rst_n_i (rst_n_tb),
+        .hlt_o   (htl_tb)
     );
 
     // 3. Geração do Clock (100 MHz)
@@ -40,7 +42,7 @@ module tb_neander;
     // 6. Timeout de Segurança (Para o simulador não travar em loop infinito)
     initial begin
         #10000; 
-        $display("cabou!");
+        $display("faiô!");
         $finish;
     end
     // 7. Monitor Self-Checking (Fim de Programa)

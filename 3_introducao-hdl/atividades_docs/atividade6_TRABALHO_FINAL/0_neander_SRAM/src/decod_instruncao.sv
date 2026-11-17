@@ -48,8 +48,8 @@ module decod_instruncao (
     //                    INICIALIZAÇÃO DOS FIOS INTERNOS
     // ======================================================================
     logic flag_n, flag_z;     // sinais de Status N e Z, da ULA
-    assign flag_n   = nz_i[0];
-    assign flag_z   = nz_i[1];
+    assign flag_n   = nz_i[1];
+    assign flag_z   = nz_i[0];
 
     // ======================================================================
     //                            DEFININDO LÓGICA
@@ -179,7 +179,7 @@ module decod_instruncao (
                         dpath_ctrl_o.ld_ac   =  1'b1;
                         dpath_ctrl_o.ld_nz   =  1'b1;
                         dpath_ctrl_o.goto_t0 =  1'b1;
-                        dpath_ctrl_o.op_code =  OP_AND; // ULA opera em NOT
+                        dpath_ctrl_o.op_code =  OP_NOT; // ULA opera em NOT
                     end
                 end
 
