@@ -7,7 +7,7 @@ module decod_instruncao (
     input   logic   [1:0]   nz_i,
     input   logic   [7:0]   t_i,        // Tempo (Vetor One-Hot t0 a t7)
     output  ctrl_dpath_t    dpath_ctrl_o,
-    output  ctrl_mem_t    mem_ctrl_o
+    output  ctrl_mem_t      mem_ctrl_o
 );
 
     // Matriz de instruções:

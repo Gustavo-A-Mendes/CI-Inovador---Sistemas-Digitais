@@ -1,4 +1,23 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 11/17/2026 12:25:56 PM
+// Design Name: 
+// Module Name: design
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 // ======================================================================
 // ======================================================================
@@ -138,9 +157,17 @@ endinterface //datapath_if
 // ======================================================================
 // ======================================================================
 module neander (
-    input   logic   clk_i,
-    input   logic   rst_n_i,
-    output  logic   hlt_o
+    input   logic           clk_i,
+    input   logic           rst_n_i,
+    output  logic           hlt_o,
+    output  logic   [7:0]   ac_o,
+    output  logic   [7:0]   pc_o,
+    output  logic   [7:0]   rem_o,
+    output  logic   [7:0]   rdm_o,
+    output  logic   [7:0]   ri_o,
+    output  logic   [7:0]   mem_out_o,
+    output  logic           mem_wen_o,
+    output  logic   [7:0]   t_o
 );
     
     // Instanciando Interfaces:
@@ -157,7 +184,8 @@ module neander (
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
         .ctrl_dpath_bus_i(ctrl_dpath_bus.master),   // Conecta o Controle no MASTER
-        .ctrl_mem_bus_i(ctrl_mem_bus.master)        // Conecta o Controle no MASTER
+        .ctrl_mem_bus_i(ctrl_mem_bus.master),       // Conecta o Controle no MASTER
+        .t_o(t_o)
     );
 
     // Datapath:
@@ -165,18 +193,25 @@ module neander (
         .clk_i(clk_i),
         .rst_n_i(rst_n_i),
         .ctrl_dpath_bus_i(ctrl_dpath_bus.slave),    // Conecta o Controle no SLAVE
-        .dpath_mem_bus_i(dpath_mem_bus.master)      // Conecta o Controle no MASTER
+        .dpath_mem_bus_i(dpath_mem_bus.master),     // Conecta o Controle no MASTER
+        .pc_o(pc_o),
+        .ac_o(ac_o),
+        .ri_o(ri_o)
     );
 
-    // SRAM:
-    neander_mem ND_MEM0(
-//    mem_vivado ND_MEM0(
+    // BRAM:
+//    neander_mem ND_MEM0(
+    mem_vivado ND_MEM0(
         .clk_i(clk_i),
         .ctrl_mem_bus_i(ctrl_mem_bus.slave),        // Conecta o Controle no SLAVE
         .dpath_mem_bus_i(dpath_mem_bus.slave)       // Conecta o Controle no SLAVE
     );
 
     assign hlt_o = ctrl_dpath_bus.ctrl_sgn.hlt;
+    assign rem_o     = dpath_mem_bus.dpath_data.rem_q;
+    assign rdm_o     = dpath_mem_bus.dpath_data.rdm_q;
+    assign mem_out_o = dpath_mem_bus.mem_data.mem_q;
+    assign mem_wen_o = ctrl_mem_bus.ctrl_sgn.w_en;
 endmodule
 
 // ======================================================================
@@ -189,10 +224,13 @@ endmodule
 
 // CONTROLE:
 module neander_control (
-    input   logic           clk_i,
-    input   logic           rst_n_i,
-    ctrl_dpath_if.master    ctrl_dpath_bus_i,   // (input status_sgn, output ctrl_sgn)
-    ctrl_mem_if.master      ctrl_mem_bus_i     // (output ctrl_sgn)
+    input   logic               clk_i,
+    input   logic               rst_n_i,
+    ctrl_dpath_if.master        ctrl_dpath_bus_i,   // (input status_sgn, output ctrl_sgn)
+    ctrl_mem_if.master          ctrl_mem_bus_i,     // (output ctrl_sgn)
+
+    // Saída de sinais internos dos registrador(es):
+    output  logic       [7:0]   t_o
 );
 
     // ======================================================================
@@ -230,6 +268,8 @@ module neander_control (
         .mem_ctrl_o(`MEM_OUT)
     );
 
+    assign t_o = t_q;
+    
     `undef STATUS_IN
     `undef CTRL_OUT
     `undef MEM_OUT
@@ -241,7 +281,12 @@ module neander_datapath (
     input   logic               rst_n_i,
     
     ctrl_dpath_if.slave         ctrl_dpath_bus_i,   // (input ctrl_sgn, output status_sgn)
-    dpath_mem_if.master         dpath_mem_bus_i     // (input mem_data, output dpath_data)
+    dpath_mem_if.master         dpath_mem_bus_i,    // (input mem_data, output dpath_data)
+    
+    // Saídas dos sinais internos de registradores:
+    output  logic       [7:0]   pc_o,   
+    output  logic       [7:0]   ac_o,   
+    output  logic       [7:0]   ri_o   
 );
     // ======================================================================
     //                        MACROS DE ROTEAMENTO
@@ -337,6 +382,10 @@ module neander_datapath (
         .nz_q(`STATUS_OUT.nz)
     );
     
+    assign pc_o = pc_q;
+    assign ac_o = ac_q;
+    assign ri_o = ri_q;
+    
     `undef CTRL_IN
     `undef STATUS_OUT
     `undef MEM_IN
@@ -408,7 +457,7 @@ module decod_instruncao (
     input   logic   [1:0]   nz_i,
     input   logic   [7:0]   t_i,        // Tempo (Vetor One-Hot t0 a t7)
     output  ctrl_dpath_t    dpath_ctrl_o,
-    output  ctrl_mem_t    mem_ctrl_o
+    output  ctrl_mem_t      mem_ctrl_o
 );
 
     // Matriz de instruções:

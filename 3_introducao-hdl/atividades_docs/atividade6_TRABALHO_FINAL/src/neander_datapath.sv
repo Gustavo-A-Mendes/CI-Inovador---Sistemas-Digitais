@@ -7,7 +7,12 @@ module neander_datapath (
     input   logic               rst_n_i,
     
     ctrl_dpath_if.slave         ctrl_dpath_bus_i,   // (input ctrl_sgn, output status_sgn)
-    dpath_mem_if.master         dpath_mem_bus_i     // (input mem_data, output dpath_data)
+    dpath_mem_if.master         dpath_mem_bus_i,    // (input mem_data, output dpath_data)
+    
+    // Saídas dos sinais internos de registradores:
+    output  logic       [7:0]   pc_o,   
+    output  logic       [7:0]   ac_o,   
+    output  logic       [7:0]   ri_o   
 );
     // ======================================================================
     //                        MACROS DE ROTEAMENTO
@@ -102,6 +107,10 @@ module neander_datapath (
         .nz_d(nz_w),
         .nz_q(`STATUS_OUT.nz)
     );
+    
+    assign pc_o = pc_q;
+    assign ac_o = ac_q;
+    assign ri_o = ri_q;
     
     `undef CTRL_IN
     `undef STATUS_OUT

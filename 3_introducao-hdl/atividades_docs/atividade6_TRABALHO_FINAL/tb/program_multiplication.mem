@@ -1,0 +1,40 @@
+// LÓGICA DO MULTIPLICADO POR SOMAS SUCESSIVAS
+// Acumula o valor do operando A no registro @82, 
+// enquanto decrementa em 1 o valor do operando B
+// Quando o operando B for 0, encerra o PROGRAMA
+// OBS.: se B for 0, encerra e retorna o valor 0, em @82
+
+// @80 -> Operando A (operando)
+// @81 -> Operando B (operando)
+// @82 -> Operando C (somador)
+// @83 -> Valor de Incremento/Decremento
+
+// ========== ÁREA DE PROGRAMA ==========
+
+// Passo 1: Zera acumuladores:
+@00
+00      // Valor ZERO
+20 00   // (AC = 0)         ->  LDA do valor 0x00 em @00
+10 82   // (C = 0)          ->  STA no registro do somador C   
+
+// Passo 2: Conferir operando B
+@05
+20 81   // (AC = B)         ->  LDA do operando B, em @82
+A0 15   // (B == 0)         ->  JZ com o valor de B. Se for pular para @15
+
+// Passo 3a (operando B não é ZERO):
+@09
+70 83   // (B-1)            ->  SUB de B com o valor em @83 (0x01)
+10 81   // (B = B-1)        ->  STA em @82, atualizando o valor de B
+20 80   // (AC = A)         ->  LDA do operando A, em @81
+30 82   // (A + C)          ->  ADD de C com o valor de A
+10 82   // (C = A + C)      ->  STA em @80, atualizando valor de C
+80 05   // (JUMP para @05)  ->  JMP (Desvio incondicional) para @05
+
+// Passo 3b (operando B é ZERO):
+@15
+F0      // HALT             -> HLT, encerra processamento
+
+// ========== AREA DE DADOS ==========
+@80
+07 03 00 01

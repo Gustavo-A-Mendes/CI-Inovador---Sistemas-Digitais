@@ -7,4 +7,4 @@ F0      // HALT
 
 // AREA DE DADOS
 @80
-00 02 03
+00 07 03

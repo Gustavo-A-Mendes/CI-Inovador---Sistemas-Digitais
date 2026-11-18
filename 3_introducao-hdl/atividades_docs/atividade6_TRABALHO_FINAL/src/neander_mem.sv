@@ -33,16 +33,18 @@ module neander_mem (
     //                          INSTANCIANDO MEMÓRIA
     // ======================================================================
     
-    // Instancia a memória SRAM:
-    // logic [7:0] sram [0:255];
-    (* ram_style = "block" *) logic [7:0] sram [0:255];
+    // Instancia a memória BRAM:
+    (* ram_style = "block" *) logic [7:0] bram [0:255];
 
+    initial begin
+        $readmemh("../tb/program_sub_matrix.mem", bram);
+    end
     // ======================================================================
     //                            DEFININDO LÓGICA
     // ======================================================================
     always_ff @ ( negedge clk_i ) begin
-        if (`CTRL_IN.w_en)    sram[addr_w] <= wdata_d;
-        if (`CTRL_IN.r_en)    rdata_q <= sram[addr_w];
+        if (`CTRL_IN.w_en)    bram[addr_w] <= wdata_d;
+        if (`CTRL_IN.r_en)    rdata_q <= bram[addr_w];
     end 
 
     assign `MEM_OUT.mem_q = rdata_q;

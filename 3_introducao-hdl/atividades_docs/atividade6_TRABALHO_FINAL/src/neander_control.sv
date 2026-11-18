@@ -3,10 +3,13 @@
 import neander_pkg::*;
 
 module neander_control (
-    input   logic           clk_i,
-    input   logic           rst_n_i,
-    ctrl_dpath_if.master    ctrl_dpath_bus_i,   // (input status_sgn, output ctrl_sgn)
-    ctrl_mem_if.master      ctrl_mem_bus_i     // (output ctrl_sgn)
+    input   logic               clk_i,
+    input   logic               rst_n_i,
+    ctrl_dpath_if.master        ctrl_dpath_bus_i,   // (input status_sgn, output ctrl_sgn)
+    ctrl_mem_if.master          ctrl_mem_bus_i,     // (output ctrl_sgn)
+
+    // Saída de sinais internos dos registrador(es):
+    output  logic       [7:0]   t_o
 );
 
     // ======================================================================
@@ -43,6 +46,8 @@ module neander_control (
         .dpath_ctrl_o(`CTRL_OUT),
         .mem_ctrl_o(`MEM_OUT)
     );
+
+    assign t_o = t_q;
 
     `undef STATUS_IN
     `undef CTRL_OUT
