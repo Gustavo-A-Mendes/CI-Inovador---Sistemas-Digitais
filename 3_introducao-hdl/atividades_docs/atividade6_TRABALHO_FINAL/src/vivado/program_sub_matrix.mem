@@ -1,0 +1,50 @@
+// LÓGICA DA SUBTRAÇÃO DE MATRIZES
+// 
+// Matrizes 3x3 = 9 espaços de memória cada
+// Subtrai Matriz A de Matriz B, elemento a elemento
+// Salva na matriz C, na posição respectiva do elemento
+
+// ÁREA DE PROGRAMA
+@00     
+00      // Valor ZERO
+
+// Passo 1: Processo (c_i <- a_i - b_i)
+20 80   // @01  (AC = a0)       ->  LDA de a0
+70 89   // @03  (AC = a0-b0)    ->  SUB de a0 e b0
+10 92   // @05  (c0 = AC)       ->  STA no c0
+20 81   // @07  (AC = a1)       ->  LDA de a1
+70 8A   // @09  (AC = a1-b1)    ->  SUB de a1 e b1
+10 93   // @0B  (c1 = AC)       ->  STA no c1
+20 82   // @0D  (AC = a2)       ->  LDA de a2
+70 8B   // @0F  (AC = a2-b2)    ->  SUB de a2 e b2
+10 94   // @11  (c2 = AC)       ->  STA no c2
+20 83   // @13  (AC = a3)       ->  LDA de a3
+70 8C   // @15  (AC = a3-b3)    ->  SUB de a3 e b3
+10 95   // @17  (c3 = AC)       ->  STA no c3
+20 84   // @19  (AC = a4)       ->  LDA de a4
+70 8D   // @1B  (AC = a4-b4)    ->  SUB de a4 e b4
+10 96   // @1D  (c4 = AC)       ->  STA no c4
+20 85   // @1F  (AC = a5)       ->  LDA de a5
+70 8E   // @21  (AC = a5-b5)    ->  SUB de a5 e b5
+10 97   // @23  (c5 = AC)       ->  STA no c5
+20 86   // @25  (AC = a6)       ->  LDA de a6
+70 8F   // @27  (AC = a6-b6)    ->  SUB de a6 e b6
+10 98   // @29  (c6 = AC)       ->  STA no c6
+20 87   // @2B  (AC = a7)       ->  LDA de a7
+70 90   // @2D  (AC = a7-b7)    ->  SUB de a7 e b7
+10 99   // @2F  (c7 = AC)       ->  STA no c7
+20 88   // @31  (AC = a8)       ->  LDA de a8
+70 91   // @33  (AC = a8-b8)    ->  SUB de a8 e b8
+10 9A   // @35  (c8 = AC)       ->  STA no c8
+F0      // @37                  ->  HLT
+
+// AREA DE DADOS
+@80
+// [@80] Matriz A:
+0A 0B 0C 0D 0E 0F 10 11 12
+
+// [@89] Matriz B:
+01 02 03 04 05 06 07 08 09
+
+// [@92] Matriz C:
+00 00 00 00 00 00 00 00 00

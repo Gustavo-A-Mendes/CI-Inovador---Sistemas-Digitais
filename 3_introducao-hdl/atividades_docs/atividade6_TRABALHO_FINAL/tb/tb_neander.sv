@@ -1,18 +1,42 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 11/16/2026 02:34:34 PM
+// Design Name: 
+// Module Name: tb_neander_vivado
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module tb_neander;
-
+    
     // 1. Sinais conectados exclusivamente às portas do Top-Level (100% compatível com Pós-Síntese!)
     logic       clk_tb;
     logic       rst_n_tb;
     logic       hlt_tb;
     logic [7:0] ac_tb, pc_tb, rem_tb, rdm_tb, ri_tb, mem_out_tb, t_tb;
     logic       mem_wen_tb;
+    logic       mem_ren_tb;
     logic [3:0] inst_code_tb;
     logic [2:0] op_code_tb;
 
     // 2. Instanciando o Chip (Device Under Test)
-    neander dut (
+    neander #(
+        `ifndef GATE_LEVEL
+        .MEM_FILE(MEM_FILE)
+        `endif
+    ) dut (
         .clk_i      (clk_tb),
         .rst_n_i    (rst_n_tb),
         .hlt_o      (hlt_tb),
@@ -33,11 +57,6 @@ module tb_neander;
     initial begin
         clk_tb = 1'b0;
         forever #10 clk_tb = ~clk_tb;
-    end
-    
-    initial begin
-        $dumpfile("tb_neander_result.vcd");
-        $dumpvars(0, tb_neander);
     end
 
     // =========================================================================
@@ -100,7 +119,7 @@ module tb_neander;
     // =========================================================================
     // Selecione qual programa validar (ou deixe 0 para autodetectar pelo código!)
     // 0 = Auto | 1 = Teste Simples (@80 = @81 op @82) | 2 = Multiplicação | 3 = Matrizes 3x3
-    localparam int MODO_TESTE = 3; 
+    localparam int MODO_TESTE = 2; 
 
     initial begin
         int erros;
@@ -156,14 +175,14 @@ module tb_neander;
             // Mapa: 0x80 = Resultado | 0x81 = Op1 | 0x82 = Op2
             // -----------------------------------------------------------------
             1: begin
-                esperado = (dump_mem[8'h02] == 8'h70) ? (dump_mem[8'h81] - dump_mem[8'h82]) 
-                                                      : (dump_mem[8'h81] + dump_mem[8'h82]);
-                assert (dump_mem[8'h80] === esperado)
+                esperado = (dump_mem[8'h03] == 8'h70) ? (dump_mem[8'h80] - dump_mem[8'h81]) 
+                                                      : (dump_mem[8'h80] + dump_mem[8'h81]);
+                assert (dump_mem[8'h82] === esperado)
                     $display("[PASS] Operacao Basica OK! Mem[0x80] = %0d (Esperado: %0d)", 
-                             $signed(dump_mem[8'h80]), $signed(esperado));
+                             $signed(dump_mem[8'h82]), $signed(esperado));
                 else begin
                     $error("[FAIL] Mem[0x80] = %0d | Esperado = %0d", 
-                           $signed(dump_mem[8'h80]), $signed(esperado));
+                           $signed(dump_mem[8'h82]), $signed(esperado));
                     erros++;
                 end
             end
@@ -213,5 +232,7 @@ module tb_neander;
 
         $finish;
     end
+    
+    
 
 endmodule

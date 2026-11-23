@@ -1,0 +1,11 @@
+// ÁREA DE PROGRAMA
+@00
+00
+20 80   // LDA do valor em  @80
+70 81   // SUB com valor em @80
+10 82   // STA do valor acumulado no AC em @80
+F0      // HALT
+
+// AREA DE DADOS
+@80
+17 03 00

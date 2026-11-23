@@ -167,7 +167,10 @@ module neander (
     output  logic   [7:0]   ri_o,
     output  logic   [7:0]   mem_out_o,
     output  logic           mem_wen_o,
-    output  logic   [7:0]   t_o
+    output  logic           mem_ren_o,
+    output  logic   [7:0]   t_o,
+    output  logic   [3:0]   inst_code_o,
+    output  logic   [2:0]   op_code_o
 );
     
     // Instanciando Interfaces:
@@ -200,18 +203,21 @@ module neander (
     );
 
     // BRAM:
-//    neander_mem ND_MEM0(
-    mem_vivado ND_MEM0(
+    neander_mem ND_MEM0(
+//    mem_vivado ND_MEM0(
         .clk_i(clk_i),
         .ctrl_mem_bus_i(ctrl_mem_bus.slave),        // Conecta o Controle no SLAVE
         .dpath_mem_bus_i(dpath_mem_bus.slave)       // Conecta o Controle no SLAVE
     );
 
-    assign hlt_o = ctrl_dpath_bus.ctrl_sgn.hlt;
-    assign rem_o     = dpath_mem_bus.dpath_data.rem_q;
-    assign rdm_o     = dpath_mem_bus.dpath_data.rdm_q;
-    assign mem_out_o = dpath_mem_bus.mem_data.mem_q;
-    assign mem_wen_o = ctrl_mem_bus.ctrl_sgn.w_en;
+    assign hlt_o        = ctrl_dpath_bus.ctrl_sgn.hlt;
+    assign op_code_o    = ula_op_t'(ctrl_dpath_bus.ctrl_sgn.op_code);
+    assign inst_code_o  = instructions_t'(ctrl_dpath_bus.status_sgn.inst_code);
+    assign rem_o        = dpath_mem_bus.dpath_data.rem_q;
+    assign rdm_o        = dpath_mem_bus.dpath_data.rdm_q;
+    assign mem_out_o    = dpath_mem_bus.mem_data.mem_q;
+    assign mem_wen_o    = ctrl_mem_bus.ctrl_sgn.w_en;
+    assign mem_ren_o    = ctrl_mem_bus.ctrl_sgn.r_en;
 endmodule
 
 // ======================================================================
@@ -275,6 +281,7 @@ module neander_control (
     `undef MEM_OUT
 endmodule
 
+// ======================================================================
 // DATAPATH:
 module neander_datapath (
     input   logic               clk_i,
@@ -392,13 +399,16 @@ module neander_datapath (
     `undef DPATH_OUT
 endmodule
 
+// ======================================================================
 // MEMORIA:
 module neander_mem (
     input   logic           clk_i,
     
     ctrl_mem_if.slave       ctrl_mem_bus_i,     // (input control_sgn)
     dpath_mem_if.slave      dpath_mem_bus_i     // (input dpath_data, output mem_data)
-);
+);  
+    localparam MEM_FILE = "program_sub_matrix.mem";
+
     // ======================================================================
     //                        MACROS DE ROTEAMENTO
     // ======================================================================
@@ -424,16 +434,19 @@ module neander_mem (
     //                          INSTANCIANDO MEMÓRIA
     // ======================================================================
     
-    // Instancia a memória SRAM:
-    // logic [7:0] sram [0:255];
-    (* ram_style = "block" *) logic [7:0] sram [0:255];
-
+    // Instancia a memória BRAM:
+    // logic [7:0] bram [0:255];
+    (* ram_style = "block" *) logic [7:0] bram [0:255];
+    
+    initial begin
+        $readmemh(MEM_FILE, bram);
+    end
     // ======================================================================
     //                            DEFININDO LÓGICA
     // ======================================================================
     always_ff @ ( negedge clk_i ) begin
-        if (`CTRL_IN.w_en)    sram[addr_w] <= wdata_d;
-        if (`CTRL_IN.r_en)    rdata_q <= sram[addr_w];
+        if (`CTRL_IN.w_en)    bram[addr_w] <= wdata_d;
+        else if (`CTRL_IN.r_en)    rdata_q <= bram[addr_w];
     end 
 
     assign `MEM_OUT.mem_q = rdata_q;
@@ -712,6 +725,7 @@ module decod_instruncao (
     end
 endmodule
 
+// ======================================================================
 // TEMPORIZADOR:
 module gerador_tempo (
     input   logic           clk_i,
@@ -732,6 +746,7 @@ module gerador_tempo (
     end
 endmodule
 
+// ======================================================================
 // AC:
 module ac (
     input   logic           clk_i,
@@ -747,6 +762,7 @@ module ac (
     end
 endmodule
 
+// ======================================================================
 // PC:
 module pc (
     input   logic           clk_i,
@@ -764,6 +780,7 @@ module pc (
     end
 endmodule
 
+// ======================================================================
 // REM:
 module rem (
     input   logic           clk_i,
@@ -779,6 +796,7 @@ module rem (
     end
 endmodule
 
+// ======================================================================
 // RDM:
 module rdm (
     input   logic           clk_i,
@@ -803,6 +821,7 @@ module rdm (
     end
 endmodule
 
+// ======================================================================
 // RI:
 module ri (
     input   logic           clk_i,
@@ -818,6 +837,7 @@ module ri (
     end
 endmodule
 
+// ======================================================================
 // NZ:
 module nz (
     input   logic           clk_i,
@@ -833,6 +853,7 @@ module nz (
     end
 endmodule
 
+// ======================================================================
 // ULA:
 module ula (
     input   logic       [7:0]   x_i,
