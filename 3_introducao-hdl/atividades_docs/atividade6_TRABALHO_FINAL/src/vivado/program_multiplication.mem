@@ -1,0 +1,45 @@
+// LÓGICA DO MULTIPLICADO POR SOMAS SUCESSIVAS
+// Acumula o valor do operando A no registro @80,
+// Copia valor de B em acumulador X 
+// decrementa em 1 o valor do acumulador X a cada ciclo
+// Quando o operando X for igual a ZERO, encerra o PROGRAMA
+// OBS.: se X for 0, encerra e retorna o valor 0, em @80
+
+// @80 -> Operando A    ( operando )
+// @81 -> Operando B    ( operando )
+// @82 -> Operando C    ( somador )
+// @83 -> Valor de Incremento/Decremento
+// @84 -> Acumulador X  ( p/ condição de parada )
+
+// ========== ÁREA DE PROGRAMA ==========
+
+// Passo 1: Zera somador e atribuir B em X:
+@00
+00      // valor ZERO
+20 00   // @01  (AC = 0)    ->  LDA do valor 0x00 em @00
+10 82   // @03  (C = 0)     ->  STA no registro do somador C, em @82
+20 81   // @05  (AC = B)    ->  LDA do operando B, em @81   
+10 84   // @07  (X = B)     ->  STA no registro do acumulador X. em @84
+
+// Passo 2: Loop Principal
+//  -> Testa condição de parada
+@09
+A0 19   // @09  (AC == 0)   ->  JZ com o valor acumulado (B). Se for verdadeiro, pular para @19
+
+//  -> Acumula valor de A
+20 80   // @0B  (AC = A)    ->  LDA do operando A, em @81
+30 82   // @0D  (AC = A+C)  ->  ADD de C com o valor de A
+10 82   // @0F  (C = AC)    ->  STA em @83, atualizando valor de C
+
+//  -> Decrementa X em 1
+20 84   // @11  (AC = X)    ->  LDA do operando X
+70 83   // @13  (AC = X-1)  ->  SUB de X com o valor em @83 (0x01)
+10 84   // @15  (X = AC)    ->  STA em @84, atualizando o valor de X
+80 09   // @17              -> JMP @09 (de volta para o início do loop)
+
+// Passo 3: Fim de programa
+F0      // @19  HALT        ->  HLT, encerra processamento
+
+// ========== AREA DE DADOS ==========
+@80
+07 02 00 01 00
