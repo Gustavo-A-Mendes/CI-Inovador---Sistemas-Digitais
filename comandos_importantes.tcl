@@ -111,6 +111,16 @@ xrun -top {nome_modulo_do_top_level} {./arquivo1.sv} {./arquivo2.sv} {./arquivo3
 
 ## ----------------------------------------------------------------------
 
+## GENUS
+
+# Fazer link simbólico (.lib):
+ln -s /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/timing/fast_vdd1v0_basicCells_hvt.lib
+
+# Fazer link simbólico (.v):
+ln -s /tools/gpdk/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_hvt/verilog/fast_vdd1v0_basicCells_hvt.v
+
+## ----------------------------------------------------------------------
+
 ## VIVADO
 
 # Gerar relatório de utilização (report-utilization)
@@ -131,7 +141,7 @@ write_verilog -force -mode timesim -sdf_anno true ./meu_projeto_netlist.v
 
 # No testbench, chamar o arquivo .sdf:
 # Argumentos: ("nome_do_arquivo.sdf", instancia_alvo, config_logs, ...)
-$sdf_annotate("meu_projeto_atrasos.sdf", tb_top_level.DUT, , "sdf_log.txt", MAXIMUM);
+$sdf_annotate("meu_projeto_atrasos.sdf", tb_top_level.DUT, , "sdf_log.txt", "MAXIMUM");
 
 # Rodar o testbench com atraso injetado do .sdf do Vivado:
 xrun tb_top_level.sv meu_projeto_netlist.v $VIVADO_HOME/data/verilog/src/glbl.v -y $VIVADO_HOME/data/verilog/src/unisims -libext .v -access +rwc -gui
