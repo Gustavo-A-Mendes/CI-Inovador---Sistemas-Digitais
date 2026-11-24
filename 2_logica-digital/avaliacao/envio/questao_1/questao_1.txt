@@ -1,0 +1,13 @@
+QUESTÃO 01:
+
+1.1. 
+    - Padronização do projeto
+    - Objetivos e limitações de projeto
+    - Qualquer tecnologia é um cobertor curto
+
+1.2.
+    1.2.1.  (F) "volta_a" também possui saída de sinal registrada
+    1.2.2.  (V)
+    1.2.3.  (F) A lógica aplicada no design é assíncrona
+    1.2.4.  (F) Causa latches para ab=01, mas isso é desejável no contexto deste design.
+    1.2.5.  (V) Pois temos apenas 7 estados e, com 3 bits, pode-se ter até 8 casos. (state = 3'd7)
