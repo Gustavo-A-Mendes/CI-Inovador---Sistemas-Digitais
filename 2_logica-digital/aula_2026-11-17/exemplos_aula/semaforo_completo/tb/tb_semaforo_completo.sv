@@ -10,7 +10,6 @@ module tb_semaforo_completo;
         .clk(clk_tb),
         .reset(reset_tb),
         .pedestre(pedestre_tb),
-        .fast_sim(0),
         .sinal_rua1(sinal_rua1_tb),
         .sinal_rua2(sinal_rua2_tb),
         .sinal_pedestre(sinal_pedestre_tb)
@@ -24,9 +23,10 @@ module tb_semaforo_completo;
         end
     end
 
-
     initial begin
-
+        $dumpfile("teste.vcd");
+        $dumpvars;
+        
         $sdf_annotate("../src/atrasos_meu_design.sdf", tb_semaforo_completo.sf, , "sdf_log.txt", "MAXIMUM");
 
         reset_tb = 1'b1;       // sinal reset inicia "ligado" (no sinal de ativação dele, seja 1 ou 0) (boa prática)
@@ -34,32 +34,14 @@ module tb_semaforo_completo;
         @(posedge clk_tb);
 
         reset_tb = 1'b0;
-        #7000;
+        ##70;
 
         pedestre_tb = 1'b1; // Acionado por 1s
-        #100;
+        ##1;
 
         pedestre_tb = 1'b0; 
-        #2000;
+        ##20;
 
         $finish;
-    end
-
-    /*
-        EXIBIÇÃO DOS SINAIS NO TERMINAL
-    */
-    always begin
-        // Exibir teste no terminal:
-        $display("t=%t \t clk=%b, rst=%b, p=%b, sgn_r1=%b, sgn_r2=%b, sgn_p=%b, tempo=%d", 
-                    $time, 
-                    clk_tb, 
-                    reset_tb, 
-                    pedestre_tb, 
-                    sinal_rua1_tb, 
-                    sinal_rua2_tb, 
-                    sinal_pedestre_tb,
-                    sf.tempo);
-
-        #1;
     end
 endmodule

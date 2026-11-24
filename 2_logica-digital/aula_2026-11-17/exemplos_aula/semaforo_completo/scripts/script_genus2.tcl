@@ -18,12 +18,12 @@ set LOCAL_DIR "[exec pwd]"
 # Copia o caminho para uma variável reservada pelo template.
 set SYNTH_DIR $LOCAL_DIR
 # Monta o caminho da pasta onde está o código Verilog.
-set RTL_PATH ../src
+set RTL_PATH $LOCAL_DIR/../src
 # Monta o caminho da pasta onde está a biblioteca de células.
-set LIB_PATH ../library
+set LIB_PATH $LOCAL_DIR/../library
 
 # 03 — Arquivos de entrada e módulo de topo
-# Seleciona o arquivo Liberty que descreve as células da condição rápida.
+# Seleciona o arquivo Library que descreve as células da condição rápida.
 set LIBRARY {fast_vdd1v0_basicCells_hvt.lib}
 # Guarda o nome do único arquivo RTL usado neste exemplo.
 set FILE_LIST {semaforo_completo_fsm.sv}
