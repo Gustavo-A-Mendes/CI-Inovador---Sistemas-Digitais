@@ -148,3 +148,11 @@ xrun tb_top_level.sv meu_projeto_netlist.v $VIVADO_HOME/data/verilog/src/glbl.v 
 
 ## XCelium: rodar o testbench com atraso injetado do .sdf do Vivado + flags para forçar o Xcelium alinhar o tratamento SDF entre as ferramentas
 xrun tb_top_level.sv meu_projeto_netlist.v $VIVADO_HOME/data/verilog/src/glbl.v -y $VIVADO_HOME/data/verilog/src/unisims -libext .v -access +rwc -gui -sdf_nocheck_celltype -pulse_r 0 -pulse_e 0 -notimingchecks
+
+
+
+
+
+
+# =================
+# Matricula: 202670667

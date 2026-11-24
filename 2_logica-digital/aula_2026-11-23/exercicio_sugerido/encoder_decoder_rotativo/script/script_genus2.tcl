@@ -174,7 +174,7 @@ report timing -from [find / -port a] > $_REPORTS_PATH/${DESIGN}_timing_m.rpt
 
 # 17 — Netlist e restrições para a próxima etapa
 # Escreve a netlist Verilog mapeada em counter.v, na pasta de saídas.
-write_hdl > ${_OUTPUTS_PATH}/${DESIGN}.v
+write_netlist > ${_OUTPUTS_PATH}/${DESIGN}.v
 # Exporta as restrições ativas da sessão para o arquivo counter.sdc.
 write_sdc > ${_OUTPUTS_PATH}/${DESIGN}.sdc
 # Exporta as anotações de atraso da sessão para o arquivo counter.sdc.
