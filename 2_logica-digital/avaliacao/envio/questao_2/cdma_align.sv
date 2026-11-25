@@ -8,64 +8,57 @@ module cdma_align (
     output  logic   [9:0]   atraso
 );
 
-    logic [2:0] count_q, count_d;
+    logic [2:0] clk_count;
     logic sample_en, encontrado_d;
-    logic [9:0] delay_count, atraso_d, atraso_q;
-    logic [7:0] data_shift_reg_d, data_shift_reg_q;
+    logic [9:0] delay_count;
+    logic [7:0] data_shift_reg;
 
-    typedef enum logic [3:0] { 
-        REC_DADO        =   4'd0
-    } state_t;
+    always_ff @( posedge clk ) begin
 
-    state_t curr_state, next_state;
+    end
 
-    always_ff @( posedge clk or posedge reset ) begin
+    // pulso a cada 8 ciclos de relógio:
+    always_ff @( posedge clk ) begin
         if (reset) begin
-            curr_state          <= REC_DADO;
-            data_shift_reg_q    <= 3'd0;
-            count_q             <= 3'd0;
-            delay_count         <= 10'd0;
-            encontrado          <= 1'b0;
-            atraso_q              <= 10'd0;
+            sample_en    <= 1'b0;
+            encontrado_d <= 1'b0;
+        end
+        else if (clk_count == 3'd7) begin
+            sample_en   <= 1'b1;
+            clk_count   <= 3'd0;
+            if (data_shift_reg == padrao)
+                encontrado_d <= 1'b1;
         end
         else begin
-            curr_state          <= next_state;
-            data_shift_reg_q    <= data_shift_reg_d;
-            count_q             <= count_d;
-            encontrado          <= encontrado_d;
-            atraso_q              <= atraso_d;
+            sample_en    <= 1'b0;
+            encontrado_d <= 1'b0;
+            clk_count    <= clk_count + 3'd1;
         end
     end
 
-    always_comb begin
-        next_state = curr_state;
-        data_shift_reg_d = data_shift_reg_q;
-        sample_en = 1'b0;
-        encontrado_d = 1'b0;
-        atraso_d = atraso_q;
+    // recebimento dos dados + contador do atraso:
+    always_ff @( posedge clk ) begin
+        if (reset) begin
+            data_shift_reg  <= 8'b0000_0000;
+            delay_count     <= 10'd0;
+        end
+        else if (sample_en) begin
+            data_shift_reg  <= {data_shift_reg[6:0], di};
+            delay_count     <= delay_count + 10'd1;;
+        end
+    end
 
-        case (curr_state)
-            REC_DADO: begin
-                count_d = count_q + 1;
-                atraso_d = atraso_q + 1;
-                
-                if (count_q == 3'd4) begin
-                    sample_en = 1'b1;
-                end
-                if (sample_en) begin
-                    data_shift_reg_d = {data_shift_reg_q[6:0], di};
-                    if (data_shift_reg_d == padrao) begin
-                        encontrado_d = 1'b1;
-                        atraso_d = 10'd0;
-                    end
-                end
-                else if (count_q == 3'd7) begin
-                    count_d = 3'd0;
-                end
-                if (encontrado) begin
-                    atraso = atraso_q;
-                end
-            end
-        endcase
+    always_ff @( posedge clk ) begin
+        if (reset) begin
+            encontrado  <= 1'b0;
+        end
+        else if (sample_en)begin
+            encontrado  <= encontrado_d;
+        end
+        else begin
+            encontrado  <= 1'b0;
+        end 
+        if (encontrado)
+            atraso <= delay_count;
     end
 endmodule

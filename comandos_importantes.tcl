@@ -66,7 +66,13 @@ vvp sim.vvp
 gtkwave ondas.vcd
 
 ## ----------------------------------------------------------------------
+# Compila e gera o binário dentro de obj_dir/
+verilator --binary -j 0 -Wall design.sv testbench.sv --top testbench
 
+# Executa a simulação
+./obj_dir/Vtestbench
+
+## ----------------------------------------------------------------------
 ## XCelium:
 
 # Compilar código

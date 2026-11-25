@@ -1,4 +1,4 @@
-module codificador_uart (
+module codificador_UART (
     input   logic           clk,
     input   logic           reset,
     input   logic   [7:0]   dado,
@@ -22,14 +22,14 @@ module codificador_uart (
         TRANS_D7        =   4'd9,
         TRANS_PARIDADE  =   4'd10,
         GERA_STOP1      =   4'd11,
-        GERA_STOP2      =   4'd12,
+        GERA_STOP2      =   4'd12
     } state_t;
 
     state_t curr_state, next_state;
 
     always_ff @( posedge clk or posedge reset ) begin
         if (reset) curr_state <= AGUARDA_DADO;
-        else       curr_state <= next_state
+        else       curr_state <= next_state;
     end
 
     always_comb begin
@@ -103,7 +103,7 @@ module codificador_uart (
             TRANS_PARIDADE: begin
                 TX = (^dado);   // XOR de dados transmitidos
                 
-                next_state = GERA_STOP;
+                next_state = GERA_STOP1;
             end
 
             GERA_STOP1: begin
@@ -124,6 +124,13 @@ module codificador_uart (
 
                 if (dado_valido)    next_state = GERA_START;
                 else                next_state = AGUARDA_DADO;
+            end
+
+            default: begin
+                TX = 1'b1;
+                transmitindo = 1'b0;
+                fim = 1'b0;
+                next_state = AGUARDA_DADO;
             end
         endcase
     end

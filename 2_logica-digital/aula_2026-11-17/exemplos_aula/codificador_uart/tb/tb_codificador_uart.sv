@@ -5,7 +5,7 @@ module tb();
     wire TXRX_s;
     reg stop_1_2=0, dado_valido_tx=0;
     reg [7:0] dado_tx=0;
-    wire dado_valido_rx, erro_rx, transmitindo, fim;
+    wire dado_valido_rx, paridade_rx, transmitindo, fim;
     wire [7:0] dado_rx;
 
     initial begin
@@ -23,11 +23,11 @@ module tb();
         #20ns;
             
         while(1) begin
-            while($urandom_range(0,1))
+            while(1'($urandom_range(0,1)))
                 @(posedge clk); // espera proxima subida do clock antes de seguir
             
-            dado_tx = $urandom_range(0,255);
-            stop_1_2 = $urandom_range(0,1);
+            dado_tx = 8'($urandom_range(0,255));
+            stop_1_2 = 1'($urandom_range(0,1));
             
             @(posedge clk); // espera proxima subida do clock antes de seguir
             #2ns;
@@ -73,8 +73,8 @@ module tb();
         .reset(reset),
         .RX(TXRX_s),
         .dado(dado_rx),
-        .dado_valido(dado_valido_rx),
-        .erro(erro_rx)
+        .dv(dado_valido_rx),
+        .paridade(paridade_rx)
         );
     
     // Monitora saídas do codificador UART
@@ -86,7 +86,7 @@ module tb();
     
     
     // Monitora saídas do decodificador UART
-    always@(posedge erro_rx)
+    always@(negedge paridade_rx)
         $display("(%t) Erro RX! ",$time);
     
     always@(posedge dado_valido_rx)

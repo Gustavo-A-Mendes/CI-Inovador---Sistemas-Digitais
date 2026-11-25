@@ -39,6 +39,7 @@ module tb_cdma_align;
       // $sformatf("%m")
     end
     
+    /* verilator lint_off BLKSEQ */
     always @(posedge clk) begin
         #1;
         if (!reset && encontrado) begin
@@ -54,6 +55,7 @@ module tb_cdma_align;
             end
         end
     end
+    /* verilator lint_on BLKSEQ */
 
     // Tarefa auxiliar: envia 1 bit em 'di' mantendo-o estavel por 8 ciclos de clk
     task send_bit;

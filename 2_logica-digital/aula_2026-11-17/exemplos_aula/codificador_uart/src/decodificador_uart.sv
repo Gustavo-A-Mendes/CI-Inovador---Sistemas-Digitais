@@ -1,8 +1,8 @@
-module decodificador_uart (
+module decodificador_UART (
     input  logic       clk,
-    input  logic       rst,       // Reset ativo alto (mantendo padrão do seu codificador)
-    input  logic       rx,        // Entrada serial conectada ao TX do codificador
-    output logic [7:0] dados,     // Vetor paralelo (LSB-first)
+    input  logic       reset,       // Reset ativo alto (mantendo padrão do seu codificador)
+    input  logic       RX,        // Entrada serial conectada ao TX do codificador
+    output logic [7:0] dado,     // Vetor paralelo (LSB-first)
     output logic       paridade,  // 1 se paridade par correta
     output logic       dv         // Pulso de 1 ciclo indicando dado válido
 );
@@ -33,10 +33,10 @@ module decodificador_uart (
     logic       paridade_atual, proximo_paridade;
     logic       dv_atual, proximo_dv;
 
-    // Bloco Sequencial: atualiza os estados de todos os registrados (estado da FSM e dos dados armazenados)
-    always_ff @( posedge clk or posedge rst) 
+    // Bloco Sequencial: atualiza os estados de todos os registrados (estado da FSM e dos dado armazenados)
+    always_ff @( posedge clk or posedge reset) 
     begin: atualiza_estado
-        if (rst) begin
+        if (reset) begin
             estado_atual        <= AGUARDA;
             dado_recebido_atual <= 8'd0;
             count_atual         <= 3'd0;
@@ -58,25 +58,25 @@ module decodificador_uart (
         proximo_estado        = estado_atual;
         proximo_dado_recebido = dado_recebido_atual;
         proximo_count         = count_atual;
-        proximo_paridade      = paridade_atual;
-        proximo_dv            = 1'b0; // Garante que dv_o seja um pulso de apenas 1 ciclo
+        proximo_paridade      = 1'b1;   // Por padrão, paridade é válida
+        proximo_dv            = 1'b0;   // Garante que dv_o seja um pulso de apenas 1 ciclo
 
         case(estado_atual)
             AGUARDA: begin
                 proximo_count = 3'd0;   // Zera o contador (count_atual) no próximo ciclo de clock;
 
                 // Detecta o Start Bit (nível lógico 0)
-                if (rx == 1'b0) begin
-                    proximo_paridade = 1'b0;    // Limpa sinal de paridade
+                if (RX == 1'b0) begin
+                    proximo_paridade = 1'b1;    // AssLimpa sinal de paridade
                     proximo_estado = REC_DADO;
                 end
             end
 
             REC_DADO: begin
-                proximo_dado_recebido[count_atual] = rx;   // Adiciona o bit rx, segundo a indice dado pelo contador
+                proximo_dado_recebido[count_atual] = RX;   // Adiciona o bit RX, segundo a indice dado pelo contador
 
                 // Forma alternativa: lógica de registrador de deslocamento
-                // proximo_dado_recebido = {rx, dado_recebido_atual[7:1]};
+                // proximo_dado_recebido = {RX, dado_recebido_atual[7:1]};
 
                 proximo_count = count_atual + 3'd1; // Incrementa o contador no próximo ciclo de clock;
                 if (count_atual == 3'd7) begin
@@ -85,14 +85,14 @@ module decodificador_uart (
             end
 
             PARIDADE: begin
-                // Paridade PAR: o XOR dos 8 bits de dados deve ser igual ao bit de paridade recebido
-                proximo_paridade = (rx == (^dado_recebido_atual));
+                // Paridade PAR: o XOR dos 8 bits de dado deve ser igual ao bit de paridade recebido
+                proximo_paridade = (RX == (^dado_recebido_atual));
                 proximo_estado  = STOP;
             end
 
             STOP: begin
                 // Valida o Stop Bit (nível lógico 1) e dispara o pulso de dado válido
-                if (rx == 1'b1) begin
+                if (RX == 1'b1) begin
                     proximo_dv = 1'b1;
                 end
                 proximo_estado = AGUARDA;
@@ -104,7 +104,7 @@ module decodificador_uart (
         endcase
     end
 
-    assign dados    = dado_recebido_atual;
+    assign dado     = dado_recebido_atual;
     assign paridade = paridade_atual;
     assign dv       = dv_atual;
 endmodule

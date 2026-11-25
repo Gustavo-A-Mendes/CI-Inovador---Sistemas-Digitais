@@ -8,7 +8,9 @@ module tb_decodificador_uart;
     wire [7:0] dado;
     wire       dado_valido;
     wire       paridade;
+    /* verilator lint_off UNUSEDSIGNAL */
     wire       inicio;
+    /* verilator lint_on UNUSEDSIGNAL */
 
     // Instanciacao do DUT (Device Under Test)
     decodificador_uart dec_inst (
