@@ -32,6 +32,7 @@ build/
 # Cadence Xcelium / Incisive
 # ==========================================
 # Pastas de compilacao e artefatos
+fv/
 xcelium.d/
 INCA_libs/
 xm-work/
