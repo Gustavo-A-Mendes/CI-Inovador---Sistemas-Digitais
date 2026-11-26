@@ -115,6 +115,7 @@ xrun -top {nome_modulo_do_top_level} {./arquivo1.sv} {./arquivo2.sv} {./arquivo3
 #
 #   -64bit:             Invoca os binários do Xcelium em modo de 64 bits (necessário para designs grandes).
 
+
 ## ----------------------------------------------------------------------
 
 ## GENUS

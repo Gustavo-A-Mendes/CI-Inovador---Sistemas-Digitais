@@ -18,6 +18,7 @@ module ula (
     } ula_op_t;
     
     always_comb begin
+        f_o = 8'd0;
         case(ula_op_t'(s_i))
             OP_0: begin
                 if (m_i)    f_o = ( ~a_i );             // (M=1) -> not(A);
@@ -33,15 +34,20 @@ module ula (
             end  
             OP_3: begin
                 if (m_i)    f_o = ( ~(a_i ^ b_i) );     // (M=1) -> not(A xor B);
-                else        f_o = ( a_i / b_i );        // (M=0) -> A / B
+                else begin                              // (M=0) -> A / B
+                    if (b_i == 8'd0)    // Tratativa para divisão por ZERO
+                        f_o = 8'hFF;
+                    else
+                        f_o = ( a_i / b_i );
+                end       
             end  
             OP_4: begin
                 if (m_i)    f_o = ( a_i & b_i );        // (M=1) -> (A and B);
-                else        f_o = ( a_i - 1 );          // (M=0) -> A - 1
+                else        f_o = ( a_i - 8'd1 );          // (M=0) -> A - 1
             end  
             OP_5: begin
                 if (m_i)    f_o = ( a_i | b_i );        // (M=1) -> (A or B);
-                else        f_o = ( b_i - 1 );          // (M=0) -> B - 1
+                else        f_o = ( b_i - 8'd1 );          // (M=0) -> B - 1
             end  
             OP_6: begin
                 if (m_i)    f_o = ( a_i ^ b_i );        // (M=1) -> (A xor B);
